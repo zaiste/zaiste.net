@@ -1,0 +1,48 @@
+author:
+  name: Zaiste
+  twitter: "@zaiste"
+
+title: Zaiste, Software Technologist 
+
+meta:
+  description: "Zaiste is a Software Technologist who helps companies and brands build great software products. Expertise in: Java, Ruby, Python, JavaScript and Clojure."
+  facebook:
+    site_name: zaiste 
+    image:
+      url: https://zaiste.net/images/zaiste.jpg 
+      width: 512
+      height: 512
+      type: img/jpg
+  twitter:
+    site: zaiste 
+    creator: "@zaiste"
+    image:
+      url: https://zaiste.net/images/zaiste.jpg 
+    domain: zaiste.net
+    
+workshops:
+- name:  Angular Workshop with Onepoint
+  location: Paris
+  date: Jan 24, 2016
+  tags:
+  - angular
+  - javascript
+- name:  React Workshop 
+  location: Poznan 
+  date: Oct 28-29, 2015
+  tags:
+  - react 
+  - javascript
+- name:  React Workshop 
+  location: Poznan 
+  date: Oct 10-11, 2015
+  tags:
+  - react 
+  - javascript
+- name:  ClojureScript Workshop 
+  location: Poznan 
+  date: Jun 27-28, 2014
+  tags:
+  - clojure 
+  - clojurescript 
+  - javascript 

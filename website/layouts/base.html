@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{{ data.page.title or data.title }} · zaiste.net {% endblock %}</title>
+
+  {% include "partials/meta.html" %}
+
+  <link rel="canonical" href="{{ config.base_url }}/{{ data.page.path }}">
+  <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css" />
+  <link href="/styles.css" rel="stylesheet">
+  {% block head %}{% endblock %}
+
+  {% include "partials/analytics.html" %}
+</head>
+<body>
+  <header>
+    <ul class="navigation">
+      <li><a href="/">𝗭</a></li>
+      <li><a href="/posts/">Posts</a></li>
+      <li><a href="/speaking/">Speaking</a></li>
+      <li><a href="/workshops/">Workshops</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </header>
+
+  <main class="columns">
+  {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3>Zaiste</h3>
+          <p>I'm a programmer, a technology consultant and <a href="https://nukomeet.com">Nukomeet</a> co-founder. I've also founded <a href="https://rupy.eu">RuPy Conf</a> and <a href="https://polyconf.com">PolyConf</a> which advocate polyglot programming and bring different programming languages and communities together. I'm building an event management platform for tech people at <a href="https://eventil.com">Eventil</a>.</p>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+          <ul>
+            <li><h4>Zaiste</h4></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/speaking/">Speaking</a></li>
+            <li><a href="/workshops/">Workshops</a></li>
+          </ul>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+          <ul>
+            <li><h4>Open Source</h4></li>
+            <li><a href="https://huncwot.org/">Huncwot</a></li>
+            <li><a href="https://kulfon.net/">Kulfon</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="bottom">
+    <div class="container-fluid">
+      Copyright © 2018 All rights reserved.
+
+      <div class="is-pulled-right">Powered by <a href="https://kulfon.net">Kulfon</a>.</div>
+
+    </div>
+  </div>
+
+  <script src="https://js.eventil.com/v1/"></script>
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+  <script type="text/javascript" src="/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<article class="column is-two-thirds">
+  <h1 class="title">Speaking</h1>
+  <small>Powered by <a href="https://eventil.com/users/zaiste">Eventil</a></small>
+
+  {% verbatim %}
+  <div id="app">
+    <ul class="presentations">
+      <li v-for="p in presentations">
+        <h3><a v-bind:href="p.url">{{ p.title }}</a></h3>
+        at <span>{{ p.event.name }}</span>
+        
+      </li>
+    </ul>
+  </div>
+  {% endverbatim %}
+</article>
+
+{% endblock %}

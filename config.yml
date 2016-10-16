@@ -1,0 +1,15 @@
+includePaths: []
+stylesheets:
+  - https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css
+javascripts:
+  - 'https://unpkg.com/jquery/dist/jquery.js'
+output_dir: public
+base_url: https://zaiste.net
+ga:
+  domain: zaiste.net
+  site_id: UA-20458791-1
+deploy:
+  server: nu02
+  path: /srv/www/zaiste.net/html
+blog:
+  prefix: none

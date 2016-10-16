@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<article class="column is-two-thirds">
+  <h1 class="title">Workshops</h1>
+  <ul class="articles">
+    {% for workshop in data.workshops %}
+    <li>
+      <h2><a href="#">{{ workshop.name }}</a></h2>
+      <span>{{ workshop.date }} ·</span>
+      <ul class="tags">
+        {% for tag in workshop.tags %}
+        <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+
+<aside class="column">
+</aside>
+{% endblock %}
