@@ -1,22 +1,21 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/index.njk" %}
 {% block content %}
-<article class="column is-two-thirds">
-  <h1 class="title">Workshops</h1>
-  <ul class="articles">
-    {% for workshop in data.workshops %}
-    <li>
-      <h2><a href="#">{{ workshop.name }}</a></h2>
-      <span>{{ workshop.date }} ·</span>
-      <ul class="tags">
-        {% for tag in workshop.tags %}
-        <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
-        {% endfor %}
-      </ul>
-    </li>
-    {% endfor %}
-  </ul>
-</article>
-
-<aside class="column">
-</aside>
+<div class="row">
+  <div class="col-md-8">
+    <h1>Workshops</h1>
+    <ul class="articles">
+      {% for workshop in website.workshops %}
+      <li>
+        <h3><a href="#">{{ workshop.name }}</a></h2>
+        <span>{{ workshop.date }} ·</span>
+        <div class="tags">
+          {% for tag in workshop.tags %}
+          <a class="badge badge-pill badge-light" href="/tags/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 {% endblock %}

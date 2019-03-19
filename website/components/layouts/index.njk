@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{{ page.title or website.title }} · zaiste.net{% endblock %}</title>
+
+    {% include "meta.html" %}
+
+    <link rel="canonical" href="{{ config.base_url }}/{{ page.path }}">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="/{{ bundles.css }}" rel="stylesheet">
+    {% block head %}{% endblock %}
+
+    {% include "analytics.html" %}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">Z</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/posts/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/speaking/">Talks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/workshops/">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">About</a>
+            </li>
+          </ul>
+          <a class="nav-link" href="/flutter_in_practice/">Flutter in Practice</a>
+          <a class="nav-link" href="/doomcasts/">Doomcasts</a>
+          <a class="nav-link" href="https://ko-fi.com/zaiste">
+            <i class="fas fa-fw fa-coffee coffee"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Zaiste</h3>
+            <p>I'm a programmer, a technology consultant and <a href="https://nukomeet.com">Nukomeet</a> co-founder. I've also founded <a href="https://rupy.eu">RuPy Conf</a> and <a href="https://polyconf.com">PolyConf</a> which advocate polyglot programming and bring different programming languages and communities together. I'm building an event management platform for tech people at <a href="https://eventil.com">Eventil</a>.</p>
+          </div>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <li><h3>Zaiste</h3></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/speaking/">Speaking</a></li>
+              <li><a href="/workshops/">Workshops</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <li><h3>Open Source</h3></li>
+              <li><a href="https://huncwot.org/">Huncwot</a></li>
+              <li><a href="https://kulfon.net/">Kulfon</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bottom">
+      <div class="container">
+        Copyright © 2019 All rights reserved.
+
+        <div class="is-pulled-right">Powered by <a href="https://kulfon.net">Kulfon</a>.</div>
+
+      </div>
+    </div>
+
+    <script src="https://js.eventil.com/v1/"></script>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/solid.js" integrity="sha384-6FXzJ8R8IC4v/SKPI8oOcRrUkJU8uvFK6YJ4eDY11bJQz4lRw5/wGthflEOX8hjL" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/fontawesome.js" integrity="sha384-Qmms7kHsbqYnKkSwiePYzreT+ufFVSNBhfLOEp0sEEfEVdORDs/aEnGaJy/l4eoy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/{{ bundles.js }}"></script>
+  </body>
+</html>

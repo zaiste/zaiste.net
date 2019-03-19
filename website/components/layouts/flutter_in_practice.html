@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <article class="content is-large">
+      <strong class="series">Flutter in Practice</strong>
+      <h1 class="title">{{ page.title }}</h1>
+
+      <div class="subtitle meta">
+        <small>{{ page.created_at | date }} ·</small>
+        <div class="tags">
+          {% for tag in page.tags %}
+          <a class="badge badge-pill badge-light" href="/tags/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if page.image %}
+      <img class="img-fluid" src="/images/{{ page.image }}" alt="">
+      {% endif %}
+
+      {{ content | safe }}
+    </article>
+  </div>
+  <div class="col-md-4">
+    <aside class="menu">
+      <img src="/images/fip-{{ page.number }}.png" class="img-fluid img-thumbnail" alt="Responsive image">
+    </aside>
+  </div>
+</div>
+{% endblock %}
