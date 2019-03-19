@@ -46,3 +46,46 @@ workshops:
   - clojure 
   - clojurescript 
   - javascript 
+
+videos:
+  fip:
+    - number: '00'
+      title: Intro
+      video_id: 123
+      slug: intro
+    - number: '01'
+      title: Development Setup
+      video_id: 123
+      slug: development-setup
+    - number: '02'
+      title: First Flutter Application
+      video_id: 123
+      slug: first-flutter-application
+    - number: '03'
+      title: Stateless & Stateful Wigets
+      video_id: 123
+      slug: stateless-stateful-widgets
+    - number: '04'
+      title: Displaying Messages with ListView
+      video_id: 123
+      slug: displaying-messages-listview
+    - number: '05'
+      title: Accessing Assets
+      video_id: 123
+      slug: accessing-assets
+    - number: '06'
+      title: Types & JSON Serialization
+      video_id: 123
+      slug: types-json-serialization
+    - number: '07'
+      title: Automatic JSON Serialization
+      video_id: 123
+      slug: automatic-json-serialization
+    - number: '08'
+      title: HTTP Request & Response
+      video_id: 123
+      slug: http-request-response
+    - number: '09'
+      title: Async / Await & FutureBuilder
+      video_id: 123
+      slug: async-await-futurebuilder

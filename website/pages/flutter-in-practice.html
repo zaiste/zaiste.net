@@ -1,0 +1,36 @@
+{% extends "layouts/index.njk" %}
+{% block content %}
+
+<div class="row">
+  <article class="col-md-12">
+    <h1>Flutter in Practice</h1>
+
+    {% markdown %}
+    **Flutter in Practice** is a free programming course that teaches how to write a mobile application using [Flutter](https://flutter.io/) framework and [Dart](https://www.dartlang.org/) programming language.
+
+    Instead of teaching concepts and ideas in both Flutter and Dart, this course showcases **a process of building an actual, mobile application**.
+
+    The goal for this tutorial is to create an **email client** that exclusively supports JMAP protocol.
+    {% endmarkdown %}
+
+    <hr/>
+
+    <div class="row">
+      {% for video in website.videos.fip %}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="/flutter-in-practice/{{ video.slug }}/">
+          <div class="card" style="width: 100%;">
+            <img src="/images/fip-{{ video.number }}.png" class="card-img-top img-fluid" alt="Responsive image">
+            <div class="card-body">
+              <small>Episode {{ video.number }}</small>
+              <h5 class="card-title">{{ video.title }}</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+</div>
+
+{% endblock %}
