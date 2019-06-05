@@ -1,20 +1,10 @@
-const eventil = new Eventil('FSyYFf3kdPU9TcntaWzopDAU')
+const foo = x => `Hello ${x}`;
+
+const notused = x => `hello world`;
 
 async function main() {
-  const me = await eventil.me()
-  const presentations = me.presentations;
-
-  new Vue({
-    el: '#app',
-    data: {
-      message: 'Hello world',
-      presentations: []
-    },
-    mounted() {
-      this.presentations = presentations; 
-    }
-  })
+  const r = await Promise.resolve(2);
+  console.log(foo(r));
 }
 
-main()
-
+main();
