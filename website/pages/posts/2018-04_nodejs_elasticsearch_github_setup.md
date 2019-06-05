@@ -26,9 +26,13 @@ The tutorial will be split into several articles:
 
 The source code can be found [on GitHub](https://github.com/zaiste/elasticsearch-nodejs-github-tutorial).
 
+## Goal
+
 The goal is to build a search engine for GitHub repositories. We will be connecting with [GitHub's API](https://developer.github.com/) to fetch list of trending repositories. Each repository data along with its `README` will be indexed by Elasticsearch.
 
 We will be constructing the application iteratively. Its initial versions won't be ideal. The intention is to showcase a possible process of software development: start with something small that works and improve it along the way by applying various refactorings.
+
+## Requirements
 
 Before we start, make sure you have the following software installed:
 
@@ -38,30 +42,33 @@ Before we start, make sure you have the following software installed:
 
 Check if Elasticsearch running:
 
-    http :9200
+```
+http :9200
+```
+```
+HTTP/1.1 200 OK
+content-encoding: gzip
+content-length: 288
+content-type: application/json; charset=UTF-8
 
-You should get a response similar to the following one:
-
-    HTTP/1.1 200 OK
-    content-encoding: gzip
-    content-length: 288
-    content-type: application/json; charset=UTF-8
-
-    {
-        "cluster_name": "tempertynka",
-        "cluster_uuid": "SWjeIaE4SrOQV-SJRxwObA",
-        "name": "ZGl7bwG",
-        "tagline": "You Know, for Search",
-        "version": {
-            "build_date": "2018-04-12T20:37:28.497551Z",
-            "build_hash": "ccec39f",
-            "build_snapshot": false,
-            "lucene_version": "7.2.1",
-            "minimum_index_compatibility_version": "5.0.0",
-            "minimum_wire_compatibility_version": "5.6.0",
-            "number": "6.2.4"
-        }
+{
+    "cluster_name": "tempertynka",
+    "cluster_uuid": "SWjeIaE4SrOQV-SJRxwObA",
+    "name": "ZGl7bwG",
+    "tagline": "You Know, for Search",
+    "version": {
+        "build_date": "2018-04-12T20:37:28.497551Z",
+        "build_hash": "ccec39f",
+        "build_snapshot": false,
+        "lucene_version": "7.2.1",
+        "minimum_index_compatibility_version": "5.0.0",
+        "minimum_wire_compatibility_version": "5.6.0",
+        "number": "6.2.4"
     }
+}
+```
+
+## Create Project
 
 Let's start by creating a project using Yarn.
 
@@ -88,7 +95,11 @@ const main = async () => {
 main()
 ```
 
-Run it with `node index.js`. Here's the output:
+Run it: 
+
+```
+node index.js
+```
 
 ```json
 { cluster_name: 'tempertynka',
@@ -108,7 +119,9 @@ Run it with `node index.js`. Here's the output:
   active_shards_percent_as_number: 50 }
 ```
 
-Now we can create a Elasticsearch index. Let's call it `github` with `trending` as the type.
+## Create Elasticsearch Index
+
+Now we can create an Elasticsearch index. Let's call it `github` with `trending` as the type.
 
 ```js
 const init = async () => {
@@ -143,6 +156,8 @@ const index = async ({ name, description, readme }) => {
 ```
 
 In the example above, we are using destructuring assignment feature to extract values of specific properties from the input object and to store them as variables.
+
+## Connect with GitHub API
 
 Next step is to connect with GitHub's API. We will start with REST API and eventually (in the following articles) we will refactor it to use GraphQL API.
 
@@ -197,6 +212,8 @@ const fetchReadme = async name => {
 }
 ```
 
+## Save to Elasticsearch
+
 Now we can merge those two data points and store it Elasticsearch.
 
 ```js
@@ -212,6 +229,8 @@ const store = async () {
   }
 }
 ```
+
+## Query Elasticsearch
 
 The final piece of the puzzle is the `search()` function.
 
@@ -248,6 +267,10 @@ We specify the query as a `multi_match`. Each field has a different weight speci
 const results = await search('webassembly');
 ```
 
+## Source code
+
 Check the [source code on GitHub](https://github.com/zaiste/elasticsearch-nodejs-github-tutorial) if you are not sure how to combine all pieces together.
+
+## Next 
 
 In the next article we will build a simple web UI using Vue.js. Stay tuned.
