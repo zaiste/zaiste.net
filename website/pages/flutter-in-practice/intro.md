@@ -2,12 +2,17 @@
 created_at: 2019-01-22
 kind: article
 publish: true
-title: "Intro"
+title: "Intro - Flutter in Practice Video Tutorial"
 number: "00"
 tags:
 - flutter 
+- tutorial
 sitemap:
   priority: 0.6
+abstract: >
+  Introduction to Flutter in Practice, a free programming course that teaches how to
+  write a mobile application using Flutter framework and Dart programming
+  language. 
 ---
 
 Hi my name is Zaiste and welcome to my Flutter in Practice video tutorial. In
