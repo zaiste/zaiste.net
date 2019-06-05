@@ -1,0 +1,30 @@
+{% extends "layouts/index.njk" %}
+{% block content %}
+
+<div class="row">
+  <article class="col-md-12">
+    <h1>Doomcasts</h1>
+
+    {% markdown %}
+    A screencast series about [Doom](https://github.com/hlissner/doom-emacs), an Emacs configuration for the Stubborn Martian Vimmer.
+    {% endmarkdown %}
+
+    <hr/>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rCMh7srOqvw?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <small>Episode 1</small>
+            <h5 class="card-title">Getting Started</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+{% endblock %}
