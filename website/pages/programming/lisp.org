@@ -1,0 +1,10 @@
+#+TITLE: Lisp
+#+ABSTRACT: Lisp is a family of computer programming languages with a distinctive, fully parenthesized prefix notation.
+
+* Lisp
+
+Scheme and Clojure are Lisp-1 which means that both variables and functions names
+are in the same namespace.
+
+Common Lisp is Lisp-2 which means that functions and variables have different
+namespaces.

@@ -1,0 +1,53 @@
+#+TITLE: Vue.js
+#+ABSTRACT: Vue.js
+
+* Vue.js
+
+** Components
+
+Compontents are declared with an API method ~.component~, which takes an id and
+a definition object.
+
+#+BEGIN_SRC js
+Vue.component('my-component', {
+  props: [ 'myprop' ],
+
+  data() {
+    return {
+      firstName: 'John',
+      lastName: 'Smith'
+    }
+  },
+
+  computed: {
+    fullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  },
+
+  template: `
+    <div>
+      <p>Local state: {{ firstName }}</p>
+      <p>Computed value: {{ fullName }}</p>
+      <p>Prop passed down from the parent: {{ myprop }}</p>
+    </div>
+  `,
+
+  created() {
+    setTimeout(() => {
+      this.message = 'Goodbye World'
+    }, 2000);
+  }
+});
+#+END_SRC
+
+A template is a string as HTML. Vue.js includes a runtime compiler that converts
+a template into a render function. Render functions are used by the virtual DOM.
+
+The ~created()~ is triggered when the component state is ready, but before the
+component is mounted to the page.
+
+There is no equivalent of React's ~shouldComponentUpdate~ in Vue.js.
+
+At init, Vue.js goes thourgh all of the data properties and converts them into
+getters and setters. It's needed for change notifications.

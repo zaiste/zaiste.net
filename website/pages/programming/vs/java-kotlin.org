@@ -1,0 +1,56 @@
+#+TITLE: Java Kotlin
+#+ABSTRACT: Java Kotlin
+
+* Java vs Kotlin
+
+** Conciseness
+
+Plain Objects or Data Classes
+
+in Kotlin:
+
+#+BEGIN_SRC kotlin
+data class Widget(var name: String, var owner: Person)
+#+END_SRC
+
+It generates getters, setters, ~hashCode()~, ~equals()~, ~toString()~.
+
+You can define default parameters
+
+#+BEGIN_SRC kotlin
+class Book(val title: String,
+           val price: Int = 10000,
+           val desc: String = "") {
+}
+#+END_SRC
+
+You can refer to parameters using their names
+
+#+BEGIN_SRC kotlin
+val book = Book(title = "Madame Bovary", price = 1000, desc = "Good")
+#+END_SRC
+
+You can use ~it~ for lambdas
+
+#+BEGIN_SRC kotlin
+mylist.filter { it > 4 }
+#+END_SRC
+
+** Safety
+
+You have to explicitly allow variables to be ~null~ aka. nullable-types by
+adding ~?~ to the type name. Those will be checked at compile-time.
+
+#+BEGIN_SRC kotlin
+val name: String? = ""
+
+#+END_SRC
+
+** Async Programming
+
+In Java there are callbacks. In Kotlin there are coroutines which allow to write
+code in a blocking way, they are lightweight threads.
+
+** Function Types
+
+Kotlin has proper function types.

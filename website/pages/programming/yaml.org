@@ -1,0 +1,24 @@
+#+TITLE: YAML
+
+* YAML
+
+~>~ folded - it removes newlines within the string and adds one at the end:
+
+#+BEGIN_SRC yaml
+key: >
+  this is a long string and this will be
+  displayed
+#+END_SRC
+
+The result: ~this is a long string and this will be displayed\n~.
+
+~|~ literal - it turns newlines within the string into explicit newlines in the
+result and adds one at the end:
+
+#+BEGIN_SRC yaml
+key: >
+  this is a long string and this will be
+  displayed
+#+END_SRC
+
+The result: ~this is a long string and this will be\n displayed\n~.

@@ -1,0 +1,16 @@
+#+TITLE: Marko.js
+#+ABSTRACT: Marko.js is a lightweight, fast JavaScript UI library. It was created at eBay.
+
+* Marko.js
+
+Marko.js is a lightweight, fast JavaScript UI library. It was created at
+eBay.
+
+Marko.js is an isomporphic UI: it can be used on the server or in the browser.
+
+It is a general purpose HTML-based template engine on steroids: it can not only
+render pages server-side (as streams), but it also allows to use (reactive)
+components, similar to React or Vue.js.
+
+Marko.js compiles templates to CommonJS modules. It supports async rendering
+and custom tags.

@@ -1,0 +1,18 @@
+#+TITLE: Dart
+
+* Dart
+
+** Compile with AOT
+
+#+BEGIN_SRC bash
+dart2aot test.dart test.aot
+#+END_SRC
+
+#+BEGIN_SRC bash
+ls
+test.aot test.aot.dill test.dart
+#+END_SRC
+
+#+BEGIN_SRC bash
+dartaotruntime test.aot
+#+END_SRC

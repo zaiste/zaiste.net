@@ -1,0 +1,26 @@
+#+TITLE: Clojure
+
+* Clojure
+
+Clojure is a functional programming language for the Java Virtual Machine.
+
+Clojure is entirely oriented around manipulating maps and lists.
+
+Most sequences and functions are lazy by default.
+
+** Threading Macro
+
+This
+
+#+BEGIN_SRC clj
+(->> task
+     :state
+     (map :status)
+     (every? #(= % "yes")))
+#+END_SRC
+
+is more readable than this:
+
+#+BEGIN_SRC clj
+(every? #(= % "yes") (map :status (:state task)))
+#+END_SRC

@@ -1,0 +1,19 @@
+#+TITLE: Sugar
+
+
+* Sugar
+
+** Demerara
+Demerara: cane sugar with a large grain and a pale amber color. A
+pleasant toffee flavor.
+
+** Sucanat
+Sucanat: made from crystallized pure cane sugar, truly unrefined sugar which
+retains a higher proportion of molasses than other types of cane sugars. It has
+an intense burnt taste. Good for things like spice cakes and ginger cookies.
+
+** Muscovado
+Muscovado: cane sugar, moist texture and a strong molasses flavor. Good in
+savory dishes like barbecue sauces and marinades. Similar to honey.
+
+From Spanish word *mascabado*

@@ -1,0 +1,8 @@
+#+TITLE: Common Lisp
+#+ABSTRACT: Common Lisp is a dialect of the Lisp programming language.
+
+* Common Lisp
+
+[[https://github.com/slburson/fset][FSet]] functional library for Common Lisp for a better experience.
+
+Compile-Time Computing.

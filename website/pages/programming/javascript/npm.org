@@ -1,0 +1,187 @@
+#+TITLE: NPM
+
+* NPM
+
+** Set Default Config
+
+#+BEGIN_SRC bash
+npm config set init.author.name <name>
+npm config set init.author.email <email>
+#+END_SRC
+
+** Open Package Home Website
+
+
+#+BEGIN_SRC bash
+npm home <package>
+#+END_SRC
+
+
+** Go to package code repository
+
+#+BEGIN_SRC bash
+npm repo <package>
+#+END_SRC
+
+** Go to package documentation
+
+#+BEGIN_SRC bash
+npm docs <package>
+#+END_SRC
+
+** List global packages
+
+List the packages its dependency tree
+
+#+BEGIN_SRC bash
+npm list --global
+#+END_SRC
+
+
+List only top level packages
+
+#+BEGIN_SRC bash
+npm list -g --depth=0
+#+END_SRC
+
+** List outdated packages
+
+#+BEGIN_SRC bash
+npm outdated -d
+#+END_SRC
+
+** Clean the cache
+
+~npm~ keeps a copy of all installed packages. Next time the same package is to
+be installed, `npm` takes it from the cache and not over the network. All packages
+are cached in the `$HOME/.npm` directory.
+
+#+BEGIN_SRC bash
+npm cache clean
+#+END_SRC
+
+** Generate package.json with defaults
+
+A package.json file will be created and the name of your directory will be used
+for the name property.
+
+#+BEGIN_SRC bash
+npm init --yes
+#+END_SRC
+
+** Create a link to local package
+
+Create a symlink in the global folder for that package
+
+#+BEGIN_SRC bash
+npm link
+#+END_SRC
+
+You will see that references either via ~npm list -g --depth=0~ or ~npm outdated
+-g~.
+
+
+** Install local package from directory
+
+#+BEGIN_SRC bash
+npm install path/to/package
+#+END_SRC
+
+This will create:
+
+#+BEGIN_SRC json
+"dependencies": {
+  ...
+  "myproject": "file:../myproject/"
+}
+#+END_SRC
+
+
+** Update packages in `package.json`
+
+#+BEGIN_SRC bash
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
+#+END_SRC
+
+
+** Freeze versions for all dependencies
+
+#+BEGIN_SRC bash
+npm shrinkwrap
+#+END_SRC
+
+
+This generates a lockfile that specifies the exact version and URL from which to
+download every single dependency.
+
+`shrinkwrap` has some serious issues. npm builds dependency tree in a
+non-deterministic manner. The tree structure can differ from one machine to
+another based on the order that the packages are downloaded. This leads to
+problematic side effects.
+
+Issues may arise when two or more dependencies specified in package.json
+share a common package ,  especially if their versions are different.
+
+npm-shrinkwrap.json is unreadable and can change in strange ways. If you were to
+shrinkwrap, delete the file, then shrinkwrap again, the two generated files
+might be completely different. Upgrading a single dependency might lead to
+additions, deletions, and the moving of dependencies around in the file that
+makes it difficult to track changes.
+
+Yarn generates yarn.lock (an equivalent to npm-shrinkwrap.json) Yarn uses this
+lockfile to generate deterministic builds : they will be the same from machine
+to machine . Yarn also automatically resolves duplicate dependencies and
+generates a flat dependency tree.
+
+** Show NPM config
+
+#+BEGIN_SRC bash
+$ npm config list
+; cli configs
+metrics-registry = "https://registry.npmjs.org/"
+user-agent = "npm/4.4.4 node/v7.8.0 darwin x64"
+
+; userconfig /Users/zaiste/.npmrc
+init.author.name = "Zaiste"
+init.version = "0.0.1"
+progress = true
+
+; builtin config undefined
+prefix = "/usr/local"
+
+; node bin location = /usr/local/Cellar/node/7.8.0/bin/node
+; "npm config ls -l" to show all defaults.
+#+END_SRC
+
+
+#+BEGIN_SRC bash
+npm config get prefix
+/usr/local
+#+END_SRC
+
+#+BEGIN_SRC bash
+cd && mkdir .node_modules_global
+npm config set prefix=$HOME/.node_modules_global
+#+END_SRC
+
+This also creates a .npmrc file in home directory.
+
+#+BEGIN_SRC bash
+$ npm config get prefix
+/home/zaiste/.node_modules_global
+$ cat .npmrc
+prefix=/home/zaiste/.node_modules_global
+#+END_SRC
+
+#+BEGIN_SRC bash
+$ npm install npm --global
+#+END_SRC
+
+Finally, add .node_modules_global/bin to the $PATH
+
+#+BEGIN_SRC bash
+$ which npm
+/home/zaiste/.node_modules_global/bin/npm
+#+END_SRC

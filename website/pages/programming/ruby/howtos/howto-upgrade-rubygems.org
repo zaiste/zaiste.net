@@ -1,0 +1,12 @@
+#+TITLE: How To Upgrade Rubygems
+#+abstract: How To Upgrade Rubygems
+
+* How To Upgrade Rubygems
+
+#+BEGIN_SRC bash
+gem install rubygems-update
+update_rubygems
+gem update --system
+#+END_SRC
+
+It may require to be run as root or use sudo.

@@ -1,0 +1,69 @@
+#+TITLE: PostgreSQL
+
+* PostgreSQL
+
+** Extensions
+
++ Horizontal Scaling and Sharding: Citus DB
++ Columnar Data Storage: cstore_fdw
++ Files as Tables: file_fdw
++ Streaming Computations: PipelineDB
++ Timeseries: TimescaleDB
+
+
+** Generate Series
+
+#+BEGIN_SRC sql
+create table product (
+  id serial primary key,
+  created_at DATE,
+  price NUMERIC(4,2)
+);
+
+insert into product (created_at, price) VALUES (
+  generate_series('2015-01-12', '2015-02-22', interval '1 day'),
+  generate_series(2.33, 45.12, 1.05)
+);
+#+END_SRC
+
+** Update Case-When
+
+#+BEGIN_SRC sql
+update product set kind = (
+  case kind
+  when 'book' then 'book_kind'
+  when 'cd'   then 'cd_kind'
+  end
+) where kind in ('book', 'cd');
+#+END_SRC
+
+
+** Insert Multiple
+
+#+BEGIN_SRC sql
+insert into widget (name) values ('Widget 1'), ('Widget 2'), ('Widget 3');
+#+END_SRC
+
+** UUID
+
+#+BEGIN_SRC sql
+create extension "uuid-ossp";
+
+... = uuid_generate_v4();
+#+END_SRC
+
+** Truncate
+
+Truncate doesn't scan the entire table while ~DELETE FROM~ without ~WHERE~ does.
+
+** Group vs Non-Group
+
+#+BEGIN_SRC sql
+select create_date, name from widget where create_date = (select min(create_date) from widget);
+#+END_SRC
+
+This won't work:
+
+#+BEGIN_SRC sql
+select min(create_date), name from widget;
+#+END_SRC

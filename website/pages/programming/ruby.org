@@ -1,0 +1,49 @@
+#+TITLE: Ruby
+#+ABSTRACT: Ruby is an interpreted, high-level programming language.
+
+
+* Ruby
+
+** Oneliners
+
+#+BEGIN_SRC sh
+ruby -ne 'print if /^[RS]/' file.txt
+#+END_SRC
+
+** Create a Gem
+
+#+BEGIN_SRC sh
+bundle gem mygem
+
+├── Gemfile
+├── LICENSE.txt
+├── README.md
+├── Rakefile
+├── mygem.gemspec
+└── lib
+    ├── mygem
+    │   └── version.rb
+    └── mygem.rb
+#+END_SRC
+
+#+BEGIN_SRC ruby
+spec.add_dependency "http"
+#+END_SRC
+
+#+BEGIN_SRC sh
+gem build mygem.gemspec
+#+END_SRC
+
+https://techandfi.com/how-to-create-a-ruby-gem/
+https://quickleft.com/blog/wrapping-your-api-in-a-custom-ruby-gem/
+https://bundler.io/v1.13/guides/creating_gem
+** Howtos
+*** How To Chain Method Invocation
+
+#+BEGIN_SRC ruby
+user.profile.settings.newsletter
+
+# vs
+
+['profile', 'settings', 'newsletter'].inject(user, :try)
+#+END_SRC

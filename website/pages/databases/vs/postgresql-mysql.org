@@ -1,0 +1,39 @@
+#+TITLE: PostgreSQL vs MySQL
+#+ABSTRACT: PostgreSQL vs MySQL
+
+* PostgreSQL vs MySQL
+
+MySQL and PostgreSQL are open source RDBMS, but Oracle « owns » the main
+fork of MySQL.
+
+PostgreSQL has traditionally focused on reliability, data-integrity and
+integrated developer-focused features. It has a sophisticated query planner,
+capable of joining large numbers of tables efficiently. MySQL, on the other
+hand, has traditionally focused on read-mostly web applications where the
+principal concern is the query optimisation.
+
+PostgreSQL supports most of Oracle's syntax which is not the case for MySQL.
+
+PostgreSQL has a better support for SQL and a better query optimizer. This
+databasae is a good fit for applications that need ad-hoc querying.
+
+PostgreSQL has only one storage engine while MySQL has nine of them.
+
+In MySQL, MyIsam is the initial storage engine. It was built for speed (no
+transactions): it uses table locking. InnoDB is currently the default storage
+engine in MySQL. It has transactions and it is also faster than MyIsam. InnoDB
+storage engine is adapted for customer-facing applications while PostgreSQL is
+more adapted for data-minning and warehousing as it needs a garbage collector.
+
+PostgreSQL provides ~TABLE SAMPLE~ to quickly retrieve a sample of an entire
+table. This supports filtering using ~WHERE~ clauses. It is a valuable feature
+for data visualisations.
+
+PostgreSQL provides ~GIST~ indexes to quickly query sets of Cartesian
+coordinates and to get the nearest neighbors to any point.
+
+MySQL has a C/C++ plugin API. PostgreSQL supports many programming languages,
+including C/C++, Java, .Net, Perl, Python, Ruby. It also allows to run
+user-supplied code as background workers.
+
+Full text search is available in InnoDB from MySQL 5.7.3.

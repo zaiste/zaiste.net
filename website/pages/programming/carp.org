@@ -1,0 +1,7 @@
+#+TITLE: Carp
+#+ABSTRACT: Carp is a statically typed Lisp.
+
+* Carp
+
+Carp is a statically typed [[file:lisp.org][Lisp]], without a garbage collector and virtual
+machine. It provides inferred types.

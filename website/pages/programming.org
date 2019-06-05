@@ -1,0 +1,71 @@
+#+TITLE: programming
+
+* Programming
+
+I like programming a lot.
+
+Programming languages I know:
+
++ [[file:programming/javascript.org][JavaScript]]
++ Java
++ [[file:programming/clojure.org][Clojure]]
++ [[file:programming/ruby.org][Ruby]]
++ Dart
++ Common Lisp
++ [[file:programming/julia.org][Julia]]
++ [[file:programming/clojurescript.org][ClojureScript]]
++ [[file:programming/python.org][Python]]
++ [[file:programming/racket.org][Racket]]
++ [[file:programming/typescript.org][TypeScript]]
++ [[file:programming/lisp.org][Lisp]]
++ [[file:programming/carp.org][Carp]]
++ [[file:programming/guile.org][Guile]]
++ [[file:programming/reason.org][Reason]]
++ [[file:programming/fsharp.org][F#]]
++ [[file:programming/cloe.org][Cloe]]
++ [[file:programming/pony.org][Pony]]
+
+Frameworks I know:
+
++ Struts
++ Spring
++ Rails
++ Flutter
++ Huncwot
+
+UI libraries I know:
+
++ React
++ [[file:programming/markojs.org][Marko.js]]
+
+Databases I use:
+
++ [[file:databases/postgresql.org][PostgreSQL]]
++ Redis
+
+Testing:
+
++ [[file:programming/javascript/testcafe.org][TestCafe]]
+
+Editors I use:
+
++ Emacs
++ Vim
++ VS Code
+
+** Patterns
+
++ Model-View-Controller
+
+** Rules
+
++ Commend any efforts to make computing more efficient and less resource intensive.
+
+** Comparing Programming Concepts
+
++ [[file:programming/vs/promise-observable.org][Promises vs Observables]]
++ [[file:programming/vs/concurrency-parallelism.org][Concurrency vs Parallelism]]
++ [[file:programming/vs/callback-synchronous-asynchronous.org][Synchronous Callbacks vs Asynchronous Callbacks]]
+** Architecture
+
++ [[file:programming/architecture/onion.org][Onion Architecture]]

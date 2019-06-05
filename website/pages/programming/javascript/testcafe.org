@@ -1,0 +1,32 @@
+#+TITLE: TestCafe
+
+* TestCafe (End-to-End Testing)
+
+
+#+BEGIN_SRC bash
+npm i testcafe
+#+END_SRC
+
+#+BEGIN_SRC js
+import { Selector } from 'testcafe';
+
+fixture `My first test`
+  .page `http://github.com/`;
+
+test('Find "testcafe" repository on GitHub', async t => {
+  await t
+    .typeText('form[action="/search"] input[name="q"]', 'testcafe' )
+    .pressKey('enter')
+    .expect(Selector('.repo-list > li > div').innerText).eql('DevExpress/testcafe');
+});
+#+END_SRC
+
+#+BEGIN_SRC bash
+testcafe chrome test.js
+#+END_SRC
+
++ explicit ~await~
++ functional testing
++ it doesn't use WebDriver
++ one-command tool
++ it allows to write tests in ESNext
