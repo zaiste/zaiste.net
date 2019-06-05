@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <meta name="author" content="{{ website.author.name }}" />
-<meta name="description" content="{{ page.abstract or website.description }}"/>
+<meta name="description" content="{{ page.abstract or page.description or website.description }}"/>
+<meta name="theme-color" content="#475359"/>
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
@@ -38,7 +39,7 @@
     "@context": "http://schema.org",
     "@type": "Person",
     "name": "Zaiste",
-    "jobTitle": "CEO",
+    "jobTitle": "Software Engineer",
     "image": "assets/images/zaiste.jpg",
     "url": "https://zaiste.net",
     "sameAs": [

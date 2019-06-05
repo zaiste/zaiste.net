@@ -2,24 +2,27 @@ author:
   name: Zaiste
   twitter: "@zaiste"
 
-title: Zaiste, Software Technologist 
+title: Zaiste, Software Technologist
+description: >
+  Zaiste is a software technologist. He helps companies build great software products.
+  Expertise in Java Ruby Python JavaScript Node.js Clojure Dart Flutter
 
 meta:
   description: "Zaiste is a Software Technologist who helps companies and brands build great software products. Expertise in: Java, Ruby, Python, JavaScript and Clojure."
   facebook:
-    site_name: zaiste 
+    site_name: zaiste
     image:
-      url: https://zaiste.net/images/zaiste.jpg 
+      url: https://zaiste.net/images/zaiste.jpg
       width: 512
       height: 512
       type: img/jpg
   twitter:
-    site: zaiste 
+    site: "@zaiste"
     creator: "@zaiste"
     image:
-      url: https://zaiste.net/images/zaiste.jpg 
+      url: https://zaiste.net/images/zaiste.jpg
     domain: zaiste.net
-    
+
 workshops:
 - name:  Angular Workshop with Onepoint
   location: Paris
@@ -27,25 +30,25 @@ workshops:
   tags:
   - angular
   - javascript
-- name:  React Workshop 
-  location: Poznan 
+- name:  React Workshop
+  location: Poznan
   date: Oct 28-29, 2015
   tags:
-  - react 
+  - react
   - javascript
-- name:  React Workshop 
-  location: Poznan 
+- name:  React Workshop
+  location: Poznan
   date: Oct 10-11, 2015
   tags:
-  - react 
+  - react
   - javascript
-- name:  ClojureScript Workshop 
-  location: Poznan 
+- name:  ClojureScript Workshop
+  location: Poznan
   date: Jun 27-28, 2014
   tags:
-  - clojure 
-  - clojurescript 
-  - javascript 
+  - clojure
+  - clojurescript
+  - javascript
 
 videos:
   fip:
@@ -89,3 +92,12 @@ videos:
       title: Async / Await & FutureBuilder
       video_id: 123
       slug: async-await-futurebuilder
+
+eventil:
+  __http:
+    __request:
+      url: 'https://api.eventil.com/me'
+      headers:
+        Authorization: 'FSyYFf3kdPU9TcntaWzopDAU'
+    __response:
+      presentations:
