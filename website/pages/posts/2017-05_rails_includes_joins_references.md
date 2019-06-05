@@ -20,7 +20,7 @@ Lazy loading is a way to defer initialization of an object until it is needed. I
 
 In Rails `includes` uses eager loading whereas `joins` uses lazy loading. With the former both tables are loaded into memory - this reduces the amount of queries required to retrieve associated data.
 
-```rb
+```ruby
 @companies = Company.includes(:persons).where(persons: { active: true } ).all
 
 @companies.each do |company|
@@ -32,7 +32,7 @@ Without the eager loading mechanism iterating through companies would generate a
 
 If you don't plan to reference any data from the associated `Person` table, you can use `joins` to load it lazy minimizing the required memory utilization. Otherwise, `joins` may trigger **N+1** quries.
 
-```rb
+```ruby
 @companies = Company.joins(:persons).where(persons: { active: true } ).all
 
 @companies.each do |company|
@@ -42,7 +42,7 @@ end
 
 `includes` just loads the data eagrly; at times you may also need the functionality that `joins` provides i.e. using the related table in `where` or `order by`, in that case you need to additionally use `references`.
 
-```rb
+```ruby
 # Will work
 Company.includes(:persons).references(:persons).where('persons.age > 30')
 Company.joins(:persons).where('persons.age > 30')

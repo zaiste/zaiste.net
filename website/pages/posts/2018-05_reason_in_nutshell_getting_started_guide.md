@@ -528,7 +528,7 @@ let make = _children => {
 
 ## TBD
 
-```re
+```reason
 module History = {
   type h;
   [@bs.send] external goBack : h => unit = "";

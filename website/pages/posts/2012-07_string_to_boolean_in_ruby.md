@@ -17,7 +17,7 @@ code adds new behaviour to `String` class. Such approach is called
 [Monkey Patching](http://en.wikipedia.org/wiki/Monkey_patch). It should be used
 with caution as it can result in hard to track down errors.
 
-``` lang:ruby
+```ruby
 class String
   def to_bool
     return true if self =~ (/^(true|t|yes|y|1)$/i)

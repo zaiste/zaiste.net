@@ -13,7 +13,7 @@ abstract: >
 
 Use `puts` with an array argument to write each elements on a new line:
 
-```rb
+```ruby
 arr = %w[a b c]
 
 File.open("array.txt", "w+") do |f|
