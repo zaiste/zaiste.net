@@ -1,0 +1,26 @@
+#+TITLE: V8
+
+* V8
+
+V8 was designed to be multi-tenant. It was designed to run the code from the
+many tabs in the browser in isolated environments and within a single process.
+
+Node.js and similar runtimes were not designed for multi-tenant
+
+** Isolates
+
+Isolates are lightweight contexts that group variables with the code allowed to
+mutate them. A single process can run thousands of Isolates, seamlessly
+switching between them.
+
+Isolates were designed to start quickly and to *not* allow one Isolate to access
+the memory of another.
+
+JavaScript runtime overhead is paid once. Then, Isolates allow to run
+scripts with almost no individual overhead.
+
+Isolates can start around a hundred times faster than a Node.js process on a
+local machine. Isolates consume an order of magnitude less memory than that
+Node.js process.
+
+Isolates start in 5 milliseconds.
