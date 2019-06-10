@@ -1,4 +1,5 @@
 #+TITLE: Clojure
+#+ABSTRACT: Clojure is a functional programming language for the Java Virtual Machine.
 
 * Clojure
 
@@ -12,7 +13,7 @@ Most sequences and functions are lazy by default.
 
 This
 
-#+BEGIN_SRC clj
+#+BEGIN_SRC clojure
 (->> task
      :state
      (map :status)
@@ -21,6 +22,6 @@ This
 
 is more readable than this:
 
-#+BEGIN_SRC clj
+#+BEGIN_SRC clojure
 (every? #(= % "yes") (map :status (:state task)))
 #+END_SRC

@@ -21,7 +21,7 @@ form, and ;; can be used to stand for the original search paths.
 
 ** WWW to Non-WWW
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -47,32 +47,32 @@ server {
 
 *** Enable HTTP/2
 
-#+BEGIN_SRC plain
+#+BEGIN_SRC nginx
 listen 443 ssl http2;
 #+END_SRC
 
 *** Enable SSL session cache
 
-#+BEGIN_SRC plain
+#+BEGIN_SRC nginx
 ssl_session_cache shared:SSL:1m; # 1 megabyte
 ssl_session_timeout 1m; # 1 minute
 #+END_SRC
 
 *** Disable SSL session tickets
 
-#+BEGIN_SRC plain
+#+BEGIN_SRC nginx
 ssl_session_tickets off;
 #+END_SRC
 
 *** Disable TLS version 1.0
 
-#+BEGIN_SRC language
+#+BEGIN_SRC nginx
 ssl_protocols TLSv1.1 TLSv1.2;
 #+END_SRC
 
 *** Reduce SSL buffer size
 
-#+BEGIN_SRC plain
+#+BEGIN_SRC nginx
 ssl_buffer_size 4k;
 #+END_SRC
 
@@ -83,7 +83,7 @@ for checking the revocation status of X.509 certificates. This appends a
 time-stamped OCSP response signed by the CA to the initial TLS handshake,
 eliminating the need for clients to contact the CA.
 
-#+BEGIN_SRC plain
+#+BEGIN_SRC nginx
 ssl_stapling on;
 ssl_stapling_verify on;
 ssl_trusted_certificate /path/to/full_chain.pem;
@@ -100,7 +100,7 @@ policy enforcement protects secure websites from downgrade attacks, SSL
 stripping, and cookie hijacking.
 *** Enable Brotli
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 brotli on;
 brotli_comp_level 4;
 brotli_types text/plain text/css application/javascript application/json image/svg+xml application/xml+rss;
