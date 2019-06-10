@@ -1,0 +1,26 @@
+#+TITLE: How To Render Collections
+
+* How To Render Collections
+
+** Array
+For array use ~.map~ function.
+
+#+BEGIN_SRC js
+export default function WidgetList({ widgets }) {
+  return (
+    <ul>
+      {widgets.map((widget, index) => (
+        <li key={index}>{widget}</li>
+      ))}
+    </ul>
+  );
+}
+#+END_SRC
+
+** Objects
+
+For objects use ~Object.entries~ function
+
+#+BEGIN_SRC language
+
+#+END_SRC
