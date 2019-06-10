@@ -1,0 +1,7 @@
+#+TITLE: Tacit Programming
+
+* Tacit (Point-Free Style) Programming
+
+Tactit programming is a programming paradigm in which function definitions do
+not identify the arguments (or "points") on which they operate. Instead the
+definitions compose other functions.
