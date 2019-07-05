@@ -106,3 +106,7 @@ brotli_comp_level 4;
 brotli_types text/plain text/css application/javascript application/json image/svg+xml application/xml+rss;
 brotli_static on;
 #+END_SRC
+
+** How-Tos
+
++ [[file:nginx/howtos/howto-install-nginx-ubuntu-18-04.org][How To Install Nginx on Ubuntu 18.04]]

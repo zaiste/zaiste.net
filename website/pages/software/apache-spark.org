@@ -1,0 +1,14 @@
+#+TITLE: Apache Spark
+
+* Apache Spark
+
+Spark comes with practical, interactive Python and Scala shells.
+
+Spark thrives in large-scale cluster deployments usually on
+top of Apache Mesos.
+
+Install Apache Spark on OS X via Homebrew.
+
+#+BEGIN_SRC shell
+brew install apache-spark
+#+END_SRC

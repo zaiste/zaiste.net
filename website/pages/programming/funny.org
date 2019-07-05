@@ -1,0 +1,5 @@
+#+TITLE: Funny
+
+* Jokes & Funny Programming Things
+
++ [[https://www.cs.utexas.edu/~cannata/cs345/Class%2520Notes/10%2520Haskell%2520Programmer%2520Evolution.html][The Evolution of a Haskell Programmer]]

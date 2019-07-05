@@ -12,6 +12,11 @@ TypeScript allows to migrate from JavaScript gradually, i.e. on a file basis
 using the ~--allowJs~ flag. As of TypeScript 2.3, it is possible to check
 regular JavaScript files.
 
+TypeScript's type system is complex. Its type-checking performance is a
+challenge.
+
+TypeScript can parse JSDoc comments into type annotations.
+
 ** Structural Types
 
 TypeScript has structural types, in contrast with Java (which has nominal

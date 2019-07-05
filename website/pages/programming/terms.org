@@ -1,0 +1,5 @@
+#+TITLE: Terms
+
+* Programming Terms
+
+*Flutent Interface*: a method for designing object-oriented APIs based on method chaining.

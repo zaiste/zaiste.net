@@ -1,0 +1,7 @@
+#+TITLE: water
+
+* Water
+
+Sparkling water gets its sparkle from CO2. CO2 doesn't contain any calories.,
+but it does lower the pH of water. If the water is rich in minerals, that won't
+make it acidic, since the minerals will buffer the CO2.

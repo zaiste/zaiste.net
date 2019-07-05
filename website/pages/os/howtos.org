@@ -1,0 +1,5 @@
+#+TITLE: OS Howtos
+
+* OS Howtos
+
++ How To: [[file:howtos/howto-find-number-cpu-cores.org][Find the number of CPU cores]]

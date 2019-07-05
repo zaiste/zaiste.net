@@ -15,3 +15,6 @@ of the 90s
 
 Steve Jobs acknowledged that VisiCalc had "propelled the Apple II to the success
 it achieved".
+
+People had already been buying Apple computers primarily to run VisiCalc for
+four years when Lotus 1-2-3 came out.

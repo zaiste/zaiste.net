@@ -2,6 +2,8 @@
 
 * Dart
 
+Dart is a statically typed language since version 2.
+
 ** Compile with AOT
 
 #+BEGIN_SRC bash

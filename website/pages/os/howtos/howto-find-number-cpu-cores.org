@@ -1,0 +1,21 @@
+#+TITLE: How To: Find the Number of CPU cores
+
+* How To: Find the Number of CPU cores
+
+#+BEGIN_SRC bash
+cat /proc/cpuinfo | grep -c processor
+#+END_SRC
+
+#+BEGIN_SRC bash
+cat /proc/cpuinfo | grep 'core id'
+core id         : 0
+core id         : 1
+#+END_SRC
+
+#+BEGIN_SRC bash
+nproc
+#+END_SRC
+
+#+BEGIN_SRC bash
+lscpu
+#+END_SRC
