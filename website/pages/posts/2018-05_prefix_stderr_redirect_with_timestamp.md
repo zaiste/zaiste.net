@@ -11,7 +11,7 @@ abstract: >
 ---
 
 
-```sh
+```bash
 foo() { while IFS='' read -r line; do echo "$(date) $line" >> file.txt; done; };
 ```
 
@@ -20,12 +20,12 @@ It, then, prepends each line with a timestamp.
 
 Test it
 
-```sh
+```bash
 echo 42 > >(foo)
 ```
 
 or with `tee`
 
-```sh
+```bash
 echo 42 | tee >(foo)
 ```

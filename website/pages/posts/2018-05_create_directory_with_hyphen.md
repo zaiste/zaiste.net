@@ -13,13 +13,13 @@ abstract: >
 
 Use `mkdir` with `--` to create a directory with a hyphen in the name. This disables further option parsing.
 
-```sh
+```bash
 mkdir -- -my-dir
 ```
 
 Put additional options always before `--`
 
-```sh
+```bash
 mkdir -p -- -my-dir/foo
 ```
 
@@ -27,18 +27,18 @@ This is a convention that is part of the POSIX standard. The argument `--` is a 
 
 Alternatively, use the current directory prefix
 
-```sh
+```bash
 mkdir ./-my-dir
 ```
 
 This also applies to other commands such as `cd`:
 
-```sh
+```bash
 cd -- -my-dir
 ```
 
 or `rm`
 
-```sh
+```bash
 rm -r -- -my-dir
 ```

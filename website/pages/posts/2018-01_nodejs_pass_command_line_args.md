@@ -22,7 +22,7 @@ console.log(args);
 Run `app.js`
 
 
-```sh
+```bash
 node app.js a b=2 -c
 ```
 ```

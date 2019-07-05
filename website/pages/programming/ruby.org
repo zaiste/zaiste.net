@@ -6,13 +6,13 @@
 
 ** Oneliners
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 ruby -ne 'print if /^[RS]/' file.txt
 #+END_SRC
 
 ** Create a Gem
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 bundle gem mygem
 
 ├── Gemfile
@@ -30,7 +30,7 @@ bundle gem mygem
 spec.add_dependency "http"
 #+END_SRC
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 gem build mygem.gemspec
 #+END_SRC
 

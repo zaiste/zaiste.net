@@ -4,19 +4,19 @@
 
 ** Install Nginx
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo apt install nginx
 #+END_SRC
 
 ** Setup Server Blocks
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo mkdir -p /var/www/example.com
 #+END_SRC
 
 In ~/etc/nginx/sites-available/example.com~
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 server {
         listen 80;
         listen [::]:80;
@@ -34,55 +34,55 @@ server {
 
 Create a link from the ~sites-available~ to the ~sites-enabled~ directory:
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 #+END_SRC
 ** Systemd
 
 *** Stop Nginx
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo systemctl stop nginx
 #+END_SRC
 
 *** Start Nginx
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo systemctl start nginx
 #+END_SRC
 *** Restart Nginx
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo systemctl restart nginx
 #+END_SRC
 *** Reload Nginx
 
 For configuration changes Nginx can be reloaded instead of restarting.
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo systemctl reload nginx
 #+END_SRC
 *** Check Nginx Configuration
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo nginx -t
 #+END_SRC
 ** Setup Firewall with UFW
 
 Only for HTTP
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo ufw allow 'Nginx HTTP'
 #+END_SRC
 
 Only for HTTPS
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo ufw allow 'Nginx HTTPS'
 #+END_SRC
 
 For both HTTP & HTTPS
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 sudo ufw allow 'Nginx Full'
 #+END_SRC

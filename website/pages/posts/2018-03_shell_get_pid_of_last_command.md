@@ -13,7 +13,7 @@ abstract: >
 
 `!` shell variable holds the PID of the last executed command.
 
-```sh
+```bash
 long-process &
 ```
 ```
@@ -22,12 +22,12 @@ long-process &
 
 Access it as `$!`:
 
-```sh
+```bash
 echo $!
 ```
 
 Assign it to a variable:
 
-```sh
+```bash
 long-process & export LONG_PROCESS_PID=$!
 ```

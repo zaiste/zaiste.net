@@ -74,7 +74,7 @@ out-of-the-box to reduce the boilerplate.
 Let's create an empty directory for our RESTful API called
 `secure-rest-api-nodejs`.
 
-```sh
+```bash
 mkdir secure-rest-api-nodejs
 ```
 
@@ -82,13 +82,13 @@ Inside, we put a file called `app.js` which will hold our entire, but still
 simple, Node.js application. Additionally, let's create `package.json` by
 executing `npm init` right inside that directory.
 
-```sh
+```bash
 cd secure-rest-api-nodejs && touch app.js && npm init
 ```
 
 Let's add the first dependency:
 
-```sh
+```bash
 npm i huncwot --save
 ```
 
@@ -109,7 +109,7 @@ app.listen(5544);
 
 Let's run it to see if works.
 
-```sh
+```bash
 node app.js
 ```
 
@@ -119,7 +119,7 @@ command-line tool such as [Wget](https://www.gnu.org/software/wget/),
 approach and HTTPie is one of my favourite tools. I can trigger a request using
 the following command:
 
-```sh
+```bash
 http :5544/
 ```
 ```http
@@ -161,7 +161,7 @@ would be nice, if our application restarted automatically, when something
 changes within the application directory. Luckly, there is a tool just for that.
 It is called [nodemon](https://nodemon.io/). 
 
-```sh
+```bash
 npm install nodemon --save-dev
 ```
 
@@ -212,7 +212,7 @@ application. Let's add the `start` command as seen here:
 
 With that change in place, you can now use `npm` to start the application. 
 
-```sh
+```bash
 npm start
 ```
 ```
@@ -299,7 +299,7 @@ app.get('/name/:name', ({ params }) => `Hello, your name is ${params.name}`);
 
 And then you can trigger the following request:
 
-```sh
+```bash
 http :5544/name/Zaiste
 ```
 ```http
@@ -380,7 +380,7 @@ learn how to do it.
 
 Create the database for our application called `secure_rest_api_nodejs`. 
 
-```sh
+```bash
 createdb secure_rest_api_nodejs
 ```
 
@@ -390,7 +390,7 @@ important distinction in PostgreSQL.
 Finally, let's create the `person` table within the `secure_rest_api_nodejs`
 database by using `psql`
 
-```sh
+```bash
 psql secure_rest_api_nodejs < db.sql
 ```
 
@@ -592,7 +592,7 @@ Attention, the `username` will be different for you.
 
 Let's test it again: 
 
-```sh
+```bash
 http :5544/register name=Zaiste password=krzychujacielubie email=zaiste@example.com
 ```
 ```http
@@ -610,7 +610,7 @@ Date: Fri, 01 Apr 2019 19:19:32 GMT
 You should get back the database ID from the `person` table. Let's connect to
 our database to verify it:
 
-```sh
+```bash
 psql secure_rest_api_nodejs
 ```
 ```
@@ -625,7 +625,7 @@ Type "help" for help.
 
 And then, let's execute a `SELECT` query on the `person` table.
 
-```sh
+```bash
 [local] zaiste@secure_rest_api_nodejs = # select * from person;
 ```
 ```
@@ -903,7 +903,7 @@ app.get('/secret, can(secret));
 
 Let's test if it all works together. First, register a new user.
 
-```sh
+```bash
 http :5544/register name=Hanka email=hanka@agrobots.com password=tomliand1
 ```
 ```http
@@ -924,7 +924,7 @@ differnt for you.
 
 Let see if I can access the `/secret` route without providing the token.
 
-```sh
+```bash
 http :5544/secret
 ```
 ```http
@@ -938,7 +938,7 @@ Date: Sat, 06 Apr 2019 17:30:40 GMT
 I cannot access this route. Let's try doing the same request, but this time we
 will send our authentication token along with the request as an HTTP header.
 
-```sh
+```bash
 http :5544/secure Authorization:c33qPZLwgb74V-ysAVu5Eg
 ```
 ```http

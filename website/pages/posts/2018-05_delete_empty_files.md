@@ -13,13 +13,13 @@ abstract: >
 
 The following command will delete all empty files in the current directory and in all of its subdirectories:
 
-```sh
+```bash
 find . -size 0 -delete
 ```
 
 There is also a `-empty` flag, but it's not POSIX
 
-```sh
+```bash
 find . -empty -delete
 ```
 

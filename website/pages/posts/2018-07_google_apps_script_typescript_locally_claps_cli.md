@@ -14,7 +14,7 @@ abstract: >
 
 clasp automatically converts flat file structure available on script.google.com into regular folders.
 
-```sh
+```bash
 sudo npm i -g grpc @google/clasp --unsafe-perm
 ```
 

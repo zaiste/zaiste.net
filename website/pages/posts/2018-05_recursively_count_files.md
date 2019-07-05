@@ -13,7 +13,7 @@ abstract: >
 
 Combine `find` and `wc` to count files in the current directory and in all of its subdirectories:
 
-```sh
+```bash
 find . -type f | wc -l
 ```
 

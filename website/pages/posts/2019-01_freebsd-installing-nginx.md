@@ -21,7 +21,7 @@ sources via the Ports Collection.
 
 Install Nginx as a binary using `pkg`:
 
-```sh
+```bash
 pkg install nginx
 ```
 
@@ -30,7 +30,7 @@ pkg install nginx
 Installing nginx via the Ports Collection allows to include or exclude
 particular modules.
 
-```sh
+```bash
 portsnap fetch update
 cd /usr/ports/www/nginx/
 make install clean
@@ -49,10 +49,10 @@ needed to enable each service.
 In order to find out the `rcvar` of each service you can simply grep their
 directory:
 
-```sh
+```bash
 grep rcvar /usr/local/etc/rc.d/*
 ```
-```sh
+```bash
 /usr/local/etc/rc.d/avahi-daemon:rcvar=avahi_daemon_enable
 /usr/local/etc/rc.d/avahi-dnsconfd:rcvar=avahi_dnsconfd_enable
 /usr/local/etc/rc.d/cupsd:rcvar="cupsd_enable"
@@ -66,7 +66,7 @@ For Nginx the `rcvar` is `nginx_enable`.
 
 Enable `nginx` to run at boot time:
 
-```sh
+```bash
 sysrc nginx_enable="YES"
 ```
 
@@ -76,10 +76,10 @@ sysrc nginx_enable="YES"
 
 Use `service` to start Nginx:
 
-```sh
+```bash
 service nginx start
 ```
-```sh
+```bash
 Performing sanity check on nginx configuration:
 nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
@@ -90,10 +90,10 @@ Starting nginx.
 
 Use `service` to restart Nginx:
 
-```sh
+```bash
 service nginx restart
 ```
-```sh
+```bash
 Performing sanity check on nginx configuration:
 nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
@@ -108,7 +108,7 @@ Starting nginx.
 
 Use `service` to stop the Nginx server:
 
-```sh
+```bash
 service nginx stop
 ```
 
@@ -116,10 +116,10 @@ service nginx stop
 
 Use `service` to reload the configuration for the Nginx server:
 
-```sh
+```bash
 service nginx reload
 ```
-```sh
+```bash
 Performing sanity check on nginx configuration:
 nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
@@ -136,27 +136,27 @@ nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 
 Create a directory in `/usr/local/www/`, e.g. for `domain.com`:
 
-```sh
+```bash
 mkdir -p /usr/local/www/domain.com/html/
 ```
 
 Set the ownership of the `domain.com/` directory to the `www` user (the default
 Nginx user created during Nginx installation):
 
-```sh
+```bash
 chown -R www:www /usr/local/www/domain.com/
 ```
 
 Set the permissions for the document directory:
 
-```sh
+```bash
 chmod -R 755 /usr/local/www/domain.com/
 ```
 
 Finally, create a sample `index.html` HTML file in
 `/usr/local/www/domain.com/html/`:
 
-```sh
+```bash
 touch /usr/local/www/domain.com/html/index.html
 ```
 
@@ -178,7 +178,7 @@ serve the content for a specific domain or an IP address.
 
 Create the directory for server blocks:
 
-```sh
+```bash
 mkdir /usr/local/etc/nginx/servers/
 ```
 
@@ -194,7 +194,7 @@ http {
 
 Add the `server` block configuration for a domain/ip of choice:
 
-```sh
+```bash
 vi /usr/local/etc/nginx/servers/domain.com.conf
 ```
 
@@ -218,7 +218,7 @@ If you made any mistakes within `nginx.conf`, you can always revert to the
 default Nginx configuration replacing it with the content of `nginx.conf-dist`
 which is located in the same directory, e.g.
 
-```sh
+```bash
 cp /usr/local/etc/nginx/nginx.conf-dist /usr/local/etc/nginx/nginx.conf
 ```
 
@@ -226,13 +226,13 @@ cp /usr/local/etc/nginx/nginx.conf-dist /usr/local/etc/nginx/nginx.conf
 
 Uncomment the `user` directive and replace its value from `nobody` to `www`.
 
-```sh
+```bash
 user www;
 ```
 
 Change `worker_processes` from `1` to `auto`:
 
-```sh
+```bash
 worker_processes auto;
 ```
 
@@ -241,16 +241,16 @@ dependeing on the number of CPU cores.
 
 Test the configuration for syntax errors:
 
-```sh
+```bash
 nginx -t
 ```
-```sh
+```bash
 nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 ```
 
 Finally, reload the configuration using `service` to make it live:
 
-```sh
+```bash
 service nginx reload
 ```

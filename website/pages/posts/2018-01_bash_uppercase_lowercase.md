@@ -13,7 +13,7 @@ abstract: >
 
 In Bash 4, to lowercase:
 
-```sh
+```bash
 var = 'Hello, World'
 echo ${var,,}
 ```
@@ -23,7 +23,7 @@ hello, world
 
 and to uppercase:
 
-```sh
+```bash
 var = 'Hello, World'
 echo ${var^^}
 ```
