@@ -1,0 +1,33 @@
+#+TITLE: Rails Caching
+
+* Rails Caching
+
+Enable caching in the ~development~
+
+#+BEGIN_SRC bash
+rails dev:cache
+#+END_SRC
+
+** Page Caching
+
+Since Rails 4 Page Caching has been extracted to the ~actionpack-page_caching~.
+
+In ~config/application.rb~
+
+#+BEGIN_SRC ruby
+config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
+#+END_SRC
+
+Page caching is enabled per-action by using ~caches_page~ method.
+
+#+BEGIN_SRC ruby
+class PagesController < ApplicationController
+  caches_page :index
+end
+#+END_SRC
+
+** Action Caching
+
+** Fragment Caching
+
+** HTTP Caching

@@ -1,0 +1,5 @@
+#+TITLE: Org Mode
+
+* Org Mode
+
+Org Mode can run blocks of code and collect the output.

@@ -6,3 +6,17 @@
 [[https://github.com/slburson/fset][FSet]] functional library for Common Lisp for a better experience.
 
 Compile-Time Computing.
+
+Rigetti uses Common Lisp to build [[https://github.com/rigetti/quilc][compilers]] and simulators for quantum
+computers.
+
+SBCL stands for Steel Bank Common Lisp.
+
+In SBCL, there is ~(declare (optimize (speed 3)))~ which can be put at the top
+of a function and the compiler will give useful feedback when it can’t optimize
+something and suggest type hints to improve performance.
+
+[[https://abcl.org%20][ABCL]] is a Common Lisp on the JVM.
+
+Common Lisp makes binding to C libraries easy via CFFI or via things like
+[[https://github.com/rpav/cl-autowrap][cl-autowrap.]]

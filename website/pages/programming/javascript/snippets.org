@@ -53,6 +53,43 @@ const array = [
 
 array.sort((a,b) => (new Date(b.date) - new Date(a.date)));
 #+END_SRC
+*** Fill
+
+#+BEGIN_SRC js
+const array = Array(5).fill('');
+#+END_SRC
+*** Remove Duplicates
+
+#+BEGIN_SRC js
+Array.from(new Set(widgets));
+
+// or
+
+
+[...new Set(widgets)];
+#+END_SRC
+*** Map with ~.from~
+
+#+BEGIN_SRC js
+const names = Array.from(widgets, ({ name }) => name);
+#+END_SRC
+** Objects
+*** Conditional Spread
+#+BEGIN_SRC js
+const fetchUser = (isPrivateData) => {
+  return {
+    name: 'User',
+    age: 18,
+    ...isPrivateData && { email : 'user@user.com' }
+  }
+}
+#+END_SRC
+*** Rest
+
+#+BEGIN_SRC js
+let user = {}, userDetails = {};
+({ name: user.name, age: user.age, ...userDetails } = rawUser);
+#+END_SRC
 ** Date
 
 *** How to output an ISO 8601 formatted string in JavaScript?

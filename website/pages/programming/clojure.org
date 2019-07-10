@@ -7,7 +7,13 @@ Clojure is a functional programming language for the Java Virtual Machine.
 
 Clojure is entirely oriented around manipulating maps and lists.
 
+Clojure has consistent standard library.
+
 Most sequences and functions are lazy by default.
+
+Clojure is not statically typed, but it has Spec.
+
+Idiomatic Clojure is slow compared to SBCL-compiled Common Lisp.
 
 ** Threading Macro
 
