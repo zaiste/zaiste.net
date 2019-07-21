@@ -36,3 +36,9 @@ is more readable than this:
 Clojure's immutable data structures (lists, vectors, maps and sets) are not copy
 on write. They're based on red-black trees: when you mutate the value, a new one
 is created that shares everything but the mutated part with the original.
+** Identities
+
+Identities change their (associated) values using transactions. There is no
+partial updates. In STM, this is done via swaps. Once a new value is constructed
+(e.g. adding a key-value pair to a hash), there is a transaction that only
+changes (atomically) the reference to that new value.

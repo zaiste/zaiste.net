@@ -16,7 +16,7 @@ CommonJS.
 In Webpack 4 there is no need to define neither the entry point, nor the output
 file. By default, it goes from ~./src/index.js~ to ~dist/main.js~.
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC bash
 npm i webpack webpack-cli --save-dev
 #+END_SRC
 
@@ -42,6 +42,6 @@ Webpack doesn’t know how to make the transformation but has loaders: think of
 them as of transformers. `babel-loader` is the webpack loader for transpiling
 ES6 and above, down to ES5.
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC bash
 npm i babel-core babel-loader babel-preset-env --save-dev
 #+END_SRC

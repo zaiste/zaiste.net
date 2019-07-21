@@ -1,0 +1,35 @@
+#+TITLE: Languages
+
+* Programming Languages
+
+** Applicative Programming Languages
+
+In applicative programming languages, the central construct is a function
+invocation. This function is applied to a set of parameters.
+
+** Stack Programming Languages
+
+In stack programming languages, any function invocation is done by using just
+the name of that function. Its parameters are implicit, they must on the stack
+when a particular function is invoked. The result of the function invocation is
+placed on the stack as well.
+
+** Concatenative Programming Languages
+
+In concatenative programming languages, computations are done by composing
+functions that operate on data being passed from one function to another one.
+
+Concatenative programming languages are not necessarily stack languages.
+
+*** Examples of Concatenative Programming Languages
+
++ Kitten
++ Forth
++ Joy
++ Lviv
+
+*** Resources
+
++ [[http://www.nsl.com/papers/interview.htm][A Conversation with Manfred von Thun]]
++ [[https://hypercubed.github.io/joy/html/faq.html][Frequently Asked Questions about Joy]]
++ [[http://www.kevinalbrecht.com/code/joy-mirror/j02maf.html][Mathematical foundations of Joy]]

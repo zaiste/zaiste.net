@@ -4,7 +4,7 @@
 
 ** Get Raw ~README~
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC bash
 http https://api.github.com/repos/<username>/<project>/readme Accept:application/vnd.github.v3.raw
 #+END_SRC
 

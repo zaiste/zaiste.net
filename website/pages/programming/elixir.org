@@ -11,3 +11,5 @@ processes are isolated and they communicate through message passing.
 
 OTP (The Open Telecom Platform) was designed to build telecom systems at
 Ericsson.
+
+[[file:elixir/scenic.org][Scenic]], a functional, native UI framework.

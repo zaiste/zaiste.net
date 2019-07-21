@@ -63,7 +63,7 @@ than these described in this post. For details check [the documentation][2].
 
 Such explicit declaration provided by `abc` module may be considered not very *pythonic*.  Because of Python's dynamic nature there are few things being checked during compilation, and there is no advanced type checking at that stage. For that reason, we could declare an abstract method by just raising a `NotImplementedError`.
 
-``` lang=python
+``` python
 class Animal:
 
     def say_something(self):

@@ -50,11 +50,11 @@ In your playbook use `no_log: true` to hide log output as the encrypted content 
 
 There's also `encrypt_string` command which allows to inline encrypted values by injecting them into YAML files with `!vault` tag. Here's how to encrypt a string read from `stdin` and name it `db_password`:
 
-```cli
+```bash
 ansible-vault encrypt_string --vault-id a_password_file --stdin-name 'db_password'
 ```
 
-```cli
+```bash
 db_password: !vault |
     $ANSIBLE_VAULT;1.1;AES256
     623133653966623430613934643361633837643737646

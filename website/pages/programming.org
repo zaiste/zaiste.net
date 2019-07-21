@@ -1,16 +1,16 @@
-#+TITLE: programming
+#+TITLE: Programming
 
 * Programming
 
 I like programming a lot.
 
-Programming languages I know:
+** Programming Languages
 
 + [[file:programming/javascript.org][JavaScript]]
 + Java
 + [[file:programming/clojure.org][Clojure]]
 + [[file:programming/ruby.org][Ruby]]
-+ Dart
++ [[file:programming/dart.org][Dart]]
 + Common Lisp
 + [[file:programming/julia.org][Julia]]
 + [[file:programming/clojurescript.org][ClojureScript]]
@@ -24,8 +24,9 @@ Programming languages I know:
 + [[file:programming/fsharp.org][F#]]
 + [[file:programming/cloe.org][Cloe]]
 + [[file:programming/pony.org][Pony]]
++ [[file:programming/elixir.org][Elixir]]
 
-Frameworks I know:
+** Programming Frameworks
 
 + Struts
 + Spring
@@ -33,21 +34,21 @@ Frameworks I know:
 + Flutter
 + Huncwot
 
-UI libraries I know:
+** UI libraries
 
 + React
 + [[file:programming/markojs.org][Marko.js]]
 
-Databases I use:
+** Databases
 
 + [[file:databases/postgresql.org][PostgreSQL]]
 + Redis
 
-Testing:
+** Testing
 
 + [[file:programming/javascript/testcafe.org][TestCafe]]
 
-Editors I use:
+** Editors
 
 + Emacs
 + Vim
@@ -69,3 +70,5 @@ Editors I use:
 ** Architecture
 
 + [[file:programming/architecture/onion.org][Onion Architecture]]
++ [[file:programming/architecture/mvc.org][Model-View-Controler]]
++ [[file:programming/architecture/state-management.org][State Management]]

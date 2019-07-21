@@ -14,7 +14,7 @@ lua language:
 
 The ~content_by_lua~ directive allows to run arbitrary Lua code:
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 location / {
 	content_by_lua 'ngx.say("<p>hello, world</p>")';
 }
@@ -22,7 +22,7 @@ location / {
 
 For more complex logic there is ~content_by_lua_file~.
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 location /by_file {
     default_type text/html;
     lua_code_cache off;
@@ -37,7 +37,7 @@ The ~init_by_lua~ directive allows to run initialization code during the nginx
 start up up. It is being used for importing and defining libraries or modules
 that are used in our request handlers.
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 init_by_lua '
     cjson = require("cjson") -- global variable
 '
@@ -54,7 +54,7 @@ There is also ~init_by_lua_file~.
 
 ~ngx.location.capture~ allows to trigger an internal request.
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 local res = ngx.location.capture("/some-path")
 #+END_SRC
 
@@ -62,7 +62,7 @@ The ~res~ contains response's status, header, and body.
 
 Pass arguments to requests:
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 local options = {
     method = ngx.HTTP_POST,
     args = { maxsize = 1000 }
@@ -72,7 +72,7 @@ local res = ngx.location.capture("/some-path", options)
 
 The ngx request object contains typical request attributes:
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 local headers = ngx.req.get_headers()
 local cookie = headers["Cookie"]
 local etag = headers["Etag"]
@@ -87,13 +87,13 @@ local post_params = ngx.req.get_post_args()
 For the response, there is *NO* ~ngx.res.body()~ method. Use ~ngx.pring~ or
 ~ngx.say~. The latter appends the newline at the end ~\n~.
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 ngx.print("Hello world")
 ngx.say("Hello world")
 #+END_SRC
 
 Send JSON response
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC nginx
 ngx.say(cjson.encode({a=1,b=2}))
 #+END_SRC

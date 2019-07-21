@@ -15,7 +15,7 @@ TL;DR
 
 Use public/private key authentication to avoid entering password each time you connect to the server.  Create an alias for each server within `.ssh/config` using the syntax below
 
-``` ssh
+``` bash
 Host alias-name
   HostName my.realm.com/or-ip
   User zaiste

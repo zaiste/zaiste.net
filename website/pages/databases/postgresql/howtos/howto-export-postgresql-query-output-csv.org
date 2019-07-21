@@ -26,7 +26,7 @@ SELECT * FROM widgets;
 
 Another approach using ~\copy~
 
-#+BEGIN_SRC language
+#+BEGIN_SRC sql
 \copy (SELECT * FROM widgets LIMIT 10;) TO '~/path/on/filesystem/file.csv' CSV HEADER
 #+END_SRC
 
@@ -35,7 +35,7 @@ Another approach using ~\copy~
 
 It's required to quote the columns if there are timestamp fields in the DB.
 
-#+BEGIN_SRC language
+#+BEGIN_SRC sql
 \copy (SELECT * FROM widgets ) TO '~/path/to/file.csv' DELIMITER ',' QUOTE '"' FORCE QUOTE * HEADER CSV
 #+END_SRC
 

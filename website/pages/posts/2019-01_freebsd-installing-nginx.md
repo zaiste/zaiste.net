@@ -200,7 +200,7 @@ vi /usr/local/etc/nginx/servers/domain.com.conf
 
 Put the following content in this newly created server block configuration:
 
-```conf
+```nginx
 server {
     access_log /var/log/nginx/domain.com.access.log;
     error_log /var/log/nginx/domain.com.error.log;
