@@ -56,6 +56,14 @@
     </nav>
 
     <main class="container">
+      {% if page.breadcrumbs.length > 0 %}
+        <ul class="breadcrumbs">
+          <li>●</li>
+          {% for breadcrumb in page.breadcrumbs %}
+            <li><a href="/{{ page.breadcrumbs.slice(0, loop.index).join("/") }}/">{{ breadcrumb }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
       {% block content %}{% endblock %}
     </main>
 
