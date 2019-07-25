@@ -26,6 +26,7 @@ I like programming a lot.
 + [[file:programming/pony.org][Pony]]
 + [[file:programming/elixir.org][Elixir]]
 + [[file:programming/shen.org][Shen]]
++ [[file:programming/darklang.org][Dark Lang]]
 
 ** Programming Frameworks
 
