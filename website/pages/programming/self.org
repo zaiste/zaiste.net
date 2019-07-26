@@ -1,0 +1,24 @@
+#+TITLE: Self
+
+* Self
+
+In Self, an object built to be set on a parent slot (and shared between multiple
+sub-objects) will be called either a trait or a mixin (depending on its parent
+chains, essentially).
+
+"prototype" has a completely different meaning in Self than it has in
+Javascript: a Self prototype is a mostly set-up object to copy, there is no
+semantic relation between a prototype and its "instance" afterwards.
+
+Self parent slots are no more and no less than built-in delegation. They can be
+used for inheritance (traits), they can be used for sharing implementation
+(mixins) or they can be used in the general context of composition (Go has
+echoes of this in struct embedding).
+
+NewtonScript is a descendent of Self. It introduces the concept of frames, dual
+inheritance hierarchy and the Soup object database.
+
+
+Self's JIT was very influential and was the forerunner to Java JIT research.
+
+Self had multiple code generators.

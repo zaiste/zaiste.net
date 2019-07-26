@@ -1,0 +1,33 @@
+#+TITLE: bcrypt vs scrypt vs argon2
+
+* brypt vs scrypt vs Argon2
+
+- Prefer Argon2 over scrypt
+- Prefer scrypt over bcrypt
+
+** bcrypt
+
+- it lacks memory hardness
+- there is (some) interest in attacking bcrypt using hybrid ARM / FPGA SoCs
+
+** scrypt
+
+- scrypt has memory hardness as part of its design
+- scrypt memory hardness is tied to a single scalar cost factor
+- scrypt iteration count is tied to a single scalar cost factor
+
+** Argon2
+
+- Argon2 won the PHC in 2015
+- Argon2 is built around AES cipher and most modern x86_64 and ARMv8 processors
+  implement an AES instruction set extension
+- Argon2 is resistant to ranking tradeoff attacks
+- Argon2 allows to parametrize the memory hardness, the CPU hardness and a
+  parallelism factor
+- Argon2 has three different implementations: Argon2d, Argon2i and Argon2id
+- Argon2d is computationally expensive and resistant to acceleration by GPUs,
+  FPGAs, and ASICs with limited memory bandwidth
+- Argon2i selects memory addresses independently of the password. This reduces
+  its resistance to GPU cracking, but eliminates the side-channel attack.
+- Argon2id is a hybrid approach: the 1st pass uses the Argon2i and subsequent
+  passes use the Argon2d

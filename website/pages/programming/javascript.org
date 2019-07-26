@@ -9,6 +9,29 @@ It has many awkward edge cases and clunky idioms.
 
 My [[file:javascript/snippets.org][JavaScript Snippets]].
 
+** Prototypes
+
+Prototypes in JavaScript correspond to trait in [[file:self.org][Self]].
+
+The last 10 years have seen an influx of users who didn't bother to learn the
+older feature of JavaScript and pushed for features from Java and other
+languages, such as class-based inheritance)
+
+JavaScript is now a language with both systems with many inconsistencies between
+them. Thus, it isn't a good idea to use both in the same codebase. It is better
+to use the class-based features which are more common/popular today. Mixing in
+prototypical and class-based systems will result in an incoherent system.
+
+*** Rules of Prototypes in JavaScript
+
+1. Prototypes in JavaScript are objects or ~null~.
+2. Every object in JavaScript can have one and only one prototype.
+3. For a property that doesn't exist on the object, the object will delegate
+   the lookup to its prototype.
+4. When calling a function on an object, the ~this~ will be bound to that
+   object, even if the function is defined in the object's prototype.
+5. Every prototype is an object, thus this prototype can also have a prototype.
+
 ** ES6 (ES2015)
 
 ECMAScript 2015 introduced a class model.

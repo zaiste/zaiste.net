@@ -6,27 +6,44 @@ I like programming a lot.
 
 ** Programming Languages
 
-+ [[file:programming/javascript.org][JavaScript]]
+*** Mainstream
+
++ C++
++ C#
 + Java
-+ [[file:programming/clojure.org][Clojure]]
-+ [[file:programming/ruby.org][Ruby]]
-+ [[file:programming/dart.org][Dart]]
-+ [[file:programming/commonlisp.org][Common Lisp]]
-+ [[file:programming/julia.org][Julia]]
-+ [[file:programming/clojurescript.org][ClojureScript]]
+- [[file:programming/javascript.org][JavaScript]] is a high-level, interpreted or just-in-time compiled programming
+  language. It has curly-bracket syntax, dynamic typing, prototype-based
+  object-orientation and first-class functions.
 + [[file:programming/python.org][Python]]
-+ [[file:programming/racket.org][Racket]]
 + [[file:programming/typescript.org][TypeScript]]
++ PHP
++ Go
+
+*** Emerging
+
++ Haskell
++ Rust
++ [[file:programming/clojure.org][Clojure]]
++ [[file:programming/clojurescript.org][ClojureScript]]
++ [[file:programming/commonlisp.org][Common Lisp]]
++ [[file:programming/dart.org][Dart]]
++ [[file:programming/elixir.org][Elixir]]
++ [[file:programming/fsharp.org][F#]]
++ [[file:programming/julia.org][Julia]]
++ [[file:programming/ruby.org][Ruby]]
+
+*** Fringe
+
++ [[file:programming/racket.org][Racket]]
++ Elm
 + [[file:programming/lisp.org][Lisp]]
 + [[file:programming/carp.org][Carp]]
 + [[file:programming/guile.org][Guile]]
 + [[file:programming/reason.org][Reason]]
-+ [[file:programming/fsharp.org][F#]]
 + [[file:programming/cloe.org][Cloe]]
 + [[file:programming/pony.org][Pony]]
-+ [[file:programming/elixir.org][Elixir]]
-+ [[file:programming/shen.org][Shen]]
 + [[file:programming/darklang.org][Dark Lang]]
++ [[file:programming/shen.org][Shen]]
 
 ** Programming Frameworks
 
