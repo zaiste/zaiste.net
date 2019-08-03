@@ -7,7 +7,13 @@ JavaScript is a programming language.
 
 It has many awkward edge cases and clunky idioms.
 
-My [[file:javascript/snippets.org][JavaScript Snippets]].
+** [[file:javascript/snippets.org][JavaScript Snippets]]
+** [[file:javascript/libraries.org][JavaScript Libraries]]
+** JavaScript HowTos
+
++ [[file:javascript/howtos/how-to-flat-array-javascript.org][How to Flat an Array in JavaScript]]
++ [[file:javascript/howtos/how-to-make-http-request-xhr.org][How to Make an HTTP Request using XMLHttpRequest (XHR)]]
++ [[file:javascript/howtos/how-to-reduce-objects.org][How to Reduce over Objects]]
 
 ** Prototypes
 
@@ -118,8 +124,3 @@ The ECMAScript modules standard uses the ~export~ and ~import~ keywords.
 *** CommonJS
 
 The CommonJS standard uses ~module.exports~ and ~require()~ function.
-** HowTos
-
-+ [[file:javascript/howtos/how-to-flat-array-javascript.org][How to Flat an Array in JavaScript]]
-+ [[file:javascript/howtos/how-to-make-http-request-xhr.org][How to Make an HTTP Request using XMLHttpRequest (XHR)]]
-+ [[file:javascript/howtos/how-to-reduce-objects.org][How to Reduce over Objects]]
