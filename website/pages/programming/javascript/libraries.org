@@ -1,0 +1,12 @@
+#+TITLE: JavaScript Libraries
+
+* JavaScript Libraries
+
+** Memoization
+
++ [[https://ramdajs.com/][Ramda]] A practical functional library for JavaScript programmers
++ [[https://github.com/planttheidea/moize][Moize]] The consistently-fast, complete memoization solution for JavaScript
++ [[https://github.com/planttheidea/micro-memoize][micro-memoize]] A tiny, crazy fast JavaScript memoization library for the 95%
+  use-case
++ [[https://github.com/anywhichway/nano-memoize][nano-memoize]] Faster than fast, smaller than micro ... a nano speed and size
+  memoize for single and multiple argument functions in JavaScript
