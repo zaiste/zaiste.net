@@ -13,3 +13,4 @@ Guile has *no* Global Interpreter Lock.
 Guile doesn't have a particular overhead for calling functions which
 makes it possibly as fast as C.
 
+Guile has pre-release of a new JIT with instant startup from native code caches.

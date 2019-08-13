@@ -20,3 +20,14 @@ something and suggest type hints to improve performance.
 
 Common Lisp makes binding to C libraries easy via CFFI or via things like
 [[https://github.com/rpav/cl-autowrap][cl-autowrap.]]
+
+Common Lisp can build a self-contained binary, thus easier to deploy.
+
+[[https://tapoueh.org/blog/2014/05/why-is-pgloader-so-much-faster/][pgloader]] got rewritten from Python to Common Lisp.
+
+** Python Integration
+
+It is possible to use Python libraries in Common Lisp via [[https://github.com/bendudson/py4cl][py4cl]].
+** Web Development
+
+[[http://40ants.com/weblocks/][Weblocks]] is a web framework for Common Lisp.

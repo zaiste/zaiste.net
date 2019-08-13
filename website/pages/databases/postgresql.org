@@ -67,3 +67,66 @@ This won't work:
 #+BEGIN_SRC sql
 select min(create_date), name from widget;
 #+END_SRC
+** Functions
+
+PostgreSQL allows to run pre-defined code via user-defined functions. Those
+functions can be written not only in SQL, but also in C, Python, Perl, Tcl or
+PL/pgSQL.
+
+*** SQL Functions
+
+SQL functions can accept and return base types, composite types and rows. They
+support variable numbers of arguments, default values for arguments and
+polymorphic arguments.
+
+SQL functions can return multiple rows or nothing.
+
+The function body can only contain SQL statements (no ifs/else, no variables, no
+loops).
+
+*** C Functions
+
+C functions can be built as a shared library that can be dynamically loaded.
+*** PL/pgSQL Functions
+
+[[https://www.postgresql.org/docs/current/plpgsql.html][PL/pgSQL]] is a full-fledged programming language with variables, expressions and
+control statements. In particular, it includes features like cursors to work
+with SQL data.
+*** Python Functions
+
+#+begin_src bash
+sudo apt install postgresql-plpython-11
+#+end_src
+
+#+begin_src sql
+CREATE EXTENSION plpythonu;
+
+#+end_src
+*** Aggregate Functions
+
+[[https://www.postgresql.org/docs/current/functions-aggregate.html][Aggregate functions]] operate over a set of values, and return a single result.
+
+User-defined aggregate function:
+
+#+begin_src sql
+CREATE OR REPLACE FUNCTION _final_median(NUMERIC[])
+   RETURNS NUMERIC AS
+$$
+   SELECT AVG(val)
+   FROM (
+     SELECT val
+     FROM unnest($1) val
+     ORDER BY 1
+     LIMIT  2 - MOD(array_upper($1, 1), 2)
+     OFFSET CEIL(array_upper($1, 1) / 2.0) - 1
+   ) sub;
+$$
+LANGUAGE 'sql' IMMUTABLE;
+
+CREATE AGGREGATE median(NUMERIC) (
+  SFUNC=array_append,
+  STYPE=NUMERIC[],
+  FINALFUNC=_final_median,
+  INITCOND='{}'
+);
+#+end_src

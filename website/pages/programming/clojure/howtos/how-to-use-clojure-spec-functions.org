@@ -1,0 +1,39 @@
+#+TITLE: How To Use Clojure.Spec for Functions
+
+* How To Use Clojure.Spec for Functions
+
+#+begin_src clojure
+(defn int-to-digits
+  [number]
+  (str number))
+#+end_src
+
+Function specifications (or specs) are defined with ~s/fdef~.
+
+#+begin_src clojure
+(s/fdef int-to-digits
+  :args (s/cat :number int?))
+#+end_src
+
+The function’s argument names and the keywords in the ~:args~ spec don’t have to
+match, it’s position based.
+
+The ~instrument~ function can be now used to assert the ~:args~ spec:
+
+#+begin_src clojure
+(stest/instrument `int-to-digits)
+#+end_src
+
+The ~:ret~ spec can be used to provide a specification for the return value:
+
+#+begin_src clojure
+(s/fdef number-to-digits
+  :args (s/cat :number int?)
+  :ret (s/coll-of char? :kind set? :min-count 1))
+#+end_src
+
+The ~:ret~ spec can be checked with the ~check~ function.
+
+#+begin_src clojure
+(stest/check `number-to-digits)
+#+end_src
