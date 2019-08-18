@@ -1,0 +1,264 @@
+#+TITLE: Io Language
+
+* Io Language
+
+Io is a prototype-based programming langauge. It was created in 2002 by Steve Dekorte.
+
+Io is known for its flexibility and simple syntax.
+
+In Io everything is an object.
+
+The Io code is traversable as a data structure
+
+it's homoiconic like Lisp, but doesn't need support for macros because of the
+way messages are handled
+
+In addition to normal slots, objects have a slot called Protos, which stores a
+List (an array) containing all of the prototypes the objects inherit state and
+behaviors from. Because this is a list, Io supports multiple inheritance, and
+the "prototypal inheritance chain" is actually not a chain, but a tree.
+
+the global namespace of Io's execution environment is the Lobby object, which
+has Object in its prototype chain. The Lobby is the default target for messages
+when none are explicitly specified
+
+** Install Io Language
+
+#+begin_src bash
+brew install io
+#+end_src
+
+** Getting Started with Io Language
+
+#+begin_src bash
+io
+Io> "Hello World" println
+#+end_src
+
+** Objects in Io Language
+
+Io objects are made of slots and prototypes. Slots are stored in a hash table
+and represent both the data and the methods of the object. Prototypes are stored
+in a list and are the ancestors of the object
+
+When an object is cloned, a new object is created with an empty slots hash table
+and a prototypes list containing only the target of the clone message. The clone
+only stores the difference with its original - *differential inheritance*.
+
+In Io is there just one interface (send a message). If the slot identified by
+the message send is activatable (a method), then it is activated, otherwise it
+is just returned.
+
+** Messages in Io Language
+
+when a message is sent to an object, its name is used to query the slots hash
+table of the object. If no slot is found, the operation is repeated for each
+prototype in the prototypes list. When a matching slot is found, it is
+activated. If no slot is found, the forward slot is activated. If no forward
+slot is found, then you get an error.
+
+** Prototypes in Io Language
+
+Io doesn't have classes. It uses prototypes instead. Prototypes are objects that
+can be cloned to create new objects.
+
+~Object~ is the parent of all prototypes.
+
+#+begin_src bash
+Person := Object clone
+Person name := "Zaiste"
+#+end_src
+
+Objects in Io consists of slots which are key-value pairs of data. Slots can be
+access with ~slotNames~.
+
+#+begin_src bash
+Io> Person slotNames
+==> list(type, name)
+#+end_src
+
+Create instances
+
+#+begin_src bash
+Io> bunia := Person clone
+Io> bunia name
+==> "Zaiste"
+Io> bunia slotNames
+==> list()
+#+end_src
+
+If a slot is not found on the object, it looks for the slot in the parent
+object, and keeps checking until it gets to Object.
+
+The ~:=~ operator is used to set a new slot, whereas the ~=~ operator updates an
+existing slot. Both operators are actually methods on Object. ~:=~ is parsed as
+~setSlot~ and ~=~ is parsed as ~updateSlot~.
+
+Use upper-case names for prototypes acting as classes and lower-case names for
+prototypes acting as instances.
+
+Object is a slot in the ~Protos~ slot of ~Lobby~. ~Object~ is both a slot of a
+slot in the ~Lobby~ and an ancestor of ~Lobby~.
+
+** Methods in Io Language
+
+When invoked, a method creates a locals object, which is used to store all local
+variables. locals has the target of the method as the proto and the value of the
+self slot.
+
+A method without arguments:
+
+#+begin_src bash
+Person hello := method(
+  "My name is #{name}" interpolate println
+)
+#+end_src
+
+A method with arguments
+
+#+begin_src bash
+Person calculate := method(arg1, arg2, ...body...)
+#+end_src
+** Lists in Io Language
+
+#+begin_src bash
+numbers := list(4, 7, 1, 3, 2, 5, 9, 6, 8)
+numbers sort
+numbers sum
+numbers average
+numbers map(* 10)
+numbers select(x, x % 2 == 0)
+#+end_src
+** Control Flow in Io Language
+
+#+begin_src bash
+if(2 > 4, "true case", "false case")
+#+end_src
+
+#+begin_src bash
+for(idx, 1, 10, idx println)
+#+end_src
+
+#+begin_src bash
+idx := 1
+while(idx <= 10,
+  idx println
+  idx = idx + 1
+)
+#+end_src
+** Dynamism in Io Language
+
+Define your own control structure:
+
+#+begin_src bash
+Object unless := method(cond, then, else, if(cond, else, then))
+#+end_src
+
+Arguments ~cond~, ~then~ and ~else~ are eagerly evaluated. Here is a lazy
+alternative:
+
+#+begin_src bash
+Object unless := method(if(call eval argAt(0) not, call eval argAt(1), call eval argAt(2)))
+#+end_src
+
+Io allows add and remove parents to an object, at runtime, using ~appendProto~,
+~prependProto~ and ~removeProto~.
+** Init in Io Language
+
+If the ~init~ slot is defined, it gets triggered just after the ~clone~ message:
+
+
+Movie := Object clone
+Movie init := method(self cast := List clone)
+
+~self~ is required, otherwise the ~cast~ slot will be local to the method.
+
+#+begin_src bash
+Person := Object clone do(
+  name ::= nil
+
+  greeting := method(
+    "Hello I'm " .. name
+  )
+)
+
+zaiste := Person clone setName("Zaiste") greeting
+
+dummy := Person clone
+dummy greeting := "Yo"
+dummy greeting
+#+end_src
+** Blocks in Io Language
+
+#+begin_src bash
+Io> plus := block(a, b, a + b)
+==> method(a, b, a + b)
+
+Io> plus call(3, 5)
+==> 8
+#+end_src
+
+#+begin_src bash
+Io> plus argumentNames
+==> list("a", "b")
+
+Io> plus code
+==> block(a, b, a +(b))
+
+Io> plus message name
+==> a
+
+Io> plus message next
+==> +(b)
+
+Io> plus message next name
+==> +
+#+end_src
+
+#+begin_src bash
+Io> plus message next setName("-")
+==> -(b)
+
+Io> plus
+==> method(a, b, a - b)
+
+Io> plus call(2, 3)
+==> -1
+#+end_src
+** Serialization in Io Language
+
+Many methods in Io respond to the ~serialized~ method which returns a string
+representation of the receiver of that message,
+** Ruby-like Syntax in Io Language
+
+#+begin_src bash
+def := Object clone
+def forward := method(
+  method_name := call message name
+  call message setName("method")
+  call sender setSlot(method_name, resend)
+)
+class := Object clone
+class forward := method(
+  new_class := Object clone
+  call sender setSlot(call message name, new_class)
+  call message argsEvaluatedIn(new_class) first
+)
+
+class Person(
+  def name(a,
+    "My name is #{a}..." interpolate print
+  )
+)
+
+# Reopen
+Person do(
+  newSlot("age", 12)
+
+  def doSquad(...)
+)
+#+end_src
+** Concurrency in Io Language (Actors + Coroutines)
+
+Prefixing a message with @ returns a future. Prefixing a message with @@
+dispatches the message to execute on a separate thread.
