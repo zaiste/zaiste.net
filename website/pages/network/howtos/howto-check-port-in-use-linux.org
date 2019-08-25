@@ -1,0 +1,36 @@
+#+TITLE: howto-check-port-in-use-linux
+
+* How to Check If a Port is In Use on Linux
+
+** Method 1: Use ~lsof~
+
+#+begin_src bash
+sudo lsof -i -P -n
+sudo lsof -i -P -n | grep LISTEN
+#+end_src
+
+#+begin_src bash
+sudo lsof -i:<portnumber>
+#+end_src
+
+** Method 2: Use ~netstat~
+
+#+begin_src bash
+netstat -tulpn | grep LISTEN
+#+end_src
+
+#+begin_src bash
+sudo ss -tulw
+sudo ss -tulwn
+#+end_src
+
++ ~-t~ - show TCP sockets
++ ~-u~ - show UDP sockets
++ ~-l~ - show listening sockets
++ ~-p~ : show process name that opened sockets
++ ~-n~ : do not use DNS
+** Method 3: Use ~nmap~
+
+#+begin_src bash
+sudo nmap -sTU -O
+#+end_src

@@ -1,0 +1,40 @@
+#+TITLE: howto-move-var-to-another-partition
+
+* How to Move /var to Another Partition
+
+** Method 1: By Modifying the fstab
+
+1. Switch to single user mode.
+2. Make sure any process writing to ~/var~ is stoped using ~lsof | grep /var~.
+3. Create a directory on another partition
+   #+begin_src bash
+mkdir -p /home/var
+   #+end_src
+4. Move the ~/var~ content to ~/home/var~
+   #+begin_src bash
+rsync -va /var /home/var
+   #+end_src
+5. Backup the ~/var~ content under ~/var.old~
+   #+begin_src bash
+mv /var /var.old
+   #+end_src
+6. Create an empty ~/var~ directory
+   #+begin_src bash
+mkdir /var
+   #+end_src
+7. Bind the new directory with ~/home/var~ using ~mount~
+   #+begin_src bash
+mount -o bind /home/var /var
+   #+end_src
+8. Update the ~/etc/fstab~
+   #+begin_src bash
+ /home/var /var        none    bind
+   #+end_src
+** Method 2: Using Symbolic Links
+
+#+begin_src bash
+mkdir /home/var
+mv /var/* /home/var
+mv /var /var.old
+ln -s /home/var /var
+#+end_src

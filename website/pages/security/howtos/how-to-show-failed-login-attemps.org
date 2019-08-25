@@ -1,0 +1,7 @@
+#+TITLE: How to Show Failed Login Attemps
+
+* How to Show Failed Login Attemps
+
+#+begin_src bash
+lastb -a | awk '{print $10}' | grep -v ^192 | sort | uniq | sed '/^$/d'
+#+end_src

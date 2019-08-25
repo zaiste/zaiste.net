@@ -1,0 +1,19 @@
+#+TITLE: howto-clear-journalctl-logs
+
+* How to Clear journalctl Logs
+
+** Clear the logs by time
+
+Keep only the logs from the last 2 days:
+
+#+begin_src
+journalctl --vacuum-time=2d
+#+end_src
+
+** Clear the logs by size
+
+Keep only the logs under ~100MB~:
+
+#+begin_src bash
+journalctl --vacuum-size=100M
+#+end_src

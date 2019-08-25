@@ -1,0 +1,15 @@
+#+TITLE: howto-test-network-connectivity
+
+* How to Test Network Connectivity
+
+** Test TCP Connectivity
+
+#+begin_src bash
+nc -z -v <hostname/ip> <port>
+#+end_src
+
+** Test UDP Connectivity
+
+#+begin_src bash
+nc -z -v -u <hostname/ip> <port>
+#+end_src
