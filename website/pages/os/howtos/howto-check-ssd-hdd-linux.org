@@ -1,4 +1,4 @@
-#+TITLE: howto-check-ssd-hdd-linux
+#+TITLE: How To Check if a Disk is an SSD or an HDD on Linux
 
 * How To Check if a Disk is an SSD or an HDD on Linux
 
