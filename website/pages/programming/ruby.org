@@ -38,6 +38,10 @@ https://techandfi.com/how-to-create-a-ruby-gem/
 https://quickleft.com/blog/wrapping-your-api-in-a-custom-ruby-gem/
 https://bundler.io/v1.13/guides/creating_gem
 ** Howtos
+
++ [[file:ruby/howtos/howto-convert-array-of-hashes-hash-ruby.org][How to Convert an Array of Hashes into a Hash]]
++ [[file:ruby/howtos/howto-upgrade-rubygems.org][How to Upgrade Rubygems]]
+
 *** How To Chain Method Invocation
 
 #+BEGIN_SRC ruby
