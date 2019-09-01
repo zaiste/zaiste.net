@@ -107,6 +107,6 @@ brotli_types text/plain text/css application/javascript application/json image/s
 brotli_static on;
 #+END_SRC
 
-** How-Tos
+** HowTos
 
 + [[file:nginx/howtos/howto-install-nginx-ubuntu-18-04.org][How To Install Nginx on Ubuntu 18.04]]

@@ -1,5 +1,10 @@
-#+TITLE: OS Howtos
+#+TITLE: OS HowTos
 
-* OS Howtos
+* OS HowTos
 
-+ How To: [[file:howtos/howto-find-number-cpu-cores.org][Find the number of CPU cores]]
++ How To: [[file:howtos/howto-find-number-cpu-cores.org][Find the Number of CPU Cores]]
++ How To: [[file:howtos/howto-check-ssd-hdd-linux.org][Check if a Disk is an SSD or an HDD on Linux]]
++ How To: [[file:howtos/howto-clear-journalctl-logs.org][Clear journalctl Logs]]
++ How To: [[file:howtos/howto-find-files-bigger-than.org][Find Files Bigger Than X]]
++ How To: [[file:howtos/howto-get-iops-total-read-write-linux.org][Get IOPS in Linux]]
++ How To: [[file:howtos/howto-move-var-to-another-partition.org][Move /var to Another Partition]]

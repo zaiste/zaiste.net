@@ -1,0 +1,21 @@
+#+TITLE: Software
+
+* Software
+
+** Tools
+
++ [[file:software/visicalc.org][VisiCalc]] is one of the first electronic spreadsheets, created by Dan Brickling.
+
+** Frameworks
+
++ [[file:software/apache-spark.org][Apache Spark]]
+
+** Applications
+
++ [[file:software/pi-hole.org][Pi-Hole]] a Linux network-level advertisement and Internet tracker
+  blocking application which acts as a DNS sinkhole, intended for use on a
+  private network.
+
+** File Formats
+
++ [[file:software/heif.org][High Efficiency Image Format (HEIF)]]
