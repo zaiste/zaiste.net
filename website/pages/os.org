@@ -1,3 +1,13 @@
 #+TITLE: Operating System
 
 * Operating System
+
+** Operating Systems
+
++ [[file:os/mirageos.org][MirageOS]]
+
+** Shells
+
++ [[file:os/bash.org][Bash]]
+
+** [[file:os/howtos.org][Operating System Related HowTos]]
