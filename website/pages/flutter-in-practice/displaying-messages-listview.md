@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Displaying Messages with ListView - Flutter in Practice Video Tutorial"
 number: "04"
+video_id: TEIhOnlMudM
 tags:
 - flutter 
 - tutorial

@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Stateless & Stateful Widgets - Flutter in Practice Video Tutorial"
 number: "03"
+video_id: pFsIjiGsfqQ
 tags:
 - flutter 
 - tutorial

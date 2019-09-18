@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Types & JSON Serialization - Flutter in Practice Video Tutorial"
 number: "06"
+video_id: rniuCsmxCsI
 tags:
 - flutter 
 - tutorial

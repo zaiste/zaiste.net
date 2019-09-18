@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Development Setup - Flutter in Practice Video Tutorial"
 number: "01"
+video_id: G5vxhjzYO-Q
 tags:
 - flutter 
 - tutorial

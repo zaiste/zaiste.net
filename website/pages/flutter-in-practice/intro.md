@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Intro - Flutter in Practice Video Tutorial"
 number: "00"
+video_id: MbUey9oquuU
 tags:
 - flutter 
 - tutorial

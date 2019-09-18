@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "First Flutter Application - Flutter in Practice Video Tutorial"
 number: "02"
+video_id: b86t20jr_wU
 tags:
 - flutter 
 - tutorial

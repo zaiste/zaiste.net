@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Accessing Assets - Flutter in Practice Video Tutorial"
 number: "05"
+video_id: pZfOQ95uab4
 tags:
 - flutter 
 - tutorial

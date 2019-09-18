@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Async / Await & FutureBuilder - Flutter in Practice Video Tutorial"
 number: "09"
+video_id: _60WdOoezmc
 tags:
 - flutter 
 - tutorial

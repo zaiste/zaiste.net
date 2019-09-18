@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "Automatic JSON Serialization - Flutter in Practice Video Tutorial"
 number: "07"
+video_id: NkUtwePWhZo
 tags:
 - flutter 
 - tutorial

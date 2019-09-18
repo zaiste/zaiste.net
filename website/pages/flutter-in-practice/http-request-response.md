@@ -4,6 +4,7 @@ kind: article
 publish: true
 title: "HTTP Request & Response - Flutter in Practice Video Tutorial" 
 number: "08"
+video_id: WsgsP-AKxFo
 tags:
 - flutter 
 - tutorial
