@@ -1,0 +1,20 @@
+#+title: How To Make A Button Full Width in Flutter
+
+* How To Make A Button Full Width in Flutter
+
+Use the ~SizedBox~ widget, which enforces the child to match its parent size:
+
+#+begin_src dart
+SizedBox.expand(
+  child: new RaisedButton(...),
+)
+#+end_src
+
+Using the ~width~ or ~height~ it only limits the streching in particular axis:
+
+#+begin_src dart
+SizedBox(
+  width: double.infinity,
+  child: RaisedButton(...),
+)
+#+end_src

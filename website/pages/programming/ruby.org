@@ -1,7 +1,6 @@
 #+TITLE: Ruby
 #+ABSTRACT: Ruby is an interpreted, high-level programming language.
 
-
 * Ruby
 
 ** Oneliners

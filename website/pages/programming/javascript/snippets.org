@@ -162,3 +162,8 @@ const callback2Promise = (callback, ...args) => {
   });
 }
 #+END_SRC
+*** Delay: Promise-based Alternative to ~setTimeout~
+
+#+begin_src js
+const delay = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+#+end_src
