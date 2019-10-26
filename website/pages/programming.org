@@ -12,6 +12,8 @@ I like programming a lot.
 + Rails
 + [[file:programming/flutter.org][Flutter]]
 + Huncwot
++ [[file:programming/nodejs.org][Node.js]]
++ [[file:programming/vuejs.org][Vue.js]]
 
 ** UI libraries
 

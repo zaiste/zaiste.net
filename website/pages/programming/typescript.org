@@ -26,3 +26,8 @@ things themselves.
 ** Configuration
 
 + ~allowSyntheticDefaultImports~ allows to use modules which don't define default exports
+** How-Tos
+
+** Notes
+
+*** [[file:typescript/built-in-type-declarations-lib-compiler-option.org][TypeScript's Built-In Type Declarations with the ~--lib~ Compiler Option]]

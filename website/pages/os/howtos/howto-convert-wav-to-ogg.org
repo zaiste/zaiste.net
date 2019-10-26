@@ -1,0 +1,17 @@
+
+
+* How To Convert WAV to OGG
+
+Install ~vorbis-tools~
+
+#+begin_src bash
+sudo apt install vorbis-tools
+#+end_src
+
+And encode using ~oggenc~
+
+#+begin_src bash
+oggenc -q 2 *.wav
+#+end_src
+
++ ~--downmix~ downmix input from stereo to mono

@@ -18,6 +18,11 @@ Processes run as separate memory allocations.
 Internal, async operations (e.e. I/O) are multi-threaded while user application
 runs in a single thread.
 
+** HowTos
+
+*** [[file:nodejs/howtos/howto-shutdown-nodejs-server.org][How To Shutdown a Node.js Server]]
+*** [[file:nodejs/howtos/howto-restart-nodejs-server.org][How To Restart a Node.js Server]]
+
 ** Event Emitter
 
 ~EventEmitter~ is a module that allows communication between objects. It can be
