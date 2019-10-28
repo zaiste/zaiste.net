@@ -1,4 +1,4 @@
-#+title: How To Style Texts using the ~Text~ widget in Flutter
+#+title: How To Style Texts using the Text Widget in Flutter
 
 * How To Style Texts using the ~Text~ widget in Flutter
 

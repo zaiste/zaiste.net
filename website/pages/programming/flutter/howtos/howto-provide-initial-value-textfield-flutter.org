@@ -1,0 +1,27 @@
+#+title: How To Provide An Initial Value To A TextField Widget in Flutter
+
+* How To Provide An Initial Value To A TextField Widget in Flutter
+
+** When Using ~TextEditingController~
+
+If you use ~TextEditingController~, set its ~text~ field to the desired value:
+
+#+begin_src dart
+TextEditingController myController = TextEditingController()..text = 'Your initial value';
+
+TextField(
+  controller: myController
+  ...
+)
+#+end_src
+
+** When Not Using ~TextEditingController~
+
+If you are not using the ~TextEditingContller~, use the ~initialValue~ field
+directly from the ~TextField~ widget:
+
+#+begin_src dart
+TextFormField(
+  initialValue: "I am smart"
+)
+#+end_src

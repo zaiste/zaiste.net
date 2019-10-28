@@ -1,0 +1,79 @@
+
+* TypeScript as Bundler instead of Webpack or Browserify
+
+TypeScript supports bundling for AMD and System.js module formats.
+
+In order to create a bundle you need to specify the ~outFile~ compiler option:
+
+#+begin_src json
+{
+  "compilerOptions": {
+    "module": "system",
+    "outFile": "dist/bundle.js"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
+#+end_src
+
+or the ~--outfile~ command-line parameter:
+
+#+begin_src js
+tsc --outfile ./dist/bundle.js --module system ./src/index.ts
+#+end_src
+
+** Using System.js
+
+System.js provides a minimal (1.5kb) loader for loading modules. The
+~System.import~ call to load the entry point; by default this corresponds to the
+file names. 
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Typescript as Bundler with System.js</title>
+</head>
+<body>
+  <script src="https://unpkg.com/systemjs@6.1.4/dist/s.min.js"></script>
+  <script src="https://unpkg.com/systemjs@6.1.4/dist/extras/named-register.min.js"></script>
+  <script src="bundle.js"></script>
+  <script>
+    System.import('index');
+  </script>
+</body>
+</html>
+#+end_src
+** Using AMD
+
+In order to generate an AMD module in TypeScript, simply set the ~module~
+compiler option to ~amd~
+
+#+begin_src json
+
+#+end_src
+
+or, use the ~--module~ command-line parameter:
+
+#+begin_src bash
+tsc --outfile ./dist/bundle.js --module amd ./src/index.ts
+#+end_src
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Typescript as Bundler with AMD</title>
+</head>
+<body>
+  <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+  <script src="bundle.js"></script>
+  <script>
+    require('index');
+  </script>
+</body>
+
+#+end_src

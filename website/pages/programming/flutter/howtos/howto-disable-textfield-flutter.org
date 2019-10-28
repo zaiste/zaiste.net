@@ -1,0 +1,26 @@
+#+title: How To Disable A TextField in Flutter
+
+* How To Disable A ~TextField~ in Flutter
+
+Use the ~enabled:~ property of the ~TextField~ widget by setting it to ~false~:
+
+#+begin_src dart
+TextField(
+  enabled: false,
+  ...
+)
+#+end_src
+
+This field won't respond to ~onTap~ events - it is similar to a disabled field
+in HTML.
+
+Use ~focusNode~ and ~enableInteractiveSelection~ to make a TextField in Flutter
+readonly so that it can respond to the ~onTap~ events:
+
+#+begin_src dart
+TextField(
+  focusNode: FocusNode(),
+  enableInteractiveSelection: false,
+  ...
+)
+#+end_src

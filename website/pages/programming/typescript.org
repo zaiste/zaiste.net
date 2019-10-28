@@ -17,6 +17,18 @@ challenge.
 
 TypeScript can parse JSDoc comments into type annotations.
 
+TypeScript generates a corresponding .js file for every .ts file.
+
+By default TypeScript generates ES3 JavaScript which should run in any browser.
+
+TypeScript transpiles ES modules into the CommonJS format. Browsers cannot load
+the CommonJS modules, so a solution is to run the code through another tool,
+called a bundler. TypeScript compiler can bundle the code too, so there is no
+need for a bundler such as Webpack or Browserify.
+
+TypeScript supporting bundling for only two of the five module formats, AMD and
+System. To create a bundle you specify the outFile parameter.
+
 ** Structural Types
 
 TypeScript has structural types, in contrast with Java (which has nominal
