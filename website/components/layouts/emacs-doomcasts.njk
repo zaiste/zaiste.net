@@ -1,0 +1,33 @@
+{% extends "layouts/index.njk" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <article class="content is-large">
+      <strong class="series">Doomcasts: Emacs Doom Screencasts</strong>
+      <h1 class="title">{{ page.title }}</h1>
+
+      <div class="subtitle meta">
+        <small>{{ page.created_at | date }} ·</small>
+        <div class="tags">
+          {% for tag in page.tags %}
+          <a class="badge badge-pill badge-light" href="/tags/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if page.image %}
+      <img class="img-fluid" src="/images/{{ page.image }}" alt="">
+      {% endif %}
+
+      <iframe width="1120" height="620" src="https://www.youtube.com/embed/{{ page.video_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      {{ content | safe }}
+    </article>
+  </div>
+  <div class="col-md-4">
+    <aside class="menu">
+      <img src="/images/doomcasts/emacs-doom-tutorial-{{ page.number }}.png" class="img-fluid img-thumbnail" alt="Responsive image">
+    </aside>
+  </div>
+</div>
+{% endblock %}

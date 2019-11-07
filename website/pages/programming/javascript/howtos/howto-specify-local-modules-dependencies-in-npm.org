@@ -1,0 +1,19 @@
+
+* How To Specify Local Modules As Dependencies in NPM
+
+Use the ~file:~ in ~package.json~ directive to specify a local module as a dependency:
+
+#+begin_src json
+{
+  "name": "mypackage",
+  "dependencies": {
+    "mylib": "file:../path/to/mylib"
+  }
+}
+#+end_src
+
+You can also use:
+
+#+begin_src bash
+npm i --save ../path/to/mylib
+#+end_src

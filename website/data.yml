@@ -157,6 +157,67 @@ videos:
     - number: '34'
       title: RxDart Map, Async Map, Switch Map
       slug: e34-rxdart-map-asyncmap-switchmap
+  doomcasts:
+    - number: '01'
+      title: Getting Started
+      slug: emacs-doom-01-getting-started
+    - number: '02'
+      title: Projectile, Treemacs & EShell
+      slug: emacs-doom-02-projectile-treemacs-eshell
+    - number: '03'
+      title: A short intro to Dired
+      slug: emacs-doom-03-dired
+    - number: '04'
+      title: Buffers, Windows and Basic Navigation
+      slug: emacs-doom-04-buffers-windows-navigation
+    - number: '05'
+      title: Installing Packages, Basics
+      slug: emacs-doom-05-installing-packages
+    - number: '06'
+      title: Quick, horizontal movement with evil-snipe
+      slug: emacs-doom-06-evil-snipe
+    - number: '07'
+      title: Moving around the screen with Aye
+      slug: emacs-doom-07-aye
+    - number: '08'
+      title: evil-multiedit
+      slug: emacs-doom-08-evil-multiedit
+    - number: '09'
+      title: Org Mode, Basic Outlines
+      slug: emacs-doom-09-org-mode-basic-outlines
+    - number: '10'
+      title: Org Mode, Links, Hyperlinks, Anchors
+      slug: emacs-doom-10-org-mode-links-hyperlinks-anchors
+    - number: '11'
+      title: Org Mode, Custom Link Types
+      slug: emacs-doom-11-org-mode-custom-link-types
+    - number: '12'
+      title: Org Mode, Linking to Words & Storing Links
+      slug: emacs-doom-12-org-mode-linking-words-storing-links
+    - number: '13'
+      title: Org Mode, Code Snippets 101
+      slug: emacs-doom-13-org-mode-code-snippets
+    - number: '14'
+      title: Org Mode, Simple Task Management
+      slug: emacs-doom-14-org-mode-task-management
+    - number: '15'
+      title: Org Mode, Task Priorities
+      slug: emacs-doom-15-org-mode-task-priorities
+    - number: '16'
+      title: Org Mode, Using Tags for Tasks
+      slug: emacs-doom-16-org-mode-tags-tasks
+    - number: '17'
+      title: Org Mode, Checklists
+      slug: emacs-doom-17-org-mode-checklists
+    - number: '18'
+      title: Emacs Magit, Getting Started Tutorial
+      slug: emacs-doom-18-magit-getting-started
+    - number: '19'
+      title: Emacs Magit, The Git Commit Flow in More Detail
+      slug: emacs-doom-19-magit-git-commit-flow
+    - number: '20'
+      title: Emacs Magit, Using Forge for Issuing Pull Requests from Emacs
+      slug: emacs-doom-20-magit-forge-pull-requests
 
 eventil:
   __http:

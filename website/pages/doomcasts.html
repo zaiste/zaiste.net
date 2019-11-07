@@ -1,9 +1,13 @@
+---
+title: Doomcasts - Emacs Doom Video Tutorials
+description: Doomcasts is a series of video tutorials about Emacs Doom, an Emacs configuration oriented towards Vim people.
+---
 {% extends "layouts/index.njk" %}
 {% block content %}
 
 <div class="row">
   <article class="col-md-12">
-    <h1>Doomcasts</h1>
+    <h1>Doomcasts: Emacs Doom Screencasts</h1>
 
     {% markdown %}
     A screencast series about [Doom](https://github.com/hlissner/doom-emacs), an Emacs configuration for the Stubborn Martian Vimmer.
@@ -12,17 +16,19 @@
     <hr/>
 
     <div class="row">
-      <div class="col-lg-4 col-md-12 mb-4">
-        <div class="card" style="width: 18rem;">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rCMh7srOqvw?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white" allowfullscreen></iframe>
+      {% for video in website.videos.doomcasts %}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="/emacs-doomcasts/{{ video.slug }}/">
+          <div class="card" style="width: 100%;">
+            <img src="/images/doomcasts/emacs-doom-tutorial-{{ video.number }}.png" class="card-img-top img-fluid" alt="Emacs Doom Video Tutorial {{ video.number }}">
+            <div class="card-body">
+              <small>Episode {{ video.number }}</small>
+              <h5 class="card-title">{{ video.title }}</h5>
+            </div>
           </div>
-          <div class="card-body">
-            <small>Episode 1</small>
-            <h5 class="card-title">Getting Started</h5>
-          </div>
-        </div>
+        </a>
       </div>
+      {% endfor %}
     </div>
   </article>
 </div>
