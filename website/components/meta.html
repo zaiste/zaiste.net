@@ -13,7 +13,7 @@
 {%- if page.image %}
 <meta property="og:image" content="https://zaiste.net/images/{{ page.image }}" />
 {%- else %}
-<meta property="og:image" content="https://zaiste-image.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ page.tags or [] | logo | safe }}" />
+<meta property="og:image" content="https://zaiste-image.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ (page.tags or []) | logo | safe }}" />
 {%- endif %}
 <meta property="og:image:type" content="{{ website.facebook.image.type }}" />
 <meta property="og:image:width" content="{{ website.facebook.image.width }}" />
