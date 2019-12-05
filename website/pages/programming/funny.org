@@ -1,4 +1,4 @@
-#+TITLE: Funny
+#+title: Funny
 
 * Jokes & Funny Programming Things
 

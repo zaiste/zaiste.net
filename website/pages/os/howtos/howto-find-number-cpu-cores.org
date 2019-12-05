@@ -1,4 +1,4 @@
-#+TITLE: How To: Find the Number of CPU cores
+#+title: How To: Find the Number of CPU cores
 
 * How To: Find the Number of CPU cores
 

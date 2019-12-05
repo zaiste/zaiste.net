@@ -1,4 +1,4 @@
-#+TITLE: Transducers
+#+title: Transducers
 
 * Transducers
 

@@ -1,4 +1,4 @@
-#+TITLE: MTR
+#+title: MTR
 #+ABSTRACT: MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool
 
 * MTR

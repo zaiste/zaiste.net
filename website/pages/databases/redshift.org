@@ -1,4 +1,4 @@
-#+TITLE: Amazon Redshift
+#+title: Amazon Redshift
 
 * Amazon Redshift
 

@@ -1,4 +1,4 @@
-#+TITLE: howto-move-var-to-another-partition
+#+title: howto-move-var-to-another-partition
 
 * How to Move /var to Another Partition
 

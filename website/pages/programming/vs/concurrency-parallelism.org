@@ -1,4 +1,4 @@
-#+TITLE: Concurrency vs Parallelism
+#+title: Concurrency vs Parallelism
 #+ABSTRACT: Concurrency vs Parallelism
 
 * Concurrency vs Parallelism

@@ -1,4 +1,4 @@
-#+TITLE: What is OpenJ9
+#+title: What is OpenJ9
 #+abstract: OpenJ9 is a Java Virtual Machine (JVM) implementation from Eclipse.
 
 

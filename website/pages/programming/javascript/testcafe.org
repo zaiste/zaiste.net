@@ -1,4 +1,4 @@
-#+TITLE: TestCafe
+#+title: TestCafe
 
 * TestCafe (End-to-End Testing)
 

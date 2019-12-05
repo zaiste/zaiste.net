@@ -1,4 +1,4 @@
-#+TITLE: Shen
+#+title: Shen
 
 * Shen
 

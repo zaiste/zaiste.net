@@ -1,4 +1,4 @@
-#+TITLE: Pony
+#+title: Pony
 #+ABSTRACT: Pony is ahead-of-time compiled, actor-model, object-oriented, high-performance programming language.
 
 * Pony

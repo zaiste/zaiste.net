@@ -1,4 +1,4 @@
-#+TITLE: TypeScript
+#+title: TypeScript
 #+ABSTRACT: TypeScript is a superset of JavaScript. It provides optional types annotations.
 
 * TypeScript

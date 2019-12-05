@@ -1,4 +1,4 @@
-#+TITLE: Network HowTos
+#+title: Network HowTos
 #+ABSTRACT: Network related HowTo guides
 
 * Network HowTos

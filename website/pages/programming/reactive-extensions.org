@@ -1,4 +1,4 @@
-#+TITLE: Reactive Extensions
+#+title: Reactive Extensions
 
 * Reactive Extensions
 

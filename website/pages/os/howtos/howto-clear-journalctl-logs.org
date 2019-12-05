@@ -1,4 +1,4 @@
-#+TITLE: howto-clear-journalctl-logs
+#+title: howto-clear-journalctl-logs
 
 * How to Clear journalctl Logs
 

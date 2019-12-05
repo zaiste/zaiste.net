@@ -1,4 +1,4 @@
-#+TITLE: Performance
+#+title: Performance
 #+ABSTRACT: Computing Related Performance
 
 * Performance

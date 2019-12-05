@@ -1,4 +1,4 @@
-#+TITLE: Racket
+#+title: Racket
 #+ABSTRACT: Racket is a multi-paradigm programming language based on the Scheme dialect of Lisp.
 
 * Racket

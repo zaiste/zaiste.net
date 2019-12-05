@@ -1,4 +1,4 @@
-#+TITLE: GitHub
+#+title: GitHub
 
 * GitHub
 

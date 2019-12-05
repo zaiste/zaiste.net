@@ -1,4 +1,4 @@
-#+TITLE: Lisp
+#+title: Lisp
 #+ABSTRACT: Lisp is a family of computer programming languages with a distinctive, fully parenthesized prefix notation.
 
 * Lisp

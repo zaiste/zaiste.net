@@ -1,4 +1,4 @@
-#+TITLE: JavaScript Promise
+#+title: JavaScript Promise
 
 * JavaScript Promise
 

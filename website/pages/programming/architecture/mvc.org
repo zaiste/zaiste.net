@@ -1,4 +1,4 @@
-#+TITLE: Model-View-Controller
+#+title: Model-View-Controller
 #+abstract: Model-View-Controller is an architectural pattern for developing user interfaces.
 
 * Model-View-Controller

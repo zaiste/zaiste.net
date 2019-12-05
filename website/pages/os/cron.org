@@ -1,4 +1,4 @@
-#+TITLE: cron
+#+title: cron
 #+ABSTRACT: cron is a daemon that executes scheduled commands
 
 * Cron

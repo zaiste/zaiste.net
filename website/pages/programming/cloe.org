@@ -1,4 +1,4 @@
-#+TITLE: Cloe
+#+title: Cloe
 #+ABSTRACT: Cloe is a Lisp-like, functional programming language.
 
 * Cloe

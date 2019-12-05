@@ -1,4 +1,4 @@
-#+TITLE: Nginx
+#+title: Nginx
 #+ABSTRACT: Nginx
 
 * Nginx
@@ -110,3 +110,4 @@ brotli_static on;
 ** HowTos
 
 + [[file:nginx/howtos/howto-install-nginx-ubuntu-18-04.org][How To Install Nginx on Ubuntu 18.04]]
++ [[file:nginx/howtos/howto-resize-on-the-fly-cache-images-nginx.org][How To Resize On The Fly and Cache Images in Nginx]]

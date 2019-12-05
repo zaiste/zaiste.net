@@ -1,4 +1,4 @@
-#+TITLE: JavaScript Snippets
+#+title: JavaScript Snippets
 #+ABSTRACT: JavaScript Snippets, Code Pieces, Oneliners
 
 * JavaScript Snippets
@@ -90,6 +90,18 @@ const fetchUser = (isPrivateData) => {
 let user = {}, userDetails = {};
 ({ name: user.name, age: user.age, ...userDetails } = rawUser);
 #+END_SRC
+*** Merge Objects
+
+#+begin_src js
+const merge = (target, source) => {
+  for (const key of Object.keys(source)) {
+    if (source[key] instanceof Object) Object.assign(source[key], merge(target[key], source[key]))
+  }
+
+  Object.assign(target || {}, source)
+  return target
+}
+#+end_src
 ** Date
 
 *** How to output an ISO 8601 formatted string in JavaScript?
@@ -166,4 +178,26 @@ const callback2Promise = (callback, ...args) => {
 
 #+begin_src js
 const delay = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+#+end_src
+** Lookup
+
+Lookup Table
+
+#+begin_src js
+const howIsBoo = state => {
+  if (state === ‘HUNGRY’) return ‘WANTS FOOD’;
+  if (state === ‘SAD’) return ‘CRYING’;
+  if (state === ‘HAPPY’) return ‘LAUGHING’
+  return ‘SLEEPING’
+}
+#+end_src
+
+#+begin_src js
+const booFeelsTable = {
+  ‘HUNGRY’: ‘WANTS FOOD’,
+  ‘SAD’: ‘CRYING’,
+  ‘HAPPY’: ‘LAUGHING’
+}
+
+const howIsBoo = state => booFeelsTable[state] || ‘SLEEPING’;
 #+end_src

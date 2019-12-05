@@ -1,4 +1,4 @@
-#+TITLE: Guile
+#+title: Guile
 #+ABSTRACT: Guile is a high-level progrmaming language from the Lisp family.
 
 * Guile

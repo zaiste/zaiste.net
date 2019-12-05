@@ -1,4 +1,4 @@
-#+TITLE: Python
+#+title: Python
 #+ABSTRACT: Python is an interpreted, high-level programming language with a distinctive use of significant whitespace.
 
 * Python

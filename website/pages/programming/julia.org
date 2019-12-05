@@ -1,4 +1,4 @@
-#+TITLE: Julia
+#+title: Julia
 #+ABSTRACT: Julia is a high-level general-purpose, dynamic programming language designed for high-performance numerical analysis and computational science.
 
 * Julia

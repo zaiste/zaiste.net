@@ -1,4 +1,4 @@
-#+TITLE: Java Kotlin
+#+title: Java Kotlin
 #+ABSTRACT: Java Kotlin
 
 * Java vs Kotlin

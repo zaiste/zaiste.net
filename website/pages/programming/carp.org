@@ -1,4 +1,4 @@
-#+TITLE: Carp
+#+title: Carp
 #+ABSTRACT: Carp is a statically typed Lisp.
 
 * Carp

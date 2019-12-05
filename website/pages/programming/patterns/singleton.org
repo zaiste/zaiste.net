@@ -1,4 +1,4 @@
-#+TITLE: Singleton Pattern
+#+title: Singleton Pattern
 
 * Singleton Pattern
 

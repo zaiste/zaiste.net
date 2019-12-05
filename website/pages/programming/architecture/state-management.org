@@ -1,4 +1,4 @@
-#+TITLE: State Management
+#+title: State Management
 
 * State Management
 

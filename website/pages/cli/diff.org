@@ -1,4 +1,4 @@
-#+TITLE: Diff
+#+title: Diff
 
 * Diff
 

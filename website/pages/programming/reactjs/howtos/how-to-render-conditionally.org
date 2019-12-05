@@ -1,4 +1,4 @@
-#+TITLE: how-to-render-conditionally
+#+title: how-to-render-conditionally
 
 * How To Render Conditionally in React.js
 

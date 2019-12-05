@@ -1,4 +1,4 @@
-#+TITLE: Virtual DOM
+#+title: Virtual DOM
 #+ABSTRACT: Virtual DOM is an in-memory, data-structure cache for DOM.
 
 Virtual DOM is ...

@@ -1,4 +1,4 @@
-#+TITLE: Vue.js
+#+title: Vue.js
 #+ABSTRACT: Vue.js
 
 * Vue.js

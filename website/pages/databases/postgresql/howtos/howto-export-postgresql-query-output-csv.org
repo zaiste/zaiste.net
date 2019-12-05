@@ -1,5 +1,6 @@
-#+TITLE: How To Export PostgreSQL Query Output as CSV
+#+title: How To Export PostgreSQL Query Output as CSV
 #+abstract: How To Export PostgreSQL Query Output as CSV
+#+tags: PostgreSQL
 
 * How To Export PostgreSQL Query Output as CSV
 

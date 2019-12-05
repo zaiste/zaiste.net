@@ -1,4 +1,4 @@
-#+TITLE: Pi Hole
+#+title: Pi Hole
 
 * Pi Hole
 

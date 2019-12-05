@@ -1,4 +1,4 @@
-#+TITLE: PostgreSQL
+#+title: PostgreSQL
 
 * PostgreSQL
 

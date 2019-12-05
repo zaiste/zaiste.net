@@ -1,4 +1,4 @@
-#+TITLE: JavaScript
+#+title: JavaScript
 #+ABSTRACT: JavaScript is a programming language created by Brendan Eich.
 
 * JavaScript

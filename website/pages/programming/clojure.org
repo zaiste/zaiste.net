@@ -1,4 +1,4 @@
-#+TITLE: Clojure
+#+title: Clojure
 #+ABSTRACT: Clojure is a functional programming language for the Java Virtual Machine.
 
 * Clojure

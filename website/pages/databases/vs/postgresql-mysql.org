@@ -1,4 +1,4 @@
-#+TITLE: PostgreSQL vs MySQL
+#+title: PostgreSQL vs MySQL
 #+ABSTRACT: PostgreSQL vs MySQL
 
 * PostgreSQL vs MySQL

@@ -1,5 +1,5 @@
-#+TITLE: Sleep
-#+ABSTRACT: Sleep for brain, Sleep Tips
+#+title: Sleep
+#+abstract: Sleep for brain, Sleep Tips
 
 * Sleep
 

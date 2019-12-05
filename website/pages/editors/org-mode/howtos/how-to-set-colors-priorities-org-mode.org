@@ -1,4 +1,4 @@
-#+TITLE: how-to-set-colors-priorities-org-mode
+#+title: how-to-set-colors-priorities-org-mode
 
 * How To Set Colors for Priorities in Org Mode
 

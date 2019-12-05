@@ -1,4 +1,4 @@
-#+TITLE: Ruby
+#+title: Ruby
 #+ABSTRACT: Ruby is an interpreted, high-level programming language.
 
 * Ruby

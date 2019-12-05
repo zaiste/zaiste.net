@@ -1,4 +1,4 @@
-#+TITLE: Languages
+#+title: Languages
 
 * Programming Languages
 ** Mainstream

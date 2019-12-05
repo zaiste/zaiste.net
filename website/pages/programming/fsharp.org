@@ -1,4 +1,4 @@
-#+TITLE: F#
+#+title: F#
 #+ABSTRACT: F# is a strongly type, multi-paradigm programming language influenced by the ML programming language.
 
 * F#

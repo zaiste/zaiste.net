@@ -1,4 +1,4 @@
-#+TITLE: Common Lisp
+#+title: Common Lisp
 #+ABSTRACT: Common Lisp is a dialect of the Lisp programming language.
 
 * Common Lisp

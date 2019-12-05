@@ -1,4 +1,4 @@
-#+TITLE: NPM
+#+title: NPM
 
 * NPM
 

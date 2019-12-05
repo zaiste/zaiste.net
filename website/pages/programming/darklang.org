@@ -1,4 +1,4 @@
-#+TITLE:  Dark Lang
+#+title:  Dark Lang
 
 * Dark Lang
 

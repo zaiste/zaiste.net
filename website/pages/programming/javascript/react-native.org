@@ -1,4 +1,4 @@
-#+TITLE: react-native
+#+title: react-native
 #+ABSTRACT: React Native is a framework for building native mobile applications using JavaScript.
 
 * React Native

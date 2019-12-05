@@ -1,4 +1,4 @@
-#+TITLE: ClojureScript
+#+title: ClojureScript
 #+ABSTRACT: ClojureScript is a version of Clojure that compiles to JavaScript.
 
 * ClojureScript

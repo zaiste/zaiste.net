@@ -1,4 +1,4 @@
-#+TITLE: howto-find-files-bigger-than
+#+title: howto-find-files-bigger-than
 
 * How To Find Files Bigger Than X
 

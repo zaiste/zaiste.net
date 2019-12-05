@@ -1,4 +1,4 @@
-#+TITLE: how-to-make-http-request-xhr
+#+title: how-to-make-http-request-xhr
 
 * How To Make an HTTP Request using XMLHttpRequest
 

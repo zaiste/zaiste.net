@@ -1,5 +1,5 @@
-#+TITLE: Onion Architecture
-#+abstract: Onion Architecture
+#+title: Onion Architecture
+#+abstract: Onion Architecture is a software application architecture that adheres to the SOLID principles.
 
 * Onion Architecture
 

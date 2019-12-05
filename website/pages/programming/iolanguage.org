@@ -1,4 +1,4 @@
-#+TITLE: Io Language
+#+title: Io Language
 
 * Io Language
 

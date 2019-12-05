@@ -1,4 +1,4 @@
-#+TITLE: Marko.js
+#+title: Marko.js
 #+ABSTRACT: Marko.js is a lightweight, fast JavaScript UI library. It was created at eBay.
 
 * Marko.js

@@ -1,4 +1,4 @@
-#+TITLE: How To Reduce over Objects
+#+title: How To Reduce over Objects
 
 
 * How To Reduce over Objects

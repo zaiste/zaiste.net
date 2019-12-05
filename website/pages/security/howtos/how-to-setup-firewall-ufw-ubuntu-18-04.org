@@ -1,4 +1,4 @@
-#+TITLE: how-to-setup-firewall-ufw-ubuntu-18-04
+#+title: How To Setup a Firewall using UFW on Ubuntu 18.04
 
 * How To Setup a Firewall using UFW on Ubuntu 18.04
 

@@ -1,4 +1,4 @@
-#+TITLE: How To Upgrade Rubygems
+#+title: How To Upgrade Rubygems
 #+abstract: How To Upgrade Rubygems
 
 * How To Upgrade Rubygems

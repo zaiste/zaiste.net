@@ -1,4 +1,4 @@
-#+TITLE: Tacit Programming
+#+title: Tacit Programming
 
 * Tacit (Point-Free Style) Programming
 

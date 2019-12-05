@@ -1,4 +1,4 @@
-#+TITLE: Declarative
+#+title: Declarative
 
 * Declarative
 

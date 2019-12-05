@@ -1,4 +1,4 @@
-#+TITLE: TTFB
+#+title: TTFB
 
 * Time To First Byte (TTFB)
 

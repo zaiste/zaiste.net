@@ -1,4 +1,4 @@
-#+TITLE: How To Setup fail2ban Ubuntu 18.04
+#+title: How To Setup fail2ban Ubuntu 18.04
 
 * How To Setup fail2ban Ubuntu 18.04
 

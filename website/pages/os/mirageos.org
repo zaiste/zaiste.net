@@ -1,4 +1,4 @@
-#+TITLE: MirageOS
+#+title: MirageOS
 
 * MirageOS
 

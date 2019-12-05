@@ -1,4 +1,4 @@
-#+TITLE: Synchronous Callback vs Asynchronous Callback
+#+title: Synchronous Callback vs Asynchronous Callback
 #+ABSTRACT: Synchronous Callback vs Asynchronous Callback
 
 * Synchronous Callback vs Asynchronous Callback

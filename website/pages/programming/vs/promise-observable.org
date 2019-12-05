@@ -1,4 +1,4 @@
-#+TITLE: Promise vs Observable
+#+title: Promise vs Observable
 #+ABSTRACT: Promise vs Observable
 
 * Promise vs Observable in JavaScript

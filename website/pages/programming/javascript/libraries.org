@@ -1,4 +1,4 @@
-#+TITLE: JavaScript Libraries
+#+title: JavaScript Libraries
 
 * JavaScript Libraries
 

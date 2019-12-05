@@ -1,4 +1,4 @@
-#+TITLE: How To Flat an Array in JavaScript
+#+title: How To Flat an Array in JavaScript
 
 * How To Flat an Array in JavaScript
 

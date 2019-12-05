@@ -1,7 +1,9 @@
-#+TITLE: How To Convert an Array of Hashes to a Hash in Ruby
+#+title: How To Convert An Array Of Hashes Into A Hash in Ruby
 #+abstract: How To Convert an Array of Hashes to a Hash in Ruby
+#+tags: Ruby
+#+tags: ClojureScript
 
-* How To Convert an Array of Hashes to a Hash in Ruby
+* How To Convert An Array Of Hashes Into A Hash in Ruby
 
 To convert:
 

@@ -2,18 +2,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <meta name="author" content="{{ website.author.name }}" />
-<meta name="description" content="{{ page.abstract or page.description or website.description }}"/>
+<meta name="description" content="{{ page.abstract or page.description or page.title or website.description }}"/>
 <meta name="theme-color" content="#475359"/>
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
-<meta property="og:description" content="{{ page.abstract or website.description }}" />
+<meta property="og:description" content="{{ page.abstract or page.title or website.description }}" />
 <meta property="og:title" content="{{ page.title or website.title }} · zaiste.net" />
 <meta property="og:site_name" content="{{ website.facebook.site_name }}" />
 {%- if page.image %}
 <meta property="og:image" content="https://zaiste.net/images/{{ page.image }}" />
 {%- else %}
-<meta property="og:image" content="{{ website.facebook.image.url }}" />
+<meta property="og:image" content="https://zaiste-image.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ page.tags or [] | logo | safe }}" />
 {%- endif %}
 <meta property="og:image:type" content="{{ website.facebook.image.type }}" />
 <meta property="og:image:width" content="{{ website.facebook.image.width }}" />
@@ -26,7 +26,7 @@
 <meta name="twitter:site" content="{{ website.twitter.site }}">
 <meta name="twitter:title" content="{{ page.title or website.title }} · zaiste.net" />
 <meta name="twitter:creator" content="{{ website.twitter.creator }}">
-<meta name="twitter:description" content="{{ page.abstract or website.description }}">
+<meta name="twitter:description" content="{{ page.abstract or page.title or website.description }}">
 {%- if page.image %}
 <meta name="twitter:image:src" content="https://zaiste.net/images/{{ page.image }}">
 {%- else %}

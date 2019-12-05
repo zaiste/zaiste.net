@@ -1,4 +1,5 @@
 #+title: How To Style Texts using the Text Widget in Flutter
+#+tags: Flutter
 
 * How To Style Texts using the ~Text~ widget in Flutter
 

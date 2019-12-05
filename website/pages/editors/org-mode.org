@@ -1,4 +1,4 @@
-#+TITLE: Org Mode
+#+title: Org Mode
 
 * Org Mode
 
