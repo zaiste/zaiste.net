@@ -5,7 +5,7 @@ abstract: >
   Here is a list of 15 Git commands that you may not know yet, but hopefully
   they will help you out on a journey to master this tool.
 tags:
-- git
+- Git
 - tutorial
 ---
 
@@ -48,7 +48,7 @@ For more: `git help stash`
 git stash -u
 ```
 
-By default, when stashing, the untracked files are not included. In order to change that bevahiour and include those files as well you need to use `-u` parameter. There is also `-a` (`—all`) which stashes both untracked and ignored files altogether, which is probably something you usually won’t need. 
+By default, when stashing, the untracked files are not included. In order to change that bevahiour and include those files as well you need to use `-u` parameter. There is also `-a` (`—all`) which stashes both untracked and ignored files altogether, which is probably something you usually won’t need.
 
 ## 5. Interactively Revert Selected Parts of Files
 ```
@@ -71,9 +71,9 @@ This command allows you to quickly switch to the previously checked out branch. 
 git checkout .
 ```
 
-If you are sure that all of your local changes can be discarded, you can use `.` to do it at once. It is, however, a good practice to always use `checkout --patch`. 
+If you are sure that all of your local changes can be discarded, you can use `.` to do it at once. It is, however, a good practice to always use `checkout --patch`.
 
-## 8. Show changes 
+## 8. Show changes
 ```
 git diff --staged
 ```
@@ -126,14 +126,14 @@ git rm —-cached <file-to-remove>
 git commit —-amend
 ```
 
-## 14. Find Branches 
+## 14. Find Branches
 ```
 git branch --contains <commit>
 ```
 
 This command will show all branches that contain a particular commit.
 
-## 15. Optimize the repository locally 
+## 15. Optimize the repository locally
 ```
 git gc --prune=now --aggressive
 ```
@@ -142,9 +142,9 @@ For more: `git help gc`
 
 ## Bonus
 
-Although I like CLI a lot, I highly recommend checking [Magit](https://magit.vc/) to futher step up your Git game. It is one of best pieces of software I used. 
+Although I like CLI a lot, I highly recommend checking [Magit](https://magit.vc/) to futher step up your Git game. It is one of best pieces of software I used.
 
-There is, also, a fantastic overview of recommended Git workflows available via `help` command. Be sure to read it thoroughly! 
+There is, also, a fantastic overview of recommended Git workflows available via `help` command. Be sure to read it thoroughly!
 
 ```
 git help workflows

@@ -3,10 +3,10 @@ created_at: 2019-12-28
 title: Building A REST API in Node.js with TypeScript (part 1 of 4)
 publish: true
 tags:
-- nodejs
-- typescript
-- javascript
-- rest
+- Node.js
+- TypeScript
+- JavaScript
+- REST
 ---
 
 Let's build a simple a REST API in Node.js using [TypeScript](https://www.typescriptlang.org/). This series will be split into **four parts** as there is a lot to discuss. It is also aimed for absolute beginners or people just starting with programming. At the same time I will be mentioning few some advanced topics so that even if you know how to build a REST API, you will hopefully still gain something from reading this tutorial.

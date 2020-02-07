@@ -1,10 +1,10 @@
 ---
 created_at: 2020-01-18
-title: Using Extension Methods in Flutter for the Provider Lookup
+title: Using **Extension Methods** in **Flutter** for the **Provider** Lookup
 publish: true
 tags:
-- flutter
-- dart
+- Flutter
+- Dart
 ---
 
 Dart 2.7 adds the extension methods. This feature allows to add new members (not only methods) to existing types.

@@ -1,10 +1,10 @@
 ---
 created_at: 2019-04-01
 title: "Creating Secure REST APIs in Node.js without JWTs"
-publish: true 
+publish: true
 tags:
-- nodejs
-- javascript
+- Node.js
+- JavaScript
 - security
 ---
 
@@ -25,7 +25,7 @@ anything new to the table compared to regular session IDs.
 At the same time, JWTs come with additional complexity. They need to be well
 understood to prevent security mistakes, namely [Cross-Site Scripting (XSS)
 attacks](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)). It may
-be also difficult to invalidate such tokens (a case for stateless JWTs). 
+be also difficult to invalidate such tokens (a case for stateless JWTs).
 
  There is a
 [bunch](http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/)
@@ -34,7 +34,7 @@ be also difficult to invalidate such tokens (a case for stateless JWTs).
 articles, [presentations](https://speakerdeck.com/rdegges/jwts-suck) and
 [videos](https://www.youtube.com/watch?v=JdGOb7AxUo0), why you do not
 need JSON Web Tokens for a typical authentication in your web application. I
-highly recommend to read them up. 
+highly recommend to read them up.
 
 JWTs are more suited for claim-related situations. A typical usecase would a
 cloud storage application or a file hosting service. Users have to authenticate
@@ -64,9 +64,9 @@ will be evident shortly.
 
 While the general principles of securing endpoints are universal, Huncwot will
 allow us to be slightly more efficient by providing some helper functions
-out-of-the-box to reduce the boilerplate. 
+out-of-the-box to reduce the boilerplate.
 
-**You shouldn't have any problems to adapt the code that follows to Express.js.** 
+**You shouldn't have any problems to adapt the code that follows to Express.js.**
 
 **Warning:** Please, use Node <= 11 (there is a bug with Node 12 as of
 2019-05-04, it should be resolved shortly)
@@ -159,7 +159,7 @@ app.listen(5544);
 Once you changed the `app.js`, you need to restart the whole application. It
 would be nice, if our application restarted automatically, when something
 changes within the application directory. Luckly, there is a tool just for that.
-It is called [nodemon](https://nodemon.io/). 
+It is called [nodemon](https://nodemon.io/).
 
 ```bash
 npm install nodemon --save-dev
@@ -169,13 +169,13 @@ The `--save-dev` option marks the dependency as only needed during the
 development. From now on, we can substitute `node` with `nodemon` to run the
 application. As we installed `nodemon` locally (the command is only available in
 the scope of this particular project), we need to use `npx` command (that comes
-included with Node.js) to run `nodemon` from the command line: 
+included with Node.js) to run `nodemon` from the command line:
 
 ```
 npx nodemon app.js
 ```
 
-Let's repeat our request to `/` endpoint. 
+Let's repeat our request to `/` endpoint.
 
 ```
 http :5544/
@@ -193,11 +193,11 @@ Date: Fri, 01 Apr 2019 16:26:12 GMT
 ```
 
 Remember that you can also open `localhost:5544` in your browser for the same
-effect. 
+effect.
 
 In order to streamline the development process even further, we can use the
 `scripts` section of `package.json` to simplify the command used to start our
-application. Let's add the `start` command as seen here: 
+application. Let's add the `start` command as seen here:
 
 ```json {5}
 {
@@ -210,7 +210,7 @@ application. Let's add the `start` command as seen here:
 }
 ```
 
-With that change in place, you can now use `npm` to start the application. 
+With that change in place, you can now use `npm` to start the application.
 
 ```bash
 npm start
@@ -227,27 +227,27 @@ what this weird `_` (underscore) sign means. In Huncwot, you can define routes
 similar to Express or any other framework. You start by selecting one of the
 following functions: `get`, `post`, `patch`, `put` and `delete`. Each function
 refers to the corresponding [HTTP request
-method](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods). 
+method](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods).
 
 Also, each of them takes two arguments. The first one is **the path** for this
 route. The second one is the function, which is responsible for handling any
 request mathing this particular path. By convention, this function is usually
-called **a handler** as it handles requests to produce responses. 
+called **a handler** as it handles requests to produce responses.
 
 A combination of a path and corresponding handler is a route.
 
 This is, where things start to become different in Huncwot. Contrary to
 Express.js (and similar frameworks), **a handler** in Huncwot is a one argument
-function. This argument is the incoming **request**. 
+function. This argument is the incoming **request**.
 
 In Express, and the majority of other Node.js frameworks, handlers take two
 arguments. The first one is the request and the second one is the response. In
 Huncwot, the response is simply everything that is being returned by the
 handler. This way, it may be slightly more natural to think about the process of
-handling requests and generating responses. 
+handling requests and generating responses.
 
 In Huncwot, handlers are functions, which take requests as their input and
-produce responses as their output. 
+produce responses as their output.
 
 ![fn input output](/images/fn-input-output.png)
 
@@ -259,17 +259,17 @@ const { json } = require('huncwot/response');
 
 const app = new Huncwot();
 
-app.get('/', request => { 
-  return json({ widget: "This is a widget available to everyone"}) 
+app.get('/', request => {
+  return json({ widget: "This is a widget available to everyone"})
 });
 
 app.listen(5544);
 ```
 
 Since we don't need the incoming request data yet, the variable is not used.
-There is a practice to name unused function parameters as underscore (a practice 
+There is a practice to name unused function parameters as underscore (a practice
 especially common in the programming laguages from the [ML
-family](https://en.wikipedia.org/wiki/ML_(programming_language))).  
+family](https://en.wikipedia.org/wiki/ML_(programming_language))).
 
 You can also configure your linter to skip those variables altogether, so this
 doesn't generate any errors if these variables are not used. Here is an example
@@ -315,17 +315,17 @@ Hello, your name is Zaiste
 This feature will come in handy later on, when we will be using the authentication
 token being passed via HTTP headers.
 
-## PostgreSQL for Persistance 
+## PostgreSQL for Persistance
 
 In order to manage access to resources by making particular routes only
 available to logged in users, we need first to create entities that represent
-these users. We also need to store them in a database. 
+these users. We also need to store them in a database.
 
 There are many options when it comes to databases. In this tutorial we will
 stick with a traditional (some may say _boring_), but solid solution for
 persistence, which is a relational data base. We will use
 [PostgreSQL](https://www.postgresql.org/) as our
-[RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system).  
+[RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system).
 
 Also, we won't be using any [object relation
 mapping](https://en.wikipedia.org/wiki/Object-relational_mapping) techniques.
@@ -336,7 +336,7 @@ a certain size, queries will become more streightforward to construct than
 fighting the constraines imposed by a particular ORM solution. Besides, it is not
 uncommon that ORM generated queries are significantly slower. In other words,
 using SQL is more flexible, efficient and simpler long-term, but not necessarily
-easier straightaway. 
+easier straightaway.
 
 ## Table for Users... Person ?!
 
@@ -363,29 +363,29 @@ Our `person` table will be short
 
 ```sql
 create table person (
-  id serial primary key, 
-  name text, 
-  email text, 
+  id serial primary key,
+  name text,
+  email text,
   password text
 );
 ```
 
 Let's place that `CREATE TABLE` query in the `db.sql` file within our project
-directory. 
+directory.
 
 Start your PostgreSQL instance. There are many ways of doing it. Use the method
 available on your system, or refer to [the PostgreSQL
 documentation](https://www.postgresql.org/docs/current/tutorial-start.html) to
 learn how to do it.
 
-Create the database for our application called `secure_rest_api_nodejs`. 
+Create the database for our application called `secure_rest_api_nodejs`.
 
 ```bash
 createdb secure_rest_api_nodejs
 ```
 
 Notice that I'm using `_` (underscore) and not `-` (hyphen/dash), which is an
-important distinction in PostgreSQL. 
+important distinction in PostgreSQL.
 
 Finally, let's create the `person` table within the `secure_rest_api_nodejs`
 database by using `psql`
@@ -399,13 +399,13 @@ performed via [database
 migrations](https://en.wikipedia.org/wiki/Schema_migration). Huncwot supports
 that too, but I'm intentionally skipping that part for simplicity reasons.
 
-## Register Route 
+## Register Route
 
 At this point we haven't done anything related to securing our routes. Let's
 change that by introducing the `/register` route for creating (or registering)
 new users. Contrary to previous routes, this will be a route that responds only
 to `POST` requests as we will be sending user data to the server within the
-request body. 
+request body.
 
 Our Node.js API will require three pieces of data to register a user: a `name`,
 an `email` and a `password`.
@@ -422,10 +422,10 @@ app.post('/register', ({ params }) => {
 
   let person = {
     name,
-    email 
+    email
     password,
   };
-  
+
   return json(person);
 })
 
@@ -434,7 +434,7 @@ app.listen(5544);
 
 Notice, that I use object destructuring for the input parameter in the handler
 of the `/register` route as I'm only interested in `request`'s `params`. Instead
-of writing `request => { ... }` I can just say `({ params }) => { ... }`. 
+of writing `request => { ... }` I can just say `({ params }) => { ... }`.
 
 Then, using the same approch, I can extract only the request params that I'm
 interested in. In this case the three we defined initially. I assign it to
@@ -462,7 +462,7 @@ Date: Fri, 01 Apr 2019 18:25:46 GMT
 
 When using HTTPie I don't need to specify that this request should be sent as
 `POST`. By providing a list of key value parameters I implicitly indicate the
-need for a `POST` request. 
+need for a `POST` request.
 
 This is slightly different than in similar tools such as cURL or Wget. In that
 case, you would need to specify the HTTP request method as `POST` explicitly.
@@ -505,8 +505,8 @@ app.post('/register', async ({ params }) => {
   const hashedPassword = await hash(password, 12);
 
   let person = {
-    name, 
-    email, 
+    name,
+    email,
     password: hashedPassword
   };
 
@@ -526,7 +526,7 @@ In addition to the features mentioned previously, Huncwot provides a
 convenient API for the database access. It is thanks to a library called
 [Sqorn](https://sqorn.org/) that can build SQL queries out of JavaScript data
 structures. It is similar to [Knex](https://knexjs.org/), but 10x faster and
-roughly 200x faster than [Squel](https://hiddentao.com/squel/). 
+roughly 200x faster than [Squel](https://hiddentao.com/squel/).
 
 Here is an example of a Sqorn query:
 
@@ -556,11 +556,11 @@ app.post('/register', async ({ params }) => {
   const hashedPassword = await hash(password, 10);
 
   let person = {
-    name, 
-    email, 
+    name,
+    email,
     password: hashedPassword
   };
-  
+
   const [{ id: person_id }] = await db
     .from('person')
     .insert(person)
@@ -583,14 +583,14 @@ looks for a configuration file within `config/` (relative to the project). Let's
 add the following config as `default.yml`:
 
 ```yaml
-db: 
+db:
   database: secure_rest_api_nodejs
   username: zaiste
 ```
 
-Attention, the `username` will be different for you. 
+Attention, the `username` will be different for you.
 
-Let's test it again: 
+Let's test it again:
 
 ```bash
 http :5544/register name=Zaiste password=krzychujacielubie email=zaiste@example.com
@@ -620,7 +620,7 @@ Border style is 1.
 Expanded display is used automatically.
 psql (11.2)
 Type "help" for help.
-[local] zaiste@secure_rest_api_nodejs = # 
+[local] zaiste@secure_rest_api_nodejs = #
 ```
 
 And then, let's execute a `SELECT` query on the `person` table.
@@ -655,7 +655,7 @@ generator](https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_n
 (CPRNG).
 
 In Node.js, we can use the `randomBytes` method from the `crypto` module. This
-method doesn't have a Promise-based API, so let's wrap it into a promise so to 
+method doesn't have a Promise-based API, so let's wrap it into a promise so to
 use it with the `async/await` syntax.
 
 ```js
@@ -695,9 +695,9 @@ that.
 
 ```sql
 create table session (
-  id serial primary key, 
-  token text, 
-  person_id integer references person(id), 
+  id serial primary key,
+  token text,
+  person_id integer references person(id),
   created_at timestamptz default now()
 );
 ```
@@ -705,7 +705,7 @@ create table session (
 This table uses a foreign key to reference the corresponding row in the `person`
 table. This way you won't be able to insert a session for a user that doens't
 exist yet. `created_at` will be used for invalidating sessions. This field
-doesn't have to be specified when inserting data: it will always default to 
+doesn't have to be specified when inserting data: it will always default to
 the current timestamp.
 
 Finally, this is the `/register` route in its full gloary:
@@ -726,16 +726,16 @@ app.post('/register', async ({ params }) => {
   const hashedPassword = await hash(password, 10);
 
   let person = {
-    name, 
-    email, 
+    name,
+    email,
     password: hashedPassword
   };
-  
+
   const [{ id: person_id }] = await db
     .from('person')
     .insert(person)
     .return('id');
-    
+
   const token = await new Promise((resolve, reject) => {
     crypto.randomBytes(16, (error, data) => {
       error ? reject(error) : resolve(fromBase64(data.toString('base64')));
@@ -760,7 +760,7 @@ the registration.
 Since we perform two writing operations on the database, it is a good idea to
 use transactions here. I'm skipping it intentionally for clarity sake.
 
-## Log In Route 
+## Log In Route
 
 Now, we need the `/login` route for a compelete authentication process. This
 route will allow users to generate a new authentication token without the need
@@ -785,7 +785,7 @@ app.post('/login', async ({ params }) => {
   const match = await compare(password, person.password);
 
   if (!match) return unauthorized();
-  
+
   const person_id = person.id;
 
   const token = await new Promise((resolve, reject) => {
@@ -847,7 +847,7 @@ will make the handler finish without returning the `401` HTTP error.
 
 Let's call our first secure route `/secret`:
 
-```js 
+```js
 app.get('/secret', async ({ headers, params }) => {
   const { authorization: token } = headers;
 
@@ -861,7 +861,7 @@ app.get('/secret', async ({ headers, params }) => {
   const [found] = await db`session`({ token: hash });
 
   if (!found) return unauthorized();
-  
+
   // from now on, we are properly authenticated
 
   return json({ secret: 'This message is only for admins!' });
@@ -879,7 +879,7 @@ Additionally, once we found a valid session, we can also reference that
 particular user to check any other criteria, such roles, etc. I leave that part
 as an execrise for the reader.
 
-## Higher-Order Function Can? 
+## Higher-Order Function Can?
 
 You probably noticed that every secured route would need to perform the same
 steps at the beginning before doing the actual work. There is some repetition
@@ -890,15 +890,15 @@ takes a handler as its input and it returns a handler as its output. This way we
 can reduce previous authentication boilerplate code for each route that needs to
 be secured.
 
-Let's simplify the previous snippet: 
+Let's simplify the previous snippet:
 
 ```js
 const { can } = require('huncwot/auth');
 
-const secret = _ => 
+const secret = _ =>
   json({ secret: 'This message is only for admins!' });
 
-app.get('/secret, can(secret)); 
+app.get('/secret, can(secret));
 ```
 
 Let's test if it all works together. First, register a new user.
@@ -920,7 +920,7 @@ Date: Sat, 01 Apr 2019 17:30:08 GMT
 ```
 
 My authentication token is `c33qPZLwgb74V-ysAVu5Eg` - this value will be
-differnt for you. 
+differnt for you.
 
 Let see if I can access the `/secret` route without providing the token.
 
@@ -966,7 +966,7 @@ will in any Node.js application. Let's finish this article off by creating a
 simple Widget API.
 
 There will be five CRUD routes:
-+ a route for listing all widgets 
++ a route for listing all widgets
 + a route for getting a particular widget by ID
 + a route for creating new widget
 + a route for updating an existing widget
@@ -995,13 +995,13 @@ const browse = _ => json(widgets);
 
 const read = ({ params: { id } }) => {
   const widget = widgets.find(_ => _.id === +id)
-  
+
   if (!widget) return notFound();
-  
+
   return json(widget);
 }
 
-const add = ({ params: { name } }) => { 
+const add = ({ params: { name } }) => {
   const id = ++_id;
 
   widgets.push({ id, name, })
@@ -1010,12 +1010,12 @@ const add = ({ params: { name } }) => {
 
 const edit = ({ params: { id, name }}) => {
   const widget = widgets.find(_ => _.id === +id);
-  
+
   widget.name = name;
-  
+
   return ok();
 }
- 
+
 
 app.get('/widgets', browse)
 app.get('/widgets/:id', read)
@@ -1027,13 +1027,13 @@ app.delete('/widgets', can(destroy))
 ## Bonus
 
 I have been mentioning in this article, that there are many interesting features
-in Huncowt. So, what is there more? 
+in Huncowt. So, what is there more?
 
 In the context of authentication, the both routes we created at the beginning,
 i.e. `/register` & `/login` come built-in with Huncwot. This way you don't need to
 implement it each time for new applications.
 
-Here is the final snippet for our secure Node.js RESTful API. 
+Here is the final snippet for our secure Node.js RESTful API.
 
 ```js
 const Huncwot = require('huncwot');
@@ -1047,7 +1047,7 @@ const {
 const { login, register, can } = require('huncwot/auth');
 const db = require('huncwot/db');
 
-// In-Memory State 
+// In-Memory State
 
 const widgets = [
   {
@@ -1061,13 +1061,13 @@ let _id = 1;
 const app = new Huncwot();
 
 // Handlers
-const secret = _ => 
+const secret = _ =>
   json({ secret: 'This message is only for admins!' });
 
-const browse = _ => 
+const browse = _ =>
   json(widgets);
 
-const read = ({ params: { id } }) => 
+const read = ({ params: { id } }) =>
   json(widgets.find(_ => _.id === +id));
 
 const add = ({ params: { name } }) => {
@@ -1091,7 +1091,7 @@ const destroy = ({ params: { id } }) => {
   const widgetIndex = widgets.findIndex(_ => _.id === +id);
 
   if (widgetIndex < 0) return notFound();
-  
+
   widgets.splice(widgetIndex, 1);
 
   return ok();
@@ -1103,7 +1103,7 @@ const finder = async ({ email }) => {
   const result = await db.from('person').where({ email });
   return result;
 };
- 
+
 // Routes
 
 app.get('/', _ => 'Hello, Huncwot');
@@ -1113,7 +1113,7 @@ app.get('/json', _ => json({ widget: 'This is widget 1' }));
 app.post('/register', register({ fields: ['name', 'email'] }));
 app.post('/login', login({ finder }));
 
-app.get('/secret', can(secret)); 
+app.get('/secret', can(secret));
 app.get('/widgets', browse);
 app.get('/widgets/:id', read);
 app.post('/widgets', can(add));

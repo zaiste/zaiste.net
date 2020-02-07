@@ -3,8 +3,9 @@ created_at: 2019-10-04
 title: TypeScript Setup for Node.js with VS Code
 publish: true
 tags:
-- nodejs
-- javascript
+- Node.js
+- JavaScript
+- TypeScript
 - security
 ---
 
@@ -35,7 +36,7 @@ thus slightly safer coding environment.
 
 It is difficult to estimate the actual benefits, but adopting TypeScript is not
 something that will change your software practice in dramatic ways. There are
-even prominent voices saying you shouldn't use types at all. 
+even prominent voices saying you shouldn't use types at all.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think this is exactly
 backwards, types often cripple larger codebases. <a
@@ -43,7 +44,7 @@ href="https://twitter.com/hashtag/Clojure?src=hash&amp;ref_src=twsrc%5Etfw">#Clo
 <a href="https://t.co/2eJIQsmRrR">https://t.co/2eJIQsmRrR</a></p>&mdash;
 stuarthalloway (@stuarthalloway) <a
 href="https://twitter.com/stuarthalloway/status/1177559672561307649?ref_src=twsrc%5Etfw">September
-27, 2019</a></blockquote> 
+27, 2019</a></blockquote>
 
 Personally I find great pleasure in using TypeScript, to the extend of not
 willing to write regular JavaScript anymore.
@@ -134,7 +135,7 @@ This is possible thanks to those type definitions. I don't need to switch back
 and forward between the documentation of the `http` module. Everything is in one
 place which streamlines the coding.
 
-## Types in Plain JavaScript 
+## Types in Plain JavaScript
 
 The `http` is a core module from Node.js and Node.js is not written in
 TypeScript. Thus, there is no information about types in it. Plenty of popular
@@ -167,7 +168,7 @@ In order to have a more streamlined process we can instruct the TypeScript
 compiler to constantly watch our files using the `--watch` option and
 automatically recompile once there are changes within them.
 
-## TypeScript with VS Code 
+## TypeScript with VS Code
 
 VS Code recognizes TypeScript projects by the presence of the `tsconfig.json`
 and conveniently provides the appropriate build tasks. The compilation can be
@@ -215,7 +216,7 @@ From now on any change in the `app.ts` will be automatically recompiled by
 TypeScript and then quickly reloaded by the `pm2` tool.
 
 <div class="split">
-⋯ 
+⋯
 </div>
 
 TypeScript makes writing JavaScript more enjoyable. It reduces the probability
@@ -223,6 +224,6 @@ of making typos while the type system constrains the area for mistakes.
 
 We also simplified and sped up the development process by eliminating the need
 to switch between the editor and the terminal - everything is now in one place,
-directly accessible from VS Code. 
+directly accessible from VS Code.
 
 That's a perfect TypeScript setup for Node.js with VS Code, indeed!

@@ -1,36 +1,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="author" content="{{ website.author.name }}" />
+<meta name="author" content="{{ website.author.name }}"/>
 <meta name="description" content="{{ page.abstract or page.description or page.title or website.description }}"/>
 <meta name="theme-color" content="#475359"/>
 
 <!-- Open Graph -->
-<meta property="og:type" content="article" />
-<meta property="og:description" content="{{ page.abstract or page.title or website.description }}" />
-<meta property="og:title" content="{{ page.title or website.title }} · zaiste.net" />
-<meta property="og:site_name" content="{{ website.facebook.site_name }}" />
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="{{ page.abstract or page.title or website.description }}"/>
+<meta property="og:title" content="{{ page.title or website.title }} · zaiste.net"/>
+<meta property="og:site_name" content="{{ website.facebook.site_name }}"/>
 {%- if page.image %}
-<meta property="og:image" content="https://zaiste.net/images/{{ page.image }}" />
+  <meta property="og:image" content="https://zaiste.net/images/{{ page.image }}"/>
 {%- else %}
-<meta property="og:image" content="https://zaiste-image.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ (page.tags or []) | logo | safe }}" />
+  <meta property="og:image" content="https://zaiste-image.now.sh/{{ page.title_raw | urlencode }}.png?theme=light&md=1&fontSize=100px{{ (page.tags or []) | logo | safe }}"/>
 {%- endif %}
-<meta property="og:image:type" content="{{ website.facebook.image.type }}" />
-<meta property="og:image:width" content="{{ website.facebook.image.width }}" />
-<meta property="og:image:height" content="{{ website.facebook.image.height }}" />
+<meta property="og:image:type" content="{{ website.facebook.image.type }}"/>
+<meta property="og:image:width" content="{{ website.facebook.image.width }}"/>
+<meta property="og:image:height" content="{{ website.facebook.image.height }}"/>
 <meta property="og:url" content="https://zaiste.net/{{ page.path }}">
 <meta property="og:locale" content="{{ website.facebook.locale or 'en_US' }}">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="{{ website.twitter.site }}">
-<meta name="twitter:title" content="{{ page.title or website.title }} · zaiste.net" />
+<meta name="twitter:title" content="{{ page.title or website.title }} · zaiste.net"/>
 <meta name="twitter:creator" content="{{ website.twitter.creator }}">
 <meta name="twitter:description" content="{{ page.abstract or page.title or website.description }}">
 {%- if page.image %}
-<meta name="twitter:image:src" content="https://zaiste.net/images/{{ page.image }}">
+  <meta name="twitter:image:src" content="https://zaiste.net/images/{{ page.image }}">
 {%- else %}
-<meta name="twitter:image:src" content="{{ website.twitter.image.url }}">
+  <meta name="twitter:image:src" content="{{ website.twitter.image.url }}">
 {%- endif %}
 <meta name="twitter:domain" content="{{ website.twitter.domain }}">
 
@@ -42,11 +42,6 @@
     "jobTitle": "Software Engineer",
     "image": "assets/images/zaiste.jpg",
     "url": "https://zaiste.net",
-    "sameAs": [
-      "https://instagram.com/zaiste",
-      "https://www.linkedin.com/in/zaiste",
-      "https://twitter.com/zaiste",
-      "https://github.com/zaiste"
-    ]
+    "sameAs": ["https://instagram.com/zaiste", "https://www.linkedin.com/in/zaiste", "https://twitter.com/zaiste", "https://github.com/zaiste"]
   }
 </script>

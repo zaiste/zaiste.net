@@ -2,8 +2,8 @@
 created_at: 2019-01-15
 title: "FreeBSD · Installing Nginx"
 tags:
-- freebsd
-- nginx
+- FreeBSD
+- Nginx
 abstract: >
   This article describes how to install and configure an Nginx server on FreeBSD.
 ---
@@ -17,7 +17,7 @@ cache. Nginx is the second most popular web server.
 On FreeBSD, Nginx can be installed as a binary package using `pkg`, or from
 sources via the Ports Collection.
 
-## Install Nginx as binary 
+## Install Nginx as binary
 
 Install Nginx as a binary using `pkg`:
 
@@ -36,7 +36,7 @@ cd /usr/ports/www/nginx/
 make install clean
 ```
 
-## Enable Nginx at boot 
+## Enable Nginx at boot
 
 FreeBSD uses the `rc` system of startup scripts for managing services. Those
 services will be started automatically at boot time as specified in
@@ -125,7 +125,7 @@ nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 ```
 
-## Nginx Essentials 
+## Nginx Essentials
 
 - Nginx configuration file: `/usr/local/etc/nginx/nginx.conf`
 - Nginx default document directory: `/usr/local/www/nginx/`
@@ -171,7 +171,7 @@ Add the following HTML content to this newly created `index.html`:
 </html>
 ```
 
-## Configure Nginx Virtual Hosts 
+## Configure Nginx Virtual Hosts
 
 Nginx's server block is similar to Apache's virtual host concept. This allows to
 serve the content for a specific domain or an IP address.
