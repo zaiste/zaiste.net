@@ -1,0 +1,10 @@
+
++++
+
++++
+# HTTP
+
+## HTTP/2
+
+HTTP/2 gives huge performance improvements over HTTP/1 in many ways, and server push is one of its features for performance.
+

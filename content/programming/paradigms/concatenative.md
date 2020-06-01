@@ -1,0 +1,10 @@
+
++++
+
++++
+# Concatenative
+
+A concatenative programming language is a point-free computer programming language in which all expressions denote functions, and the juxtaposition of expressions denotes function composition.
+
+Concatenative is a property of a language syntax.
+

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+Topics
+{% endblock title %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
+  <p class="text-base leading-6 font-semibold uppercase text-gray-600 tracking-wider">
+    Topics I cover on my website
+  </p>
+  <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+    {% for term in terms %}
+    <a href="{{ term.slug }}" class="col-span-1 flex justify-center py-8 px-8 bg-gray-50 hover:bg-gray-100">
+      <div class="text-gray-500">{{ term.name }}</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

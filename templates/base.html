@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "meta.html" %}
+  <title>{% block title %}{{ page.title | default(value=config.extra.title) }}{% endblock title %} · zaiste.net</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+  <link rel="stylesheet" href="/main.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+  {% include "nav.html" %}
+  <main class="flex-grow">
+  {% block content %}{% endblock %}
+  </main>
+  {% include "footer.html" %}
+</body>
+
+</html>

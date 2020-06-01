@@ -1,0 +1,8 @@
+
++++
+
++++
+# Lua
+
+Lua has extensible semantics via metatables. Setting up a prototype-based OO system is easy.
+

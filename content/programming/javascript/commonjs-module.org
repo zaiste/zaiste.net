@@ -1,0 +1,10 @@
+* CommonJS Module Approach
+
+#+begin_src js
+var compute = require('./compute.js');
+
+exports.computeSomethingElse = function() {
+}
+#+end_src
+
+Node.js Modules is an extension to CommonJS Modules (1.1).

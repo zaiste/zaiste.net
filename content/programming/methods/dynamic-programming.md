@@ -1,0 +1,18 @@
+
++++
+
++++
+# Dynamic Programming
+
+Dynamic programming is a method for solving problems of recursive nature, iteratively and is applicable when the computations of the subproblems overlap.
+
+Dynamic programming is usually implemented using tabulation, but can also be implemented using memoization.
+
+Tabulation is a bottom-up approach of solving a problem. First all sub-problems are solved by filling up an n-dimensional table. Then, based on the results in the table, the final solution is provided as an aggregation of the solutions for the sub-problems.
+
+If all subproblems must be solved at least once, a bottom-up dynamic-programming algorithm usually outperforms a top-down memoized algorithm by a constant factor.
+
+If some subproblems in the subproblem space need not be solved at all, the memoized solution has the advantage of solving only those subproblems that are definitely required
+
+A problem solvable by memoization will be solvable by dynamic programming, but a problem solvable by dynamic programming might not be solvable by memoization.
+

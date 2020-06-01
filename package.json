@@ -1,0 +1,26 @@
+{
+  "name": "faster-zaiste.net",
+  "version": "1.0.0",
+  "description": "This is the source code for my personal website that lives at [zaiste.net](https:/zaiste.net). It's built with [kulfon](https://kulfon.net).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaiste/zaiste.net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaiste/zaiste.net/issues"
+  },
+  "homepage": "https://github.com/zaiste/zaiste.net#readme",
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "fast-glob": "^3.2.2",
+    "gray-matter": "^4.0.2",
+    "toml": "^3.0.0"
+  }
+}

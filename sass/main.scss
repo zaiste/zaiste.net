@@ -1,0 +1,185 @@
+.markdown {
+  color: #4b4b4b;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  font-size: 1.25rem;
+}
+
+.markdown>*+* {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.markdown p,
+table {
+  margin-bottom: 1rem;
+}
+
+.markdown li+li {
+  margin-top: 0.25rem;
+}
+
+.markdown li>p+p {
+  margin-top: 1.5rem;
+}
+
+.markdown strong {
+  font-weight: 600;
+}
+
+.markdown a {
+  border-bottom-width: 2px;
+  border-color: #c3ddfd;
+}
+
+.markdown a:hover {
+  border-color: #a4cafe;
+  background-color: #f4f5f7;
+}
+
+.markdown h1 {
+  line-height: 1.25;
+  border-bottom-width: 1px;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  line-height: 1.25;
+  border-bottom-width: 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h3 {
+  line-height: 1.375;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h4 {
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h5 {
+  line-height: 1.25;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h6 {
+  line-height: 1.25;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown blockquote {
+  font-size: 1rem;
+  border-left-width: 4px;
+  border-color: #e2e8f0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #718096;
+}
+
+.markdown code {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1rem;
+  display: inline;
+  background-color: #f7fafc;
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.markdown p > code {
+  color: #6875f5;
+}
+
+.markdown pre {
+  background-color: #f7fafc;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.markdown pre code {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  overflow: visible;
+  border-radius: 0;
+}
+
+.markdown ul {
+  font-size: 1rem;
+  padding-left: 2rem;
+  list-style-type: disc;
+}
+
+.markdown ol {
+  font-size: 1rem;
+  padding-left: 2rem;
+  list-style-type: decimal;
+}
+
+.markdown kbd {
+  font-size: 0.75rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  vertical-align: middle;
+  font-weight: 400;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.markdown table {
+  font-size: 1rem;
+  border-color: #718096;
+}
+
+.markdown th {
+  border-width: 1px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.markdown td {
+  border-width: 1px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Override pygments style background color. */
+
+.markdown .highlight pre {
+  background-color: #f7fafc !important;
+}

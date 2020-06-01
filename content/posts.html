@@ -1,0 +1,19 @@
+<import base from="layouts/index.html" />
+
+<base {bundles} {stylesheets} {website}>
+<div class="w-full mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-8 xl:mt-12">
+  <h1 class="text-4xl mb-4 font-extrabold">Posts</h1>
+  <ul>
+    <for post in pages('posts')>
+      <li class="mb-2">
+        <h4 class="text-3xl font-light">
+          <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="/{ post.filepath }">
+            { post.title }
+          </a>
+        </h4>
+        <div class="text-gray-400">{ post.created_at | format("YYYY-MM-DD") }</div>
+      </li>
+    </for>
+  </ul>
+</div>
+</base>

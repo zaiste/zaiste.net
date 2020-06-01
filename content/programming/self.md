@@ -1,0 +1,26 @@
+
++++
+
++++
+# Self
+
+Self was first announced in 1987.
+
+Self has no classes only prototypes.
+
+Self makes no distinction between member access and method calls.
+
+The term \`prototype\` has a different meaning in Self than it has in Javascript.
+
+Self parent slots are built-in delegation. They can be used for inheritance (traits), they can be used for sharing implementation (mixins) or they can be used in the general context of composition
+
+NewtonScript is a descendent of Self. It introduces the concept of frames, dual inheritance hierarchy and the Soup object database.
+
+Self's JIT was influential and was the forerunner to Java JIT research.
+
+Self had multiple code generators.
+
+## Self Papers
+
+-   [Organizing Programs without Classes](http://bibliography.selflanguage.org/_static/organizing-programs.pdf)
+

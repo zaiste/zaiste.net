@@ -1,0 +1,10 @@
+
++++
+
++++
+# Concurrency vs Parallelism
+
+Concurrency is the separation of tasks to provide interleaved execution.
+
+Parallelism is the simultaneous execution of multiple pieces of work in order to increase speed.
+

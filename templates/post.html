@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-4 gap-4">
+    <div class="col-span-4 lg:col-span-3">
+      <div class="header mb-8">
+        <div class="text-gray-500">Part 1 of 4</div>
+        <h1 class="text-4xl leading-tight text-gray-600 font-medium mb-2">
+          {{ page.title }}
+        </h1>
+        {% if page.taxonomies.topics %}
+        <div class="flex mb-2">
+          {% for topic in page.taxonomies.topics %}
+            <div class="flex flex-shrink-0 text-sm items-center mr-2">
+              <div class="bg-gray-200 text-gray-600 px-2 py-1 rounded-l-sm">#</div>
+              <div class="bg-gray-100 px-2 py-1 rounded-r-sm">
+                <a href="{{ get_taxonomy_url(kind='topics', name=topic) }}">
+                  {{ topic }}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="text-gray-500">
+          {{ page.date }}
+        </div>
+      </div>
+
+      <div class="markdown">
+        {{ page.content | safe }}
+      </div>
+    </div>
+    <aside>
+      <p>Table of Contents </p>
+    </aside>
+  </div>
+</div>
+{% endblock content %}

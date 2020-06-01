@@ -1,0 +1,20 @@
+
++++
+
++++
+# ClojureScript
+
+ClojureScript is a version of Clojure that compiles to JavaScript. Thus, it can run in all browsers, on mobile devices and on Node.js. In short, it provides the power of Clojure and the reach of JavaScript.
+
+ClojureScript is maintained by Cognitect, the same company that maintains Clojure.
+
+Since version 1.7, many libraries work out of the box in both Clojure and ClojureScript.
+
+ClojureScript programs are often shorter than equivalent JavaScript programs. ClojureScript is higher-level and includes a large standard library that works across all JavaScript engines.
+
+ClojureScript is not just JavaScript with a different syntax. It has Clojure's semantics: immutable data structures, multiple-arity functions, data structure literals, protocols et al.
+
+ClojureScript provides solid interoperation with JavaScript: it is always possible to drop down to JavaScript if necessary. Also, any existing JavaScript library is usable from ClojureScript.
+
+ClojureScript uses the Google Closure Compiler to minify the code. It includes dead code elimination and other advanced optimization techniques to include only code you need before it minifies it. As a result you can include entire libraries and have Google Closure remove the parts you don't need. This greatly reduces the final bundle size.
+

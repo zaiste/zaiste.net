@@ -1,0 +1,25 @@
+<import nav from="nav.html" />
+<import footer from="footer.html" />
+<import meta from="meta.html" />
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta {website} />
+    <link rel="dns-prefetch" href="//api.eventil.com">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link rel="canonical" href="{ config.base_url }/{ page.path }">
+    <link rel="stylesheet" href="/{ bundles.css }">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <nav />
+    <slot />
+    <footer />
+  </body>
+</html>

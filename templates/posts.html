@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
+  <h1 class="text-4xl mb-8 leading-tight font-bold text-cool-gray-600">{{ section.title }}</h1>
+  <ul>
+    {% for page in section.pages %}
+    <li class="mb-6">
+      <h4 class="text-2xl leading-tight text-gray-600 font-medium">
+        <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="{{ page.slug }}">
+          {{ page.title }}
+        </a>
+        <span class="ml-4 text-sm text-gray-400">{{ page.date }}</span>
+      </h4>
+      <div class="text-gray-400"></div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}
