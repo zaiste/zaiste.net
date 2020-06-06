@@ -1,8 +1,8 @@
-
 +++
-
+title = "JavaScript"
+[extra]
+howtos = true
 +++
-# JavaScript
 
 JavaScript is a programming language.
 

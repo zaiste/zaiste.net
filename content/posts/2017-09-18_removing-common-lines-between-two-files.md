@@ -5,7 +5,7 @@ aliases = [
   "removing_common_lines_between_two_files"
 ]
 [taxonomies]
-topics = [ "cli" ]
+topics = [ "CLI" ]
 +++
 
 To remove common lines between two files you can use `grep`, `comm` or `join` command.

@@ -1,10 +1,8 @@
-
++++
+title = "How To Create a Stream Transformer in Dart"
 +++
 
-+++
-# How To Create a Stream Transformer in Dart
-
-```dart 
+```dart
 import 'dart:async';
 
 void main() {

@@ -1,4 +1,7 @@
 +++
+title = "Ruby"
+[extra]
+howtos = true
 +++
 
 # Ruby

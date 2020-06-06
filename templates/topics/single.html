@@ -9,7 +9,7 @@
   <div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
     <header class="mb-8">
       <h1 class="text-4xl leading-tight text-cool-gray-600 font-medium mb-1">
-        About <span class="text-blue-500 bg-gray-50 px-2 border border-gray-200">{{ term.name }}</span>
+        <span class="text-blue-500 bg-gray-50 px-2 border border-gray-200">{{ term.name }}</span>-related Content
       </h1>
       <p class="text-gray-400 text-lg">Below is a list of all content (articles, howtos, notes, etc) from my website related to {{ term.name }}</p>
     </header>
@@ -17,7 +17,7 @@
       {% for page in term.pages %}
       <li class="mb-6">
         <h4 class="text-2xl leading-tight text-gray-600 font-medium">
-          <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="{{ page.slug }}">
+          <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="/{{ page.path }}">
             {{ page.title }}
           </a>
           <span class="ml-4 text-sm text-gray-400">{{ page.date }}</span>

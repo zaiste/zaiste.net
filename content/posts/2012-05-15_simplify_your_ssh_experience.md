@@ -1,11 +1,8 @@
-
 +++
 date = 2012-05-15T00:00:00.000Z
-
-
 title = "Simplify your SSH experience"
-topics = [ "ssh", "cli" ]
-
+[taxonomies]
+topics = [ "SSH", "CLI" ]
 +++
 
 I manage too many remote servers to be able to remember their IP addresses, usernames and passwords. The key to simplify this experience is a proper [SSH](http://www.openssh.org/) configuration. By adjusting `.ssh/config` file you can easily create a memorable alias, along with particular settings for any server you use.

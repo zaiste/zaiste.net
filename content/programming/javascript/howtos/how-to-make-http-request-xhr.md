@@ -1,10 +1,8 @@
-
++++
+title = "How To Make an HTTP Request using XMLHttpRequest"
 +++
 
-+++
-# How To Make an HTTP Request using XMLHttpRequest
-
-```js 
+```js
 function httpGet(url, responseType="") {
   return new Promise((resolve, reject) => {
     const request = new XMLHttpRequest();

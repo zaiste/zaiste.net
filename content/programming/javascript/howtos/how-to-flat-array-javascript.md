@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Flat an Array in JavaScript"
 +++
-# How To Flat an Array in JavaScript
 
 ```js
 const array = [1, [2, [3, [4, 5, 6]]]]

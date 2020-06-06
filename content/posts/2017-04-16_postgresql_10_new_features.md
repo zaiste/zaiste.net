@@ -1,11 +1,8 @@
-
 +++
 date = 2017-04-16T00:00:00.000Z
-
-
 title = "PostgreSQL 10 New Features"
-topics = [ "postgresql" ]
-
+[taxonomies]
+topics = [ "PostgreSQL" ]
 +++
 
 ## Logical replication

@@ -5,6 +5,16 @@
   <h1 class="text-4xl leading-tight text-cool-gray-600 font-medium mb-4">
     {{ page.title }}
   </h1>
+  {% if page.extra.howtos %}
+  <div class="mt-6 grid grid-cols-2 gap-2 md:grid-cols-3 lg:my-8">
+    {% if page.extra.howtos %}
+    <a href="/{{ page.path }}howtos/"
+      class="col-span-1 shadow flex justify-center py-8 px-8 bg-gray-50 hover:bg-gray-100">
+      <div class="text-gray-800 font-medium"><span class="text-gray-500">{{ page.title }}</span> HowTos</div>
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
   <div class="markdown">
     {{ page.content | safe }}
   </div>

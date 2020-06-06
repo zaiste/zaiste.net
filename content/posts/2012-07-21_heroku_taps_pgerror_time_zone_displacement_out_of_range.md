@@ -1,11 +1,8 @@
-
 +++
 date = 2012-07-21T00:00:00.000Z
-
-
 title = "Heroku Taps - PGError time zone displacement out of range"
-topics = [ "heroku", "postgresql" ]
-
+[taxonomies]
+topics = [ "PostgreSQL" ]
 +++
 
 While using `heroku db:push` command with `ruby 1.9.3` you may encounter the

@@ -1,7 +1,7 @@
 +++
+title = "How To Make A Button Full Width in Flutter"
 +++
 
-# How To Make A Button Full Width in Flutter
 
 Use the `SizedBox` widget, which enforces the child to match its parent size:
 

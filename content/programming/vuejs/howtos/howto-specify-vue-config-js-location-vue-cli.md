@@ -1,7 +1,7 @@
 +++
+title = "How To Specify A `vue.config.js` Location for `vue-cli`"
 +++
 
-# How To Specify A `vue.config.js` Location for `vue-cli`
 
 `vue.config.js` is an (optional) config file, automatically loaded by `@vue/cli-service` if present in the project root (next to package.json)
 

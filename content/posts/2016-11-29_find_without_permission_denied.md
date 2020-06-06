@@ -1,11 +1,8 @@
-
 +++
 date = 2016-11-29T00:00:00.000Z
-
-
 title = "find without permission denied"
-topics = [ "cli" ]
-
+[taxonomies]
+topics = [ "CLI" ]
 +++
 
 Find a file named `boo` in the current directory without printing *permission

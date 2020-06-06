@@ -1,11 +1,8 @@
-
 +++
 date = 2014-01-28T00:00:00.000Z
-
-
 title = "Enable PostgreSQL HStore by default"
-topics = [ "postgresql" ]
-
+[taxonomies]
+topics = [ "PostgreSQL" ]
 +++
 
 In PostgreSQL `create database` (or `createdb` on cli) by default copies the

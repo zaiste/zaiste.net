@@ -1,7 +1,7 @@
 +++
+title = "How To Open An URL For A Text Link In Flutter"
 +++
 
-# How To Open An URL For A Text Link In Flutter
 
 Use the `launch` & `canLaunch` functions from the `url_launcher` package along
 with the `InkWell` widget:

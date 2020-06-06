@@ -1,8 +1,6 @@
-
 +++
-
+title = "Datomic"
 +++
-# Datomic
 
 With datomic, looking through history is fast and easy.
 

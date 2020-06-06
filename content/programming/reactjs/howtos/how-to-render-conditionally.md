@@ -1,10 +1,8 @@
-
++++
+title = "How To Render Conditionally in React.js"
 +++
 
-+++
-# How To Render Conditionally in React.js
-
-```js 
+```js
 export default function Widget({ isVisible }) {
   return (
     <div>
@@ -16,7 +14,7 @@ export default function Widget({ isVisible }) {
 
 Another approach:
 
-```js 
+```js
 export default function Widget({ isVisible }) {
   if (!isVisible) {
     return (

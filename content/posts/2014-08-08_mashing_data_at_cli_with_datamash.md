@@ -1,11 +1,8 @@
-
 +++
 date = 2014-08-08T00:00:00.000Z
-
-
 title = "Mashing data at CLI with Datamash"
-topics = [ "data science", "cli" ]
-
+[taxonomies]
+topics = [ "CLI" ]
 +++
 
 [datamash][1] is a tool that allows to group, count elements and perform a

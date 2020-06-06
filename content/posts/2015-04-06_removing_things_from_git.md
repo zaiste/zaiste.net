@@ -1,11 +1,8 @@
-
 +++
 date = 2015-04-06T00:00:00.000Z
-
-
 title = "Removing things from Git"
-topics = [ "git", "cli" ]
-
+[taxonomies]
+topics = [ "Git", "CLI" ]
 +++
 
 ## Remove a file in the most recent state

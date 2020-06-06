@@ -1,8 +1,8 @@
-
 +++
-
+title = "Org Mode"
+[extra]
+howtos = true
 +++
-# Org Mode
 
 Org Mode is a major mode for Emacs. It is part of Emacs.
 

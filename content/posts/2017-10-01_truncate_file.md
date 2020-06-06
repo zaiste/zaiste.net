@@ -1,11 +1,8 @@
-
 +++
 date = 2017-10-01T00:00:00.000Z
-
-
 title = "Truncate file"
-topics = [ "cli", "unix", "sed" ]
-
+[taxonomies]
+topics = [ "CLI" ]
 +++
 
 Use `sed` to truncate a file in-place `sed`

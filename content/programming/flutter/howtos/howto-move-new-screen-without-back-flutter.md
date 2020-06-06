@@ -1,7 +1,7 @@
 +++
+title = "How To Move To A New Screen Without Back Button in Flutter"
 +++
 
-# How To Move To A New Screen Without Back Button in Flutter
 
 Use `Navigator.pushReplacement`:
 

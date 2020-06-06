@@ -1,10 +1,8 @@
-
 +++
 date = 2014-12-11T00:00:00.000Z
-
-
 title = "PostgreSQL JSON data type"
-topics = [ "postgresql", "json" ]
+[taxonomies]
+topics = [ "PostgreSQL" ]
 
 +++
 

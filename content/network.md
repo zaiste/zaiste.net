@@ -1,7 +1,8 @@
 +++
+title = "Network"
+[extra]
+howtos = true
 +++
-
-# Network
 
 ## Protocols
 
@@ -16,5 +17,4 @@
 -   [Nginx](@/network/nginx.md)
 -   [OpenResty](@/network/openresty.md)
 
-## [Network Related HowTos](@/network/howtos.md)
 

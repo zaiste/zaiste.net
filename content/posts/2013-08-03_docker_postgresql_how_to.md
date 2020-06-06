@@ -1,11 +1,8 @@
-
 +++
 date = 2013-08-03T00:00:00.000Z
-
-
 title = "Docker PostgreSQL How-To"
-topics = [ "docker", "postgresql", "howto" ]
-
+[taxonomies]
+topics = [ "Docker", "PostgreSQL" ]
 +++
 
 [Docker][1] is one of the most exciting open source project right now. In short,

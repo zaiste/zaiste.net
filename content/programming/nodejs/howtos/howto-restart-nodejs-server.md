@@ -1,7 +1,6 @@
 +++
+title = "How To Restart a Node.js Server"
 +++
-
-# How To Restart a Node.js Server
 
 First, start a server
 

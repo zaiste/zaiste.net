@@ -1,0 +1,5 @@
++++
+title = "Editors"
+template = "posts.html"
+page_template = "note.html"
++++

@@ -1,10 +1,8 @@
-
++++
+title = "How To Upgrade Rubygems"
 +++
 
-+++
-# How To Upgrade Rubygems
-
-```bash 
+```bash
 gem install rubygems-update
 update_rubygems
 gem update --system

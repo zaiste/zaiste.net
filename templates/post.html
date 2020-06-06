@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="max-w-screen-xl mx-auto py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+<div class="max-w-screen-xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
   <div class="grid grid-cols-4 gap-4">
     <div class="col-span-4 lg:col-span-3">
       <div class="header mb-8">
-        <div class="text-gray-500">Part 1 of 4</div>
-        <h1 class="text-4xl leading-tight text-gray-600 font-medium mb-2">
+        <h1 class="text-4xl leading-tight text-gray-600 font-medium">
           {{ page.title | replace(from="*", to="")}}
         </h1>
+        {% if page.extra.subtitle %}
+        <div class="text-gray-500 mb-2 text-lg font-semibold">{{ page.extra.subtitle }}</div>
+        {% endif %}
+
+        <hr/>
+
         {% if page.taxonomies.topics %}
-        <div class="flex mb-2">
+        <div class="flex my-4">
           {% for topic in page.taxonomies.topics %}
             <div class="flex flex-shrink-0 text-sm items-center mr-2">
               <div class="bg-gray-200 text-gray-600 px-2 py-1 rounded-l-sm">#</div>
@@ -25,7 +30,7 @@
         {% endif %}
 
         <div class="text-gray-500">
-          {{ page.date }}
+          {{ page.date | date(format="%Y-%m-%d") }}
         </div>
       </div>
 
@@ -33,8 +38,18 @@
         {{ page.content | safe }}
       </div>
     </div>
-    <aside>
-      <p>Table of Contents </p>
+    <aside class="sticky top-0">
+      <p class="uppercase text-sm text-gray-600 font-semibold">Table of Contents </p>
+      <ul class="mt-2">
+        {% for h1 in page.toc %}
+        <li class="mb-1">
+          <a class="flex items-center py-2 p2-4 block text-gray-500 border-l-2 border-gray-400 border-white bg-gray-50 hover:bg-gray-100 hover:text-gray-700 hover:border-gray-700"
+            href="{{ h1.permalink | safe }}">
+            <span class="mx-4 font-medium text-sm">{{ h1.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
     </aside>
   </div>
 </div>

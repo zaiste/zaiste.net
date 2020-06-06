@@ -1,7 +1,7 @@
 +++
+title = "How To Style Texts using the `Text` widget in Flutter"
 +++
 
-# How To Style Texts using the `Text` widget in Flutter
 
 ```dart
 Text(

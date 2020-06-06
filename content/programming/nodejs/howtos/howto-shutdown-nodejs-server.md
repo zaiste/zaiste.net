@@ -1,7 +1,6 @@
 +++
+title = "How To Shutdown a Node.js Server"
 +++
-
-# How To Shutdown a Node.js Server
 
 1.  Subscribe to the `connection` event which provides the socket for each new connection.
 2.  Remember each socket

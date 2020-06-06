@@ -6,7 +6,7 @@ aliases = [
   "postgresql_distinct_on"
 ]
 [taxonomies]
-topics = [ "postgresql" ]
+topics = [ "PostgreSQL" ]
 +++
 
 `DISTINCT` clause eliminates duplicate rows from the results retrieved by `SELECT` statement. It keeps one row for each group of duplicates. This one row is unpredictable unless `ORDER BY` is used to ensure that the desired row appears first

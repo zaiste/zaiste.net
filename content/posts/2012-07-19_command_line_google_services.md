@@ -1,11 +1,8 @@
-
 +++
 date = 2012-07-19T00:00:00.000Z
-
-
 title = "Command & Line - Google Services"
-topics = [ "cli" ]
-
+[taxonomies]
+topics = [ "CLI" ]
 +++
 
 [GoogleCL](http://code.google.com/p/googlecl/) is a small wrapper for Google

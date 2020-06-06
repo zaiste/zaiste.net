@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Validate A Phone Number in Dart"
 +++
-# How To Validate A Phone Number in Dart
 
 ```dart
 String pattern = r'^(?:[+0][1-9])?[0-9]{10,12}$';

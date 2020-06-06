@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Install Nginx on Ubuntu 18.04"
 +++
-# How To Install Nginx on Ubuntu 18.04
 
 ## Install Nginx
 

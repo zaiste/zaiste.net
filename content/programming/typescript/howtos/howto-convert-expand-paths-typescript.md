@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Convert / Expand Paths in TypeScript"
 +++
-# How To Convert / Expand Paths in TypeScript
 
 The `baseUrl` compiler option in TypeScript allows you to define import paths relative to the path defined using that option:
 

@@ -1,10 +1,8 @@
-
++++
+title = "How To Create A Service Locator for Dependency Injection in Dart"
 +++
 
-+++
-# How To Create A Service Locator for Dependency Injection in Dart
-
-```dart 
+```dart
 void main() {
   Injector injector = Injector();
   injector.add(() => Person('Filip'));

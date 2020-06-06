@@ -1,11 +1,8 @@
-
 +++
 date = 2015-04-12T00:00:00.000Z
-
-
 title = "How to write command line tools in JavaScript with Node.js"
-topics = [ "nodejs", "cli", "javascript" ]
-
+[taxonomies]
+topics = [ "Node.js", "CLI", "JavaScript" ]
 +++
 
 Let's start by creating a project using `npm`

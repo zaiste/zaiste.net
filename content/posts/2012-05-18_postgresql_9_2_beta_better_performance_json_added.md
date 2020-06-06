@@ -1,11 +1,8 @@
-
 +++
 date = 2012-05-18T00:00:00.000Z
-
-
 title = "PostgreSQL 9.2 Beta - Better Performance, JSON added"
-topics = [ "postgresql" ]
-
+[taxonomies]
+topics = [ "PostgreSQL" ]
 +++
 
 PostgreSQL Global Development Group announced [the beta release of PostgreSQL 9.2](http://www.postgresql.org/about/news/1395/). Improvements include:

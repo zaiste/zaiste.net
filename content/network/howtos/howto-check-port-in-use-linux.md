@@ -1,8 +1,6 @@
-
 +++
-
+title = "How to Check If a Port is In Use on Linux"
 +++
-# How to Check If a Port is In Use on Linux
 
 ## Method 1: Use `lsof`
 

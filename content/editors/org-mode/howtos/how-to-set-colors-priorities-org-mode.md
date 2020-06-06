@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Set Colors for Priorities in Org Mode"
 +++
-# How To Set Colors for Priorities in Org Mode
 
 Customize `org-priority-faces` to set specific attributes for each priority:
 

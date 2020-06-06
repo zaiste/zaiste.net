@@ -1,10 +1,8 @@
-
++++
+title = "Bash"
 +++
 
-+++
-# Bash
-
-```bash 
+```bash
 bash-3.2$ FILENAME=somefile.tar.gz
 bash-3.2$ echo ${FILENAME%%.*}
 somefile

@@ -1,7 +1,7 @@
 +++
+title = "How To Reduce over Objects"
 +++
 
-# How To Reduce over Objects
 
 For the following data set, calculate the `score` average only for `available` widgets.
 

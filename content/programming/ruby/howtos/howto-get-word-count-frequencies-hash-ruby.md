@@ -1,7 +1,7 @@
 +++
+title = "How To Get Word Count / Frequencies using Hashes in Ruby"
 +++
 
-# How To Get Word Count / Frequencies using Hashes in Ruby
 
 ```ruby
 wf = Hash.new(0).tap { |h| words.each { |word| h[word] += 1 } }

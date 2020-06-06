@@ -1,8 +1,6 @@
-
 +++
-
+title = "Mnesia"
 +++
-# Mnesia
 
 Mnesia was designed for replicating connection state between a hot-master telecom switch and its warm-standby switch, so that the warm standby can be instantly promoted to master.
 

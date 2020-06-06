@@ -1,8 +1,6 @@
-
 +++
-
+title = "MirageOS"
 +++
-# MirageOS
 
 MirageOS is similar to Docker but without Linux as the underlaying.
 

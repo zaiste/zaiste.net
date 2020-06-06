@@ -1,10 +1,8 @@
-
++++
+title = "How To Assure Unique Jobs in Sidekiq"
 +++
 
-+++
-# How To Assure Unique Jobs in Sidekiq
-
-```ruby 
+```ruby
 class UniqueWorker
 
   def self.perform_unique_async(...<params>...)

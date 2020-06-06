@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Create A Singleton in Dart"
 +++
-# How To Create A Singleton in Dart
 
 Dart provides factory constructors, which simplifies the creation of singletons.
 

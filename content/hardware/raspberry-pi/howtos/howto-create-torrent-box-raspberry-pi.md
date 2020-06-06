@@ -1,31 +1,29 @@
-
++++
+title = "How To Create a Torrent Box on Raspberry Pi"
 +++
 
-+++
-# How To Create a Torrent Box on Raspberry Pi
-
-```bash 
+```bash
 sudo apt-get install transmission-daemon
 ```
 
 Mount the network drive
 
-```bash 
+```bash
 sudo mkdir -p /media/NASHDD1/torrent-inprogress
 sudo mkdir -p /media/NASHDD1/torrent-complete
 ```
 
-```bash 
+```bash
 sudo nano /etc/transmission-daemon/settings.json
 ```
 
-```bash 
+```bash
 "incomplete-dir": "/media/NASHDD1/torrent-inprogress",
 "incomplete-dir-enabled": true,
 "download-dir": "/media/NASHDD1/torrent_complete",
 ```
 
-```bash 
+```bash
 sudo service transmission-daemon reload
 ```
 
@@ -33,7 +31,7 @@ rpc-password and rpc-username located respectively on Lines 51 and 54 of the con
 
 Speaking of ports, the default transmission peer-port is 51413, as defined on Line 32. Opening this port on the firewall (and allowing port forwarding in the router) is not strictly necessary for the applications to work correctly, however it is needed for it to work in active mode, and so to be able to connect to more peers.
 
-```bash 
+```bash
 sudo ufw allow 9091,51413/tcp
 ```
 
@@ -47,25 +45,25 @@ ZFS can self heal and recover data automatically. Complex algorithms, hashes and
 
 ## Install ZFS
 
-```bash 
+```bash
 sudo apt-get install zfsutils-linux
 ```
 
 Striped pool, where a copy of data is stored across all drives.
 
-```bash 
+```bash
 sudo zpool create files /dev/vda /dev/vdb
 ```
 
 Mirrored pool, where a single, complete copy of data is stored on all drives.
 
-```bash 
+```bash
 sudo zpool create files mirror /dev/vda /dev/vdb
 ```
 
 ## List ZFS Pool
 
-```bash 
+```bash
 sudo zpool list
 ```
 
@@ -73,7 +71,7 @@ sudo zpool list
 
 By default, /files mount point is only writeable by the user root. If you want to make /files writable by your own user and group, you can do so by running the following command:
 
-```bash 
+```bash
 sudo chown -Rfv USERNAME:GROUPNAME /files
 ```
 
@@ -81,7 +79,7 @@ sudo chown -Rfv USERNAME:GROUPNAME /files
 
 mount files ZFS pool to /var/www
 
-```bash 
+```bash
 sudo zfs set mountpoint=/var/www files
 ```
 
@@ -93,7 +91,7 @@ the pool, you can remove it. Beware that this will also remove any files that yo
 
 A snapshot is simply an exact picture of the state of your data at a certain point in time.
 
-```bash 
+```bash
 sudo zfs snapshot data@snap1
 ```
 
@@ -101,13 +99,13 @@ where ```
 undefined
 ``` is the name of the pool
 
-```bash 
+```bash
 sudo zfs rollback data@snap1
 ```
 
 When you take a snapshot of a given dataset (‘dataset’ is the ZFS term for a filesystem), ZFS just records the timestamp when the snapshot was made. That is it! No data is copied and no extra storage is consumed. It works because of the copy-on-write mechanism.
 
-```bash 
+```bash
 zfs list -rt all zroot/usr/src
 ```
 
@@ -121,7 +119,7 @@ The copy-on-write mechanism ensures that whenever a block is modified, instead o
 
 ## Add Disk to the Pool
 
-```bash 
+```bash
 zpool add files ada4
 ```
 
@@ -139,13 +137,13 @@ Data is mirrored between ndisks. The actual capacity of the vdev is limited by t
 
 You may want to add extra disk, say ada4, to mirror same the data.
 
-```bash 
+```bash
 zpool attach tank ada1 ada4
 ```
 
 add an extra vdev to increase the capacity of zpool.
 
-```bash 
+```bash
 zpool add tank mirror ada4 ada5 ada6
 ```
 
@@ -161,24 +159,24 @@ RAID-Z is a data/parity distribution scheme like RAID-5, but it uses a dynamic s
 
 Using the zfs send and zfs receive we can perform full and incremental backup of a dataset and we can also use output redirection to store the backup in gzip format, a tape, a disk or in a remote file system.
 
-```bash 
+```bash
 zfs send datapool/project1@monday | gzip -9 > projet1.gz
 ```
 
-```bash 
+```bash
 zfs send datapool/project1@monday | ssh sol02 zfs recv testpool/project1
 ```
 
 ### Full Replication
 
-```bash 
+```bash
 zfs send datapool/project1@monday | zfs receive -Fv rpool/project1
 
 ```
 
 ### Incremental
 
-```bash 
+```bash
 zfs send -I datapool/project1@monday datapool/project1@tuesdayIncr | zfs receive -Fv rpool/project1
 ```
 

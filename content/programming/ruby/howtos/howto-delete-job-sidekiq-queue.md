@@ -1,10 +1,8 @@
-
++++
+title = "How To Delete A Job From A Queue In Sidekiq"
 +++
 
-+++
-# How To Delete A Job From A Queue In Sidekiq
-
-```ruby 
+```ruby
 queue = Sidekiq::Queue.new("mailer")
 
 queue.each do |job|

@@ -1,7 +1,8 @@
 +++
-
+title = "Nginx"
+[extra]
+howtos = true
 +++
-# Nginx
 
 Nginx is an event-based architecture. It uses a single thread running an event loop which handles sockets when they become ready for reading or writing.
 

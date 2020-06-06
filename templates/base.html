@@ -5,8 +5,23 @@
   {% include "meta.html" %}
   <title>{% block title %}{{ page.title | default(value=config.extra.title) }}{% endblock title %} · zaiste.net</title>
 
+  <link rel="canonical" href="{{ current_url | safe }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
   <link rel="stylesheet" href="/main.css">
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jakub Neander",
+      "jobTitle": "Software Engineer",
+      "image": "/images/neander.jpg",
+      "url": "https://zaiste.net",
+      "sameAs": ["https://instagram.com/zaiste", "https://www.linkedin.com/in/zaiste", "https://twitter.com/zaiste", "https://github.com/zaiste"]
+    }
+  </script>
+
+  <script async defer data-domain="zaiste.net" src="https://nibspace.com/js/ns.js"></script>
 </head>
 
 <body class="flex flex-col min-h-screen">

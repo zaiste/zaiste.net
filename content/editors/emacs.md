@@ -1,8 +1,6 @@
-
 +++
-
+title = "Emacs"
 +++
-# Emacs
 
 Run `M-x` with prefix equals to `C-u M-x` which in Doom is `SPC u M-x`.
 

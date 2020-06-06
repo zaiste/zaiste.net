@@ -1,7 +1,7 @@
 +++
+title = "How To Specify A Custom TypeScript `tsconfig.json` in Vue.js"
 +++
 
-# How To Specify A Custom TypeScript `tsconfig.json` in Vue.js
 
 Use the `chainWebpack` option from the `vue.config.js` configuration file to adjust the config for `ts-loader` and `fork-ts-checker-plugin` accordingly.
 

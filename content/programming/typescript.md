@@ -1,7 +1,8 @@
 +++
+title = "TypeScript"
+[extra]
+howtos = true
 +++
-
-# TypeScript
 
 TypeScript is a superset of JavaScript. It provides optional types annotations.
 

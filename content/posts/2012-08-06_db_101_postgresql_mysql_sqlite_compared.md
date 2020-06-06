@@ -1,10 +1,8 @@
-
 +++
 date = 2012-08-06T00:00:00.000Z
-
 title = "DB 101: PostgreSQL, MySQL and SQLite compared"
-topics = [ "postgresql", "mysql", "sqlite" ]
-
+[taxonomies]
+topics = [ "PostgreSQL", "MySQL", "Sqlite" ]
 +++
 
 In this post I go through basic adminstrative commands for [PostgreSQL][1],

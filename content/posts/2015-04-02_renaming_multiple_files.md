@@ -1,11 +1,8 @@
-
 +++
 date = 2015-04-02T00:00:00.000Z
-
-
 title = "Renaming multiple files"
-topics = [ "cli" ]
-
+[taxonomies]
+topics = [ "CLI" ]
 +++
 
 For [zsh][1] there is `zmv` module which must be loaded with `autoload`;

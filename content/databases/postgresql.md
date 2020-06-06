@@ -1,16 +1,17 @@
-
 +++
-
+title = "PostgreSQL"
+[extra]
+howtos = true
+libs = "Extensions"
 +++
-# PostgreSQL
 
 ## Extensions
 
--   Horizontal Scaling and Sharding: Citus DB
--   Columnar Data Storage: cstore_fdw
--   Files as Tables: file_fdw
--   Streaming Computations: PipelineDB
--   Timeseries: TimescaleDB
+- Horizontal Scaling and Sharding: Citus DB
+- Columnar Data Storage: cstore_fdw
+- Files as Tables: file_fdw
+- Streaming Computations: PipelineDB
+- Timeseries: TimescaleDB
 
 ## Generate Series
 

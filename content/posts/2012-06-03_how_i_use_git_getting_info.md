@@ -1,11 +1,8 @@
-
 +++
 date = 2012-06-03T00:00:00.000Z
-
-
 title = "How I use Git - Extracting Info"
-topics = [ "git", "cli" ]
-
+[taxonomies]
+topics = [ "Git", "CLI" ]
 +++
 
 In the 2nd post of the series I'll show how I extract information from a Git repository. There are three layers I will operate on:

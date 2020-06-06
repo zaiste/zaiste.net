@@ -1,7 +1,7 @@
 +++
+title = "How To Retrieve Text Field Values in Flutter"
 +++
 
-# How To Retrieve Text Field Values in Flutter
 
 ## Using `TextEditingController`
 

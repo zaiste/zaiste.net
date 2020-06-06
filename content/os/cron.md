@@ -1,8 +1,6 @@
-
 +++
-
+title = "Cron"
 +++
-# Cron
 
 Every user on a system may have their own crontab file.
 

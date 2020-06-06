@@ -1,8 +1,8 @@
-
 +++
-
+title = "Dart"
+[extra]
+howtos = true
 +++
-# Dart
 
 Dart is a statically typed language since version 2.
 

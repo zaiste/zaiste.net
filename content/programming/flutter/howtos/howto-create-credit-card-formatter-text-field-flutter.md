@@ -1,10 +1,8 @@
-
++++
+title = "How To Create A Credit Card Formatter for A Text Field in Flutter"
 +++
 
-+++
-# How To Create A Credit Card Formatter for A Text Field in Flutter
-
-```dart 
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

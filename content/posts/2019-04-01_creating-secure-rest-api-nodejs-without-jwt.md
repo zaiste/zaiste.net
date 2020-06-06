@@ -5,7 +5,7 @@ aliases = [
   "creating-secure-rest-api-nodejs-without-jwt"
 ]
 [taxonomies]
-topics = [ "Node.js", "JavaScript", "security" ]
+topics = [ "Node.js", "JavaScript", "Security" ]
 +++
 
 Before we go on creating an actual RESTful API, let's address the elephant in

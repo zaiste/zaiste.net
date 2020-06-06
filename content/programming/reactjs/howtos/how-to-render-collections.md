@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Render Collections"
 +++
-# How To Render Collections
 
 ## Array
 

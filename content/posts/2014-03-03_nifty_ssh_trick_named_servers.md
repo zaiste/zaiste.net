@@ -4,7 +4,8 @@ date = 2014-03-03T00:00:00.000Z
 
 
 title = "Nifty SSH Trick: Named Servers"
-topics = [ "ssh", "cli" ]
+[taxonomies]
+topics = [ "SSH", "CLI" ]
 
 +++
 

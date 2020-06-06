@@ -1,7 +1,6 @@
 +++
+title = "How To Convert An Array Of Hashes Into A Hash in Ruby"
 +++
-
-# How To Convert An Array Of Hashes Into A Hash in Ruby
 
 To convert:
 

@@ -1,10 +1,8 @@
-
++++
+title = "How To Create Workers in Node.js 11+"
 +++
 
-+++
-# How To Create Workers in Node.js 11+
-
-```js 
+```js
 const { Worker } = require('worker_threads');
 
 let threadStatus = [...Array(numberOfThreads)].fill(0);
@@ -23,7 +21,7 @@ for (let i = 0; i < numberOfThreads; i++) {
 
 Worker:
 
-```js 
+```js
 const { parentPort, workerData } = require('worker_threads');
 
 const { ... } = workerData;

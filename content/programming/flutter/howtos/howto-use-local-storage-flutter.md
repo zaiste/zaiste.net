@@ -1,7 +1,6 @@
 +++
+title = "How To Use Local Storage in Flutter"
 +++
-
-# How To Use Local Storage in Flutter
 
 ## Use the `shared_preferences` Plugin
 

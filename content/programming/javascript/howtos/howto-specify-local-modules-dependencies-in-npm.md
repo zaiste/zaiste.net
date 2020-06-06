@@ -1,7 +1,7 @@
 +++
+title = "How To Specify Local Modules As Dependencies in NPM"
 +++
 
-# How To Specify Local Modules As Dependencies in NPM
 
 Use the `file:` in `package.json` directive to specify a local module as a dependency:
 

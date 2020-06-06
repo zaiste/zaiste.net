@@ -1,8 +1,8 @@
-
 +++
-
+title = "Vim"
+[extra]
+howtos = true
 +++
-# Vim
 
 Vim 8 added a native way to load 3rd party plugins. Thus, there is no need any longer to use things like `pathogen`.
 

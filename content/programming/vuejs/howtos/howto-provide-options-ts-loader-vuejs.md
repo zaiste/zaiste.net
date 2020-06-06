@@ -1,7 +1,7 @@
 +++
+title = "How To Modify Options to the `ts-loader` Loader in Vue.js CLI"
 +++
 
-# How To Modify Options to the `ts-loader` Loader in Vue.js CLI
 
 ```js
 module.exports = {

@@ -1,18 +1,20 @@
 +++
 date = 2019-12-28T00:00:00.000Z
-title = "Building A REST API in Node.js with TypeScript (part 1 of 4)"
+title = "Building A REST API in Node.js with TypeScript"
 aliases = [
   "building-rest-api-nodejs-typescript-1"
 ]
 [taxonomies]
 topics = [ "Node.js", "TypeScript", "JavaScript", "REST" ]
+[extra]
+subtitle = "Part 1 of 4"
 +++
 
 Let's build a simple a REST API in Node.js using [TypeScript](https://www.typescriptlang.org/). This series will be split into **four parts** as there is a lot to discuss. It is also aimed for absolute beginners or people just starting with programming. At the same time I will be mentioning few some advanced topics so that even if you know how to build a REST API, you will hopefully still gain something from reading this tutorial.
 
-<div class="notice warning">
-If you prefer to watch me coding this application instead of reading the article, check <a href="https://www.youtube.com/watch?v=AqanhZQJfrw">this video</a>. Also, if you liked it, consider subscribing to <a href="https://www.youtube.com/zaiste">my YouTube channel</a> for more.
-</div>
+{% warning() %}
+If you prefer to watch me coding this application instead of reading the article, check [this video](https://www.youtube.com/watch?v=AqanhZQJfrw). Also, if you liked it, consider subscribing to <a href="https://www.youtube.com/zaiste">my YouTube channel</a> for more.
+{% end %}
 
 In this series I will be using [Huncwot](https://github.com/huncwotjs/huncwot), which is a tool to quickly build web applications. It is an integrated solution that covers both frontend, backend and everything in between.
 

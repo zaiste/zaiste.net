@@ -1,8 +1,6 @@
-
 +++
-
+title = "How To Resize On The Fly & Cache Images in Nginx"
 +++
-# How To Resize On The Fly & Cache Images in Nginx
 
 Nginx provides the `image_filter` module for the dynamic image resizing. This Nginx configuration will allow for requests such as
 `http://server.com/images/1024/river.jpg` - this image will be resized to `1024` pixels wide and compressed using the quality value
