@@ -4,11 +4,9 @@
 +++
 # How To Convert / Expand Paths in TypeScript
 
-The ```
-undefined
-``` compiler option in TypeScript allows you to define import paths relative to the path defined using that option:
+The `baseUrl` compiler option in TypeScript allows you to define import paths relative to the path defined using that option:
 
-```json 
+```json
 {
   "compilerOptions": {
     "baseUrl": "src"

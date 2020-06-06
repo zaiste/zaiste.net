@@ -1,7 +1,9 @@
 +++
 date = 2019-12-28T00:00:00.000Z
 title = "Building A REST API in Node.js with TypeScript (part 1 of 4)"
-
+aliases = [
+  "building-rest-api-nodejs-typescript-1"
+]
 [taxonomies]
 topics = [ "Node.js", "TypeScript", "JavaScript", "REST" ]
 +++

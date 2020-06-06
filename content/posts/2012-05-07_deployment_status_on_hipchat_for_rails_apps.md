@@ -4,7 +4,7 @@ date = 2012-05-07T00:00:00.000Z
 
 
 title = "Deployment Status on HipChat for Rails Apps"
-topics = [ "rails", "hipchat" ]
+topics = [ "Rails" ]
 
 +++
 

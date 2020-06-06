@@ -1,7 +1,6 @@
-
++++
 +++
 
-+++
 # WebAssembly
 
 WebAssembly is a portable, size- and load-time-efficient binary compiler target, which promises near-native performance on the web.

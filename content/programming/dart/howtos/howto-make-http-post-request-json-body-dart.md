@@ -1,12 +1,8 @@
-
 +++
-
 +++
-# How To Make A HTTP ```
-undefined
-``` Request with JSON as The Body in Dart or Flutter
+# How To Make A HTTP `POST` Request with JSON as The Body in Dart or Flutter
 
-```dart 
+```dart
 import 'package:http/http.dart' as http;
 
 Map data = {

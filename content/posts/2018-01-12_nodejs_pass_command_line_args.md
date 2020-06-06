@@ -1,14 +1,11 @@
-
 +++
 date = 2018-01-12T00:00:00.000Z
-
-
 title = "Node.js: Pass Command Line Arguments"
-topics = [ "nodejs" ]
 description = """
 Use `process.argv`
 """
-
+[taxonomies]
+topics = [ "Node.js" ]
 [extra]
 priority = 0.8
 

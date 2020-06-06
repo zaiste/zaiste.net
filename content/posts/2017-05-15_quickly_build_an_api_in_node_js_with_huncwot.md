@@ -146,7 +146,7 @@ All this is meant as a starting point and to show you how all the pieces are com
 
 ## Testing routes
 
-Once you start the application using `huncwot s`, you can start playing with that resource at `/tasks`. I will be using [httpie](https://httpie.org) instead of [curl](https://curl.haxx.se) to issue HTTP requests in the examples below (be sure to have it installed before following along).
+Once you start the application using `huncwot s`, you can start playing with that resource at `/tasks`. I will be using [httpie](https://httpie.md) instead of [curl](https://curl.haxx.se) to issue HTTP requests in the examples below (be sure to have it installed before following along).
 
 Let's start by retrieving all tasks
 

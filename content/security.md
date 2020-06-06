@@ -6,11 +6,11 @@
 
 ## Versus
 
--   [bcrypt vs scrypt vs Aragon2](file:security/vs/bcrypt-scrypt-argon2.org)
+-   [bcrypt vs scrypt vs Aragon2](@/security/vs/bcrypt-scrypt-argon2.md)
 
 ## Tools
 
--   [WireGuard](file:security/wireguard.org)
+-   [WireGuard](@/security/wireguard.md)
 
-## [Security Related HowTos](file:security/howtos.org)
+## [Security Related HowTos](@/security/howtos.md)
 

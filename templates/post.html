@@ -7,7 +7,7 @@
       <div class="header mb-8">
         <div class="text-gray-500">Part 1 of 4</div>
         <h1 class="text-4xl leading-tight text-gray-600 font-medium mb-2">
-          {{ page.title }}
+          {{ page.title | replace(from="*", to="")}}
         </h1>
         {% if page.taxonomies.topics %}
         <div class="flex mb-2">

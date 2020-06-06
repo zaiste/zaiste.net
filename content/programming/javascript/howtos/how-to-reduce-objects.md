@@ -1,16 +1,11 @@
-
++++
 +++
 
-+++
 # How To Reduce over Objects
 
-For the following data set, calculate the ```
-undefined
-``` average only for ```
-undefined
-``` widgets.
+For the following data set, calculate the `score` average only for `available` widgets.
 
-```js 
+```js
 const widgets = [
   {
     score: 123,
@@ -28,7 +23,7 @@ const widgets = [
 
 ## Reduce with an object as accumulator
 
-```js 
+```js
 const calculate = ({ total, length }, score) => ({ total += score, length += 1 })
 const init = { total: 0, length: 0 }
 
@@ -42,7 +37,7 @@ const average = total / length;
 
 ## Point-free Function Composition
 
-```js 
+```js
 const filter = predicate => arr => arr.filter(predicate);
 const map = fn => arr => arr.map(fn);
 const cursor = path => obj => obj[path];
@@ -65,7 +60,7 @@ const average = calculate(widgets);
 
 ## Using Reducers
 
-```js 
+```js
 const reducers = {
   filter: predicate => (acc, elem) => predicate(item) ? acc.concat([elem]) : acc,
   map: fn => (acc, elem) => acc.concat([fn(elem)]),
@@ -81,7 +76,7 @@ const { total, length } = widgets.reduce(availableReducer, [])
 
 ## Using home-grown Transducers
 
-```js 
+```js
 const transducers = {
   filter: predicate => step => (acc, elem) => predicate(item) ? step(acc, item) : acc,
   map: fn => step => (acc, elem) => step(acc, fn(elem))
@@ -98,7 +93,7 @@ const { total, length } = widgets.reduce(reducer, init);
 
 ## Using Ramda Transducers
 
-```js 
+```js
 import { compose, filter, map, transduce } from 'ramda';
 
 const prepare = compose(filter(({ available }) => available), map(({ score }) => score));

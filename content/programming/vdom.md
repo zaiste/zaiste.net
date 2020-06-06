@@ -1,7 +1,6 @@
-
++++
 +++
 
-+++
 Virtual DOM is ...
 
 The DOM was often used to store state: this just isn't an efficient approach.
@@ -14,9 +13,7 @@ The Virtual DOM is an improvement because it allows to consolidate multiple chan
 
 With the 2 way bindings approach, changes could trigger many computations where each would trigger re-renders. React bundles all such operations into a single rerender.
 
-```
-undefined
-``` lets you write declarative UI without diffing. It has an almost 1-to-1 correspondence with JSX, but by utilizing the static/dynamic split it doesn't have to do VDOM diffs.
+`lit-html` lets you write declarative UI without diffing. It has an almost 1-to-1 correspondence with JSX, but by utilizing the static/dynamic split it doesn't have to do VDOM diffs.
 
 Template Instantiation.
 

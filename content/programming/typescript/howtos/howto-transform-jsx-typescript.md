@@ -4,23 +4,15 @@
 +++
 # How To Transform JSX using TypeScript
 
-TypeScript can transform JSX templates. You need use the ```
-undefined
-``` extension and set the ```
-undefined
-``` flag to ```
-undefined
-```.
+TypeScript can transform JSX templates. You need use the `.tsx` extension and set the `--jsx` flag to `React`.
 
-```bash 
+```bash
 tsc --jsx React ./src/App.tsx
 ```
 
-For a library like Preact or Mithril you need to addtionally use the```
-undefined
-``` command-line parameter:
+For a library like Preact or Mithril you need to addtionally use the `--jsxFactory` command-line parameter:
 
-```bash 
+```bash
 tsc --jsx React --jsxFactory h ./src/App.tsx
 ```
 

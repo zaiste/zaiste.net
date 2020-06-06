@@ -4,11 +4,11 @@
 +++
 # TestCafe (End-to-End Testing)
 
-```bash 
+```bash
 npm i testcafe
 ```
 
-```js 
+```js
 import { Selector } from 'testcafe';
 
 fixture `My first test`
@@ -22,15 +22,11 @@ test('Find "testcafe" repository on GitHub', async t => {
 });
 ```
 
-```bash 
+```bash
 testcafe chrome test.js
 ```
 
--   explicit 
-
-    ```
-    undefined
-    ```
+-   explicit `await`
 -   functional testing
 -   it doesn't use WebDriver
 -   one-command tool

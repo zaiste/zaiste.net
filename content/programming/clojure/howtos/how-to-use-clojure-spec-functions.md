@@ -4,52 +4,38 @@
 +++
 # How To Use Clojure.Spec for Functions
 
-```clojure 
+```clojure
 (defn int-to-digits
   [number]
   (str number))
 ```
 
-Function specifications (or specs) are defined with ```
-undefined
-```.
+Function specifications (or specs) are defined with `s/fdef`.
 
-```clojure 
+```clojure
 (s/fdef int-to-digits
   :args (s/cat :number int?))
 ```
 
-The function’s argument names and the keywords in the ```
-undefined
-``` spec don’t have to match, it’s position based.
+The function’s argument names and the keywords in the `:args` spec don’t have to match, it’s position based.
 
-The ```
-undefined
-``` function can be now used to assert the ```
-undefined
-``` spec:
+The `instrument` function can be now used to assert the `:args` spec:
 
-```clojure 
+```clojure
 (stest/instrument `int-to-digits)
 ```
 
-The ```
-undefined
-``` spec can be used to provide a specification for the return value:
+The `:ret` spec can be used to provide a specification for the return value:
 
-```clojure 
+```clojure
 (s/fdef number-to-digits
   :args (s/cat :number int?)
   :ret (s/coll-of char? :kind set? :min-count 1))
 ```
 
-The ```
-undefined
-``` spec can be checked with the ```
-undefined
-``` function.
+The `:ret` spec can be checked with the `check` function.
 
-```clojure 
+```clojure
 (stest/check `number-to-digits)
 ```
 

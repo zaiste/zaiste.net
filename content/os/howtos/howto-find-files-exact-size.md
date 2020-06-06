@@ -4,38 +4,15 @@
 +++
 # How To Find Files of an Exact Size in Linux
 
-```bash 
+```bash
 find . -type f -size 127c -exec ls -l {} \;
 ```
 
--   ```
-    undefined
-    ```
++ `b` (default) for 512-byte blocks
++ `c` for bytes
++ `w` for words (2 bytes)
++ `k` for kilobytes
++ `M` for megabytes
++ `G` for gigabytes
 
-     (default) for 512-byte blocks
--   ```
-    undefined
-    ```
-
-     for bytes
--   ```
-    undefined
-    ```
-
-     for words (2 bytes)
--   ```
-    undefined
-    ```
-
-     for kilobytes
--   ```
-    undefined
-    ```
-
-     for megabytes
--   ```
-    undefined
-    ```
-
-     for gigabytes
 

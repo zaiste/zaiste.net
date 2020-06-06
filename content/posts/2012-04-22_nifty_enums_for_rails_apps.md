@@ -1,14 +1,9 @@
-
 +++
 date = 2012-04-22T00:00:00.000Z
-
-
 title = "Nifty enums for Rails apps"
-topics = [ "rails" ]
-
+topics = [ "Rails" ]
 [extra]
 priority = 0.8
-
 +++
 
 Yesterday, when wondering about the best representation for enum, I came along a nifty gem called [symbolize](https://github.com/nofxx/symbolize). The gem introduces an easy way to use symbols for values of an attribute. It provides a dedicated method (`symbolize`) that allows to return a symbol as a value of an attribute that method is used for.
@@ -19,8 +14,7 @@ It can be done like so
 
 Two options I found pretty cool are `scope` and `methods`.
 
-Option `scope` (class)
-----------------------
+# Option `scope` (class)
 
 ActiveRecord flavour
 
@@ -37,8 +31,7 @@ Scopes can be also chained.
     FooBar.great.cdr
 
 
-Option `methods` (object)
--------------------------
+# Option `methods` (object)
 
 It add fancy boolean methods to objects with enum.
 

@@ -7,98 +7,44 @@
 ## Method 1: By Modifying the fstab
 
 1.  Switch to single user mode.
-2.  Make sure any process writing to 
-
-    ```
-    undefined
-    ```
-
-     is stoped using 
-
-    ```
-    undefined
-    ```
-
-    .
+2. Make sure any process writing to `/var` is stoped using `lsof | grep /var`.
 3.  Create a directory on another partition
-
-```bash 
+```bash
 mkdir -p /home/var
 ```
+4. Move the `/var` content to `/home/var`
 
-1.  Move the 
-
-    ```
-    undefined
-    ```
-
-     content to 
-
-    ```
-    undefined
-    ```
-
-```bash 
+```bash
 rsync -va /var /home/var
 ```
 
-1.  Backup the 
+1. Backup the `/var` content under `/var.old`
 
-    ```
-    undefined
-    ```
-
-     content under 
-
-    ```
-    undefined
-    ```
-
-```bash 
+```bash
 mv /var /var.old
 ```
 
-1.  Create an empty 
+1. Create an empty `/var` directory
 
-    ```
-    undefined
-    ```
-
-     directory
-
-```bash 
+```bash
 mkdir /var
 ```
 
-1.  Bind the new directory with 
+1. Bind the new directory with `/home/var` using `mount`
 
-    ```
-    undefined
-    ```
-
-     using 
-
-    ```
-    undefined
-    ```
-
-```bash 
+```bash
 mount -o bind /home/var /var
 ```
 
-1.  Update the 
+1. Update the `/etc/fstab`
 
-    ```
-    undefined
-    ```
-
-```bash 
+```bash
  /home/var /var        none    bind
 ```
 
 ## Method 2: Using Symbolic Links
 
-```bash 
+```bash
 mkdir /home/var
 mv /var/* /home/var
 mv /var /var.old

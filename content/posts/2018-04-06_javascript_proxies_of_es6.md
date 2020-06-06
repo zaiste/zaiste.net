@@ -1,14 +1,10 @@
-
 +++
 date = 2018-04-06T00:00:00.000Z
-
-
 title = "JavaScript Proxies of ES6"
-topics = [ "javascript", "es6" ]
-
+[taxonomies]
+topics = [ "JavaScript" ]
 [extra]
 priority = 0.8
-
 +++
 
 [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), a new feature of ES6, allows to intercept operations performed on objects. It’s located between the object and its caller, mediating the exchange of values. It allows to write generic wrappers around objects.

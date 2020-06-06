@@ -1,12 +1,9 @@
-
++++
 +++
 
-+++
-# How To Modify Options to the ```
-undefined
-``` Loader in Vue.js CLI
+# How To Modify Options to the `ts-loader` Loader in Vue.js CLI
 
-```js 
+```js
 module.exports = {
   chainWebpack: config => {
     config.module

@@ -1,11 +1,11 @@
-
 +++
 date = 2017-11-05T00:00:00.000Z
-
-
 title = "NGINX X-Accel header"
-topics = [ "nginx" ]
-
+aliases = [
+  "nginx_x_accel_header"
+]
+[taxonomies]
+topics = [ "Nginx" ]
 +++
 
 `X-Accel-Redirect` response header makes an internal redirection to a `location` block determined by header's value returned from an upstream (backend).

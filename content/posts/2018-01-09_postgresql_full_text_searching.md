@@ -1,14 +1,10 @@
-
 +++
 date = 2018-01-09T00:00:00.000Z
-
-
 title = "PostgreSQL Full Text Searching"
-topics = [ "postgresql" ]
-
+[taxonomies]
+topics = [ "PostgreSQL" ]
 [extra]
 priority = 0.8
-
 +++
 
 [Full Text Searching](https://www.postgresql.org/docs/10/static/textsearch.html) is a feature that allows to identify natuaral-language documents (textual entities) matching a query. It provides a lingustic support that goes beyond regular expressions by handling the derived forms of words e.g. declension, conjugation, etc. As a result it brings more relevency to search results.

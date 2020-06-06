@@ -1,14 +1,12 @@
-
 +++
 date = 2018-01-17T00:00:00.000Z
-
-
 title = "Ruby: Write Array elements as new line"
-topics = [ "nodejs" ]
 description = """
 Use `puts` with an array argument
 """
 
+[taxonomies]
+topics = [ "Node.js" ]
 [extra]
 priority = 0.8
 

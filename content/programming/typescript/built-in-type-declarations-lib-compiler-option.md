@@ -1,20 +1,11 @@
-
++++
 +++
 
-+++
-# TypeScript's Built-In Type Declarations with the ```
-undefined
-``` Compiler Option
+# TypeScript's Built-In Type Declarations with the `--lib` Compiler Option
 
 Since version 2.0, the built-in standard library type declarations have been split into modules in TypeScript. This allows to select which (of those built-in) declarations to include in the project.
 
-There are several groups which can be defined with the ```
-undefined
-``` compiler option (or via the ```
-undefined
-``` property in ```
-undefined
-```):
+There are several groups which can be defined with the `--lib` compiler option (or via the `lib` property in `tsconfig.json`):
 
 -   dom
 -   webworker
@@ -38,56 +29,5 @@ undefined
 
 By default, if not set explicitly, TypeScript will include type declarations needed for web development, depending on the target:
 
--   for 
-
-    ```
-    undefined
-    ```
-
-     as target: 
-
-    ```
-    undefined
-    ```
-
-    , 
-
-    ```
-    undefined
-    ```
-
-     and 
-
-    ```
-    undefined
-    ```
--   for 
-
-    ```
-    undefined
-    ```
-
-     as target: 
-
-    ```
-    undefined
-    ```
-
-    , 
-
-    ```
-    undefined
-    ```
-
-    , 
-
-    ```
-    undefined
-    ```
-
-     and 
-
-    ```
-    undefined
-    ```
-
+- for `ES5` as target: `dom`, `es5` and `scripthost`
+- for `ES6` as target: `dom`, `dom.iterable`, `es6` and `scripthost`

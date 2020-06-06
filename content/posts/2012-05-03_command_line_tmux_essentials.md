@@ -1,17 +1,12 @@
-
 +++
 date = 2012-05-03T00:00:00.000Z
-
-
 title = "Command & Line: Tmux Essentials"
-topics = [ "tmux", "cli" ]
-
+topics = [ "Tmux", "CLI" ]
 +++
 
 Meet [Tmux](http://tmux.sourceforge.net/), an awesome terminal multiplexer. This is one of my favourite command line tools. Easy to use & set up, at the same time powerful; in addition to that it can impress your non-tech friends while you switch dark terminal screens, pretending to be doing some « complicated IT stuff ».
 
-TL;DR
------
+# TL;DR
 
 *Multiplexer* is an application that let you run multiple terminals (or terminal programs) at once, easily switch between them, keep them running in background, etc. To see what it is all about, check this simple Tmux run:
 
@@ -22,8 +17,8 @@ If you like the status bar featured in this episode, check out [tmuxified](https
 
 
 
-Basic Vocabulary
-----------------
+# Basic Vocabulary
+
 Tmux introduces a concept of **session** which is a group of terminals. When you start Tmux, it creatas its first session. Each session can have several **windows** i.e. what you see on screen at given time. Windows are numbered. Window can be splitted both horizonatlly or vertically. Each window can have one or several (when splitted) **panes** that run a terminal.
 
 Tmux has two modes: *normal* where you enter commands and *copy-mode* where you can scroll around & copy text.

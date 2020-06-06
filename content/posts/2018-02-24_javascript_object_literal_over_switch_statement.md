@@ -1,15 +1,11 @@
-
 +++
 date = 2018-02-24T00:00:00.000Z
-
-
 title = "JavaScript: Object Literal over Switch Statement"
-topics = [ "javascript" ]
 abstract = ""
-
+[taxonomies]
+topics = [ "JavaScript" ]
 [extra]
 priority = 0.8
-
 +++
 
 ```js

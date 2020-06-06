@@ -1,11 +1,11 @@
-
 +++
 date = 2014-06-12T00:00:00.000Z
-
-
 title = "Heredoc in Ruby"
-topics = [ "ruby" ]
-
+aliases = [
+  "heredoc_in_ruby"
+]
+[taxonomies]
+topics = [ "Ruby" ]
 +++
 
 Ruby supports multiline strings through [« here doc » syntax][2]. It allows to specify a string as a block of text where newlines and indents are preserved. It is not widely known, but useful feature.

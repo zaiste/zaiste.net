@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
+  <h1 class="text-4xl leading-tight text-cool-gray-600 font-medium mb-4">
+    {{ page.title }}
+  </h1>
+  <div class="markdown">
+    {{ page.content | safe }}
+  </div>
+</div>
+
+{% endblock content %}

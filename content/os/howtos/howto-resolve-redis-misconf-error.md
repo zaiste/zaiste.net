@@ -1,10 +1,7 @@
-
++++
 +++
 
-+++
-# How To Resolve Redis' ```
-undefined
-``` Error
+# How To Resolve Redis' `MISCONF` Error
 
 Here's the error:
 
@@ -16,29 +13,19 @@ It means that Redis is not able to save data on the disk. This error occurs beca
 
 Redis doesn't need as much memory as the OS thinks it does to write to disk, so may pre-emptively fail the fork.
 
-Set ```
-undefined
-``` to ```
-undefined
-``` in the ```
-undefined
-```:
+Set `vm.overcommit_memory` to `1` in the `/etc/sysctl.conf`:
 
-```bash 
+```bash
 vm.overcommit_memory=1
 ```
 
-And then, restart the ```
-undefined
-``` process:
+And then, restart the ~sysctl~ process:
 
-```bash 
+```bash
 sudo sysctl -p /etc/sysctl.conf
 ```
 
-**Important**: Setting the ```
-undefined
-``` option to ```
-undefined
-``` in Redis **doesn't**solve the problem, it just ignores it.
+*Important*: Setting the `stop-writes-on-bgsave-error` option to `no` in Redis *doesn't*
+ solve the problem, it just ignores it.
+
 

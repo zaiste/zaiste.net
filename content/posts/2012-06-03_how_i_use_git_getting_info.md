@@ -303,4 +303,4 @@ Finally, the following command will give the names of the _files_ that have both
 
 In this article, I only scratched the surface. There is much more options for `git diff`, `git status`, `git log` and `git grep` commands. You can get more details on each of these commands via `git help <command>`.
 
-In the next post I'll show how `git` can be integrated with our favorite text editor: [Vim](http://vim.org). Stay tuned!
+In the next post I'll show how `git` can be integrated with our favorite text editor: [Vim](http://vim.md). Stay tuned!

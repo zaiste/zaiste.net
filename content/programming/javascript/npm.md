@@ -6,26 +6,26 @@
 
 ## Set Default Config
 
-```bash 
+```bash
 npm config set init.author.name <name>
 npm config set init.author.email <email>
 ```
 
 ## Open Package Home Website
 
-```bash 
+```bash
 npm home <package>
 ```
 
 ## Go to package code repository
 
-```bash 
+```bash
 npm repo <package>
 ```
 
 ## Go to package documentation
 
-```bash 
+```bash
 npm docs <package>
 ```
 
@@ -33,29 +33,27 @@ npm docs <package>
 
 List the packages its dependency tree
 
-```bash 
+```bash
 npm list --global
 ```
 
 List only top level packages
 
-```bash 
+```bash
 npm list -g --depth=0
 ```
 
 ## List outdated packages
 
-```bash 
+```bash
 npm outdated -d
 ```
 
 ## Clean the cache
 
-```
-undefined
-``` keeps a copy of all installed packages. Next time the same package is to be installed, \`npm\` takes it from the cache and not over the network. All packages are cached in the \`$HOME/.npm\` directory.
+`npm` keeps a copy of all installed packages. Next time the same package is to be installed, `npm` takes it from the cache and not over the network. All packages are cached in the `$HOME/.npm` directory.
 
-```bash 
+```bash
 npm cache clean
 ```
 
@@ -63,7 +61,7 @@ npm cache clean
 
 A package.json file will be created and the name of your directory will be used for the name property.
 
-```bash 
+```bash
 npm init --yes
 ```
 
@@ -71,32 +69,30 @@ npm init --yes
 
 Create a symlink in the global folder for that package
 
-```bash 
+```bash
 npm link
 ```
 
-You will see that references either via ```
-undefined
-``` or ~npm outdated -g~.
+You will see that references either via `npm list -g --depth=0` or `npm outdated -g`.
 
 ## Install local package from directory
 
-```bash 
+```bash
 npm install path/to/package
 ```
 
 This will create:
 
-```json 
+```json
 "dependencies": {
   ...
   "myproject": "file:../myproject/"
 }
 ```
 
-## Update packages in \`package.json\`
+## Update packages in `package.json`
 
-```bash 
+```bash
 npm i -g npm-check-updates
 npm-check-updates -u
 npm install
@@ -104,13 +100,13 @@ npm install
 
 ## Freeze versions for all dependencies
 
-```bash 
+```bash
 npm shrinkwrap
 ```
 
 This generates a lockfile that specifies the exact version and URL from which to download every single dependency.
 
-\`shrinkwrap\` has some serious issues. npm builds dependency tree in a non-deterministic manner. The tree structure can differ from one machine to another based on the order that the packages are downloaded. This leads to problematic side effects.
+`shrinkwrap` has some serious issues. npm builds dependency tree in a non-deterministic manner. The tree structure can differ from one machine to another based on the order that the packages are downloaded. This leads to problematic side effects.
 
 Issues may arise when two or more dependencies specified in package.json share a common package ,  especially if their versions are different.
 
@@ -120,7 +116,7 @@ Yarn generates yarn.lock (an equivalent to npm-shrinkwrap.json) Yarn uses this l
 
 ## Show NPM config
 
-```bash 
+```bash
 $ npm config list
 ; cli configs
 metrics-registry = "https://registry.npmjs.org/"
@@ -138,32 +134,32 @@ prefix = "/usr/local"
 ; "npm config ls -l" to show all defaults.
 ```
 
-```bash 
+```bash
 npm config get prefix
 /usr/local
 ```
 
-```bash 
+```bash
 cd && mkdir .node_modules_global
 npm config set prefix=$HOME/.node_modules_global
 ```
 
 This also creates a .npmrc file in home directory.
 
-```bash 
+```bash
 $ npm config get prefix
 /home/zaiste/.node_modules_global
 $ cat .npmrc
 prefix=/home/zaiste/.node_modules_global
 ```
 
-```bash 
+```bash
 $ npm install npm --global
 ```
 
 Finally, add .node_modules_global/bin to the $PATH
 
-```bash 
+```bash
 $ which npm
 /home/zaiste/.node_modules_global/bin/npm
 ```

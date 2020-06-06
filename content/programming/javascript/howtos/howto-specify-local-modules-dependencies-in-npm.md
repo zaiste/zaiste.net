@@ -1,16 +1,11 @@
-
++++
 +++
 
-+++
 # How To Specify Local Modules As Dependencies in NPM
 
-Use the ```
-undefined
-``` in ```
-undefined
-``` directive to specify a local module as a dependency:
+Use the `file:` in `package.json` directive to specify a local module as a dependency:
 
-```json 
+```json
 {
   "name": "mypackage",
   "dependencies": {
@@ -21,7 +16,7 @@ undefined
 
 You can also use:
 
-```bash 
+```bash
 npm i --save ../path/to/mylib
 ```
 

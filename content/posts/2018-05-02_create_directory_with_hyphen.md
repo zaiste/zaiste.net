@@ -1,13 +1,11 @@
-
 +++
 date = 2018-05-02T00:00:00.000Z
-
-
 title = "Create Directory with Hypen"
-topics = [ "shell" ]
 description = """
 Use -- to create directory with hyphen.
 """
+[taxonomies]
+topics = [ "CLI" ]
 
 [extra]
 priority = 0.8

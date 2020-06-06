@@ -1,20 +1,15 @@
-
++++
 +++
 
-+++
 # JavaScript Snippets
 
 ## Array
 
 ### Push
 
-Using ```
-undefined
-``` or ```
-undefined
-```, the context parameter must be, obviously, the object in question.
+Using `apply` or `call`, the context parameter must be, obviously, the object in question.
 
-```js 
+```js
 let a = [1];
 a.push.apply(a, [2,3]); // more hacky => [1, 2, 3]
 
@@ -23,7 +18,7 @@ Array.prototype.push.apply(a, [4,5]); // more explicit => [1, 2, 3, 4, 5]
 
 Or, just use the spread operator if possible:
 
-```js 
+```js
 let a = [1];
 a.push(...[2,3]);
 
@@ -32,7 +27,7 @@ a.push(...[2,3]);
 
 ### Flatten Array
 
-```js 
+```js
 const flatten = list => list.reduce(
   (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
 );
@@ -40,7 +35,7 @@ const flatten = list => list.reduce(
 
 ### Flatten Array (Deep)
 
-```js 
+```js
 const flattenDeep = arr => Array.isArray(arr)
       ? arr.reduce((a, b) => [...flattenDeep(a), ...flattenDeep(b)] , [])
       : [arr]
@@ -52,7 +47,7 @@ Turn strings into dates if necessary.
 
 Subtract dates to get a value that is either negative, positive, or zero.
 
-```js 
+```js
 const array = [
   {id: 1, date: Mar 22 2012 11:00:00 AM},
   {id: 2, date: Mar 4 2012 08:00:00 AM}
@@ -63,13 +58,13 @@ array.sort((a,b) => (new Date(b.date) - new Date(a.date)));
 
 ### Fill
 
-```js 
+```js
 const array = Array(5).fill('');
 ```
 
 ### Remove Duplicates
 
-```js 
+```js
 Array.from(new Set(widgets));
 
 // or
@@ -78,11 +73,9 @@ Array.from(new Set(widgets));
 [...new Set(widgets)];
 ```
 
-### Map with ```
-undefined
-```
+### Map with `.from`
 
-```js 
+```js
 const names = Array.from(widgets, ({ name }) => name);
 ```
 
@@ -90,7 +83,7 @@ const names = Array.from(widgets, ({ name }) => name);
 
 ### Conditional Spread
 
-```js 
+```js
 const fetchUser = (isPrivateData) => {
   return {
     name: 'User',
@@ -102,14 +95,14 @@ const fetchUser = (isPrivateData) => {
 
 ### Rest
 
-```js 
+```js
 let user = {}, userDetails = {};
 ({ name: user.name, age: user.age, ...userDetails } = rawUser);
 ```
 
 ### Merge Objects
 
-```js 
+```js
 const merge = (target, source) => {
   for (const key of Object.keys(source)) {
     if (source[key] instanceof Object) Object.assign(source[key], merge(target[key], source[key]))
@@ -124,7 +117,7 @@ const merge = (target, source) => {
 
 ### How to output an ISO 8601 formatted string in JavaScript?
 
-```js 
+```js
 const date = new Date();
 date.toISOString();      // "2010-11-13T13:31:23.493Z"
 ```
@@ -133,7 +126,7 @@ date.toISOString();      // "2010-11-13T13:31:23.493Z"
 
 ### Custom Error
 
-```js 
+```js
 class CustomError extends Error {
   constructor(message) {
     super(message);
@@ -145,7 +138,7 @@ class CustomError extends Error {
 
 ## Debugging
 
-```js 
+```js
 let log = 'cache:set';
 let colors = [];
 
@@ -167,7 +160,7 @@ let color = colors[Math.abs(hash(namespace)) % colors.length];
 
 ### From Callback to Promise
 
-```js 
+```js
 const fetchUser = callback => {
   return dbUsers()
     .then(user => callback(null, user))
@@ -175,7 +168,7 @@ const fetchUser = callback => {
 }
 ```
 
-```js 
+```js
 const fetchUser = async callback => {
   try {
     const user = await dbUsers();
@@ -186,7 +179,7 @@ const fetchUser = async callback => {
 }
 ```
 
-```js 
+```js
 const callback2Promise = (callback, ...args) => {
   return new Promise((resolve, reject) => {
     return method(...args, (error, result) => {
@@ -196,11 +189,9 @@ const callback2Promise = (callback, ...args) => {
 }
 ```
 
-### Delay: Promise-based Alternative to ```
-undefined
-```
+### Delay: Promise-based Alternative to `setTimeout`
 
-```js 
+```js
 const delay = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 ```
 
@@ -208,7 +199,7 @@ const delay = milliseconds => new Promise(resolve => setTimeout(resolve, millise
 
 Lookup Table
 
-```js 
+```js
 const howIsBoo = state => {
   if (state === ‘HUNGRY’) return ‘WANTS FOOD’;
   if (state === ‘SAD’) return ‘CRYING’;
@@ -217,7 +208,7 @@ const howIsBoo = state => {
 }
 ```
 
-```js 
+```js
 const booFeelsTable = {
   ‘HUNGRY’: ‘WANTS FOOD’,
   ‘SAD’: ‘CRYING’,

@@ -8,7 +8,7 @@ topics = [ "ocaml", "ml", "programming", "101" ]
 
 +++
 
-[OCaml](ocaml.org) is an industrial strength, general purpose programming language with an emphasis on expressiveness and safety. It is a multi-paradigm language which unifies functional, imperative and object-oriented programming under an ML-like type system. OCaml was created 20 years ago at INIRIA. Check [What is OCaml at ocaml.org](https://ocaml.org/learn/description.html).
+[OCaml](ocaml.md) is an industrial strength, general purpose programming language with an emphasis on expressiveness and safety. It is a multi-paradigm language which unifies functional, imperative and object-oriented programming under an ML-like type system. OCaml was created 20 years ago at INIRIA. Check [What is OCaml at ocaml.org](https://ocaml.org/learn/description.html).
 
 OCaml syntax is said to be pragmatic, but often critisized as not being visually appealing enough with people pointing to Haskell or Standard ML as better alternatives in that regard. For many it feels like someone invented certain syntax constructs along the way as they were needed and without a cohesive plan.
 

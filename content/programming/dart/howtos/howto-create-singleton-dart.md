@@ -6,7 +6,7 @@
 
 Dart provides factory constructors, which simplifies the creation of singletons.
 
-```dart 
+```dart
 class Singleton {
   static final Singleton _singleton = Singleton._internal();
 
@@ -24,19 +24,11 @@ main() {
 }
 ```
 
-The ```
-undefined
-``` construct specifies that whenever there is a request for a new```
-undefined
-``` instance, run the specified constructor function.
+The `factory` construct specifies that whenever there is a request for a new `Singleton` instance, run the specified constructor function.
 
-Another way is to use a static field that use a private constructor. This way it is not possible to create a new instance using ```
-undefined
-```, the reference to the only instance is available only through the ```
-undefined
-``` static field.
+Another way is to use a static field that use a private constructor. This way it is not possible to create a new instance using `Singleton()`, the reference to the only instance is available only through the `instance` static field.
 
-```dart 
+```dart
 class Singleton {
   Singleton._privateConstructor();
 
@@ -54,7 +46,7 @@ main() {
 
 A singleton can be used for a Session storage
 
-```dart 
+```dart
 class Session {
   // singleton
   static final Session _singleton = Session._internal();

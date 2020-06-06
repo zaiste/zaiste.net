@@ -1,7 +1,6 @@
-
++++
 +++
 
-+++
 # Node.js
 
 Node.js is an open source runtime built on Chrome's V8 JavaScript engine for creating both server-side apps, as well as JavaScript code run outside of the browser environment, e.g. command-line tools.
@@ -16,25 +15,23 @@ Internal, async operations (e.e. I/O) are multi-threaded while user application 
 
 ## HowTos
 
-### [How To Shutdown a Node.js Server](file:nodejs/howtos/howto-shutdown-nodejs-server.org)
+### [How To Shutdown a Node.js Server](@/programming/nodejs/howtos/howto-shutdown-nodejs-server.md)
 
-### [How To Restart a Node.js Server](file:nodejs/howtos/howto-restart-nodejs-server.org)
+### [How To Restart a Node.js Server](@/programming/nodejs/howtos/howto-restart-nodejs-server.md)
 
 ## Event Emitter
 
-```
-undefined
-``` is a module that allows communication between objects. It can be considered as the core of Node asynchronous event-driven architecture as many internal objects are instances of ```
-undefined
-``` class e.g. HTTP requests, responses, and streams. In general, all objects that emit events are instances of the ```
-undefined
-``` class.
+`EventEmitter` is a module that allows communication between objects. It can be
+considered as the core of Node asynchronous event-driven architecture as many
+internal objects are instances of `EventEmitter` class e.g. HTTP requests,
+responses, and streams. In general, all objects that emit events are instances
+of the `EventEmitter` class.
 
 ## Buffer
 
 Bus Station Metaphore: at some bus stations, a bus is not allowed to depart until a certain amount of passengers arrive or until a specific departure time. The passengers may arrive at different times with different speed. Neither the passengers nor the bus station has control over passengers’ arrival at the station.
 
-```js 
+```js
 const buffer1 = Buffer.alloc(10); // 10 bytes.
 buffer1.toJSON() // { type: 'Buffer', data: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
 
@@ -56,7 +53,4 @@ Heavy, CPU intesive tasks block the event loop, causing the application to freez
 
 ## Cluster
 
-The ```
-undefined
-``` module allows to spawn multiple child processes that share a port.
-
+The `cluster` module allows to spawn multiple child processes that share a port.

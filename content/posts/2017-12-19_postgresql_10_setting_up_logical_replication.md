@@ -1,11 +1,8 @@
-
 +++
 date = 2017-12-19T00:00:00.000Z
-
-
 title = "PostgreSQL 10: Setting up Logical Replication"
-topics = [ "postgresql" ]
-
+[taxonomies]
+topics = [ "PostgreSQL" ]
 [extra]
 priority = 0.8
 

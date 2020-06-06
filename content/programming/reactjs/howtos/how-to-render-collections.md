@@ -6,11 +6,9 @@
 
 ## Array
 
-For array use ```
-undefined
-``` function.
+For array use `.map` function.
 
-```js 
+```js
 export default function WidgetList({ widgets }) {
   return (
     <ul>
@@ -24,11 +22,9 @@ export default function WidgetList({ widgets }) {
 
 ## Objects
 
-For objects use ```
-undefined
-``` function
+For objects use `Object.entries` function
 
-```js 
+```js
 
 ```
 

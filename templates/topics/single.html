@@ -7,12 +7,25 @@
 {% block content %}
 <main class="flex-grow">
   <div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
-    <p class="text-base leading-6 font-semibold uppercase text-gray-600 tracking-wider">
-      {{ term.name }} Related Content
-    </p>
-    <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-      ...
-    </div>
+    <header class="mb-8">
+      <h1 class="text-4xl leading-tight text-cool-gray-600 font-medium mb-1">
+        About <span class="text-blue-500 bg-gray-50 px-2 border border-gray-200">{{ term.name }}</span>
+      </h1>
+      <p class="text-gray-400 text-lg">Below is a list of all content (articles, howtos, notes, etc) from my website related to {{ term.name }}</p>
+    </header>
+    <ul>
+      {% for page in term.pages %}
+      <li class="mb-6">
+        <h4 class="text-2xl leading-tight text-gray-600 font-medium">
+          <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="{{ page.slug }}">
+            {{ page.title }}
+          </a>
+          <span class="ml-4 text-sm text-gray-400">{{ page.date }}</span>
+        </h4>
+        <div class="text-gray-400"></div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </main>
 {% endblock content %}

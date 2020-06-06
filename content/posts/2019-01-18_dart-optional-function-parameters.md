@@ -1,12 +1,14 @@
-
 +++
 date = 2019-01-18T00:00:00.000Z
 title = "Dart · Optional Function Parameters"
-topics = [ "dart" ]
 description = """
 In Dart, there are two ways to specify optional parameters: they can be either positional or named.
 """
-
+aliases = [
+  "dart-optional-function-parameters"
+]
+[taxonomies]
+topics = [ "Dart" ]
 +++
 
 In [Dart](https://www.dartlang.org/), there are two ways to specify optional

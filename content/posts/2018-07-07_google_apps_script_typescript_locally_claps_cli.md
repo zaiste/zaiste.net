@@ -1,15 +1,11 @@
-
 +++
 date = 2018-07-07T00:00:00.000Z
-
-
 title = "Apps Script with TypeScript & claps CLI to develop locally"
-topics = [ "rails" ]
 abstract = ""
-
+[taxonomies]
+topics = [ "Rails" ]
 [extra]
 priority = 0.8
-
 +++
 
 [claps](https://github.com/google/clasp) allows to manage App Script projets in a local environment. You can create and publish add-ons for products like Google Sheets, Google Docs et al. using the command line.

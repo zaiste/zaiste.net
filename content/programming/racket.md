@@ -6,9 +6,7 @@
 
 Racket has support for OS-level threads via [places](https://docs.racket-lang.org/guide/parallelism.html#%2528part._effective-places%2529).
 
-Racket can create a single binary with ```
-undefined
-```.
+Racket can create a single binary with `raco distribute`.
 
 Racket can be run on ARM.
 

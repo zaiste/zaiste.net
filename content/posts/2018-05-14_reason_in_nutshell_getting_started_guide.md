@@ -1,18 +1,14 @@
-
 +++
 date = 2018-05-14T00:00:00.000Z
-
-
 title = "Reason in a nutshell - Getting Started Guide"
 image = "zaiste-reason.png"
-topics = [ "reason", "javascript" ]
 description = """
 Reason is a programming language built on top of OCaml. It provides functional and object-oriented features with type-safety and focus on performance. It was created at Facebook. Its syntax is similar to JavaScript. The intention is to make interoperation with JavaScript and adoption by JavaScript programmers easier.
 """
-
 [extra]
 priority = 0.8
-
+[taxonomies]
+topics = [ "Reason", "JavaScript" ]
 +++
 
 This tutorial intends to provide a comprehensive, but relatively short introduction to Reason.

@@ -2,17 +2,11 @@
 +++
 
 +++
-# How To Make ```
-undefined
-``` Handle Escape Sequences for Colors in Terminal
+# How To Make `less` Handle Escape Sequences for Colors in Terminal
 
-Use the ```
-undefined
-``` (or ```
-undefined
-```) options.
+Use the `-R` (or `--RAW-CONTROL-CHARS`) options.
 
-```bash 
+```bash
 less -R <your file>
 ```
 

@@ -5,7 +5,7 @@
 
 ## Protocols
 
--   [HTTP](file:network/http.org)
+-   [HTTP](@/network/http.md)
 
 ## Tools
 
@@ -13,8 +13,8 @@
 
 ## Application Servers
 
--   [Nginx](file:network/nginx.org)
--   [OpenResty](file:network/openresty.org)
+-   [Nginx](@/network/nginx.md)
+-   [OpenResty](@/network/openresty.md)
 
-## [Network Related HowTos](file:network/howtos.org)
+## [Network Related HowTos](@/network/howtos.md)
 

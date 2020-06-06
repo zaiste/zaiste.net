@@ -1,20 +1,13 @@
-
++++
 +++
 
-+++
 # How To Open An URL For A Text Link In Flutter
 
-Use the ```
-undefined
-``` & ```
-undefined
-``` functions from the ```
-undefined
-``` package along with the ```
-undefined
-``` widget:
+Use the `launch` & `canLaunch` functions from the `url_launcher` package along
+with the `InkWell` widget:
 
-```dart 
+
+```dart
 import 'package:url_launcher/url_launcher.dart';
 
 InkWell(
@@ -27,11 +20,9 @@ InkWell(
 )
 ```
 
-Alternatively, use the ```
-undefined
-``` widget:
+Alternatively, use the `RichText` widget:
 
-```dart 
+```dart
 class SomeText extends StatefulWidget {
   @override
   _SomeTextState createState() => _SomeTextState();

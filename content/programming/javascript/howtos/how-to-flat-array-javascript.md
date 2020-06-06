@@ -4,7 +4,7 @@
 +++
 # How To Flat an Array in JavaScript
 
-```js 
+```js
 const array = [1, [2, [3, [4, 5, 6]]]]
 
 array.flat()  // == array.flat(1)
@@ -14,15 +14,9 @@ array.flat(Infinity)
 // [1, 2, 3, 4, 5, 6]
 ```
 
-```
-undefined
-``` combines ```
-undefined
-``` and ```
-undefined
-```
+`Array.prototype.flatMap` combines `flat` and `map`
 
-```js 
+```js
 const duplicate = x => [x, x];
 
 [2, 3, 4].map(duplicate);

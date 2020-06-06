@@ -1,14 +1,11 @@
-
 +++
 date = 2018-03-09T00:00:00.000Z
-
-
 title = "Shell: Get the PID of the last command"
-topics = [ "shell" ]
 description = """
 `!` shell variable holds the PID of the last executed command. Don't forget to access it by prefixing with `$` i.e. `$!`.
 """
-
+[taxonomies]
+topics = [ "CLI" ]
 [extra]
 priority = 0.8
 

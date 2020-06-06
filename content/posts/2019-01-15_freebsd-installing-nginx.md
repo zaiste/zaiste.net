@@ -1,12 +1,14 @@
-
 +++
 date = 2019-01-15T00:00:00.000Z
 title = "FreeBSD · Installing Nginx"
-topics = [ "FreeBSD", "Nginx" ]
 description = """
 This article describes how to install and configure an Nginx server on FreeBSD.
 """
-
+aliases = [
+  "freebsd-installing-nginx"
+]
+[taxonomies]
+topics = [ "FreeBSD", "Nginx" ]
 +++
 
 This article describes how to install and configure an Nginx server on FreeBSD.

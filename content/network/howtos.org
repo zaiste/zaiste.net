@@ -1,7 +1,0 @@
-#+title: Network HowTos
-#+ABSTRACT: Network related HowTo guides
-
-* Network HowTos
-
-+ [[file:howtos/howto-check-port-in-use-linux.org][How to Check If a Port is In Use on Linux]]
-+ [[file:howtos/howto-test-network-connectivity.org][How to Test Network Connectivity]]

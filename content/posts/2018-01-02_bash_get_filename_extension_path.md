@@ -1,17 +1,14 @@
-
 +++
 date = 2018-01-02T00:00:00.000Z
-
-
 title = "Bash: Get Filename or Extension from Path"
-topics = [ "bash" ]
 description = """
 Use `$(basename "$fullpath")`
 """
 
+[taxonomies]
+topics = [ "Bash", "CLI" ]
 [extra]
 priority = 0.8
-
 +++
 
 ```bash

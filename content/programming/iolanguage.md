@@ -20,13 +20,13 @@ the global namespace of Io's execution environment is the Lobby object, which ha
 
 ## Install Io Language
 
-```bash 
+```bash
 brew install io
 ```
 
 ## Getting Started with Io Language
 
-```bash 
+```bash
 io
 Io> "Hello World" println
 ```
@@ -47,27 +47,23 @@ when a message is sent to an object, its name is used to query the slots hash ta
 
 Io doesn't have classes. It uses prototypes instead. Prototypes are objects that can be cloned to create new objects.
 
-```
-undefined
-``` is the parent of all prototypes.
+`Object` is the parent of all prototypes.
 
-```bash 
+```bash
 Person := Object clone
 Person name := "Zaiste"
 ```
 
-Objects in Io consists of slots which are key-value pairs of data. Slots can be access with ```
-undefined
-```.
+Objects in Io consists of slots which are key-value pairs of data. Slots can be access with `slotNames`.
 
-```bash 
+```bash
 Io> Person slotNames
 ==> list(type, name)
 ```
 
 Create instances
 
-```bash 
+```bash
 Io> bunia := Person clone
 Io> bunia name
 ==> "Zaiste"
@@ -77,33 +73,14 @@ Io> bunia slotNames
 
 If a slot is not found on the object, it looks for the slot in the parent object, and keeps checking until it gets to Object.
 
-The ```
-undefined
-``` operator is used to set a new slot, whereas the ```
-undefined
-``` operator updates an existing slot. Both operators are actually methods on Object. ```
-undefined
-``` is parsed as```
-undefined
-``` and ```
-undefined
-``` is parsed as ```
-undefined
-```.
+The `:=` operator is used to set a new slot, whereas the `=` operator updates an
+existing slot. Both operators are actually methods on Object. `:=` is parsed as
+`setSlot` and `=` is parsed as `updateSlot`.
 
 Use upper-case names for prototypes acting as classes and lower-case names for prototypes acting as instances.
 
-Object is a slot in the ```
-undefined
-``` slot of ```
-undefined
-```. ```
-undefined
-``` is both a slot of a slot in the ```
-undefined
-``` and an ancestor of ```
-undefined
-```.
+Object is a slot in the `Protos` slot of `Lobby`. `Object` is both a slot of a
+slot in the `Lobby` and an ancestor of `Lobby`.
 
 ## Methods in Io Language
 
@@ -111,7 +88,7 @@ When invoked, a method creates a locals object, which is used to store all local
 
 A method without arguments:
 
-```bash 
+```bash
 Person hello := method(
   "My name is #{name}" interpolate println
 )
@@ -119,13 +96,13 @@ Person hello := method(
 
 A method with arguments
 
-```bash 
+```bash
 Person calculate := method(arg1, arg2, ...body...)
 ```
 
 ## Lists in Io Language
 
-```bash 
+```bash
 numbers := list(4, 7, 1, 3, 2, 5, 9, 6, 8)
 numbers sort
 numbers sum
@@ -136,15 +113,15 @@ numbers select(x, x % 2 == 0)
 
 ## Control Flow in Io Language
 
-```bash 
+```bash
 if(2 > 4, "true case", "false case")
 ```
 
-```bash 
+```bash
 for(idx, 1, 10, idx println)
 ```
 
-```bash 
+```bash
 idx := 1
 while(idx <= 10,
   idx println
@@ -156,47 +133,29 @@ while(idx <= 10,
 
 Define your own control structure:
 
-```bash 
+```bash
 Object unless := method(cond, then, else, if(cond, else, then))
 ```
 
-Arguments ```
-undefined
-```, ```
-undefined
-``` and ```
-undefined
-``` are eagerly evaluated. Here is a lazy alternative:
+Arguments `cond`, `then` and `else` are eagerly evaluated. Here is a lazy
+alternative:
 
-```bash 
+```bash
 Object unless := method(if(call eval argAt(0) not, call eval argAt(1), call eval argAt(2)))
 ```
 
-Io allows add and remove parents to an object, at runtime, using ```
-undefined
-```,```
-undefined
-``` and ```
-undefined
-```.
+Io allows add and remove parents to an object, at runtime, using `appendProto`,
+`prependProto` and `removeProto`.
 
 ## Init in Io Language
 
-If the ```
-undefined
-``` slot is defined, it gets triggered just after the ```
-undefined
-``` message:
+If the `init` slot is defined, it gets triggered just after the `clone` message:
 
 Movie := Object clone Movie init := method(self cast := List clone)
 
-```
-undefined
-``` is required, otherwise the ```
-undefined
-``` slot will be local to the method.
+`self` is required, otherwise the `cast` slot will be local to the method.
 
-```bash 
+```bash
 Person := Object clone do(
   name ::= nil
 
@@ -214,7 +173,7 @@ dummy greeting
 
 ## Blocks in Io Language
 
-```bash 
+```bash
 Io> plus := block(a, b, a + b)
 ==> method(a, b, a + b)
 
@@ -222,7 +181,7 @@ Io> plus call(3, 5)
 ==> 8
 ```
 
-```bash 
+```bash
 Io> plus argumentNames
 ==> list("a", "b")
 
@@ -239,7 +198,7 @@ Io> plus message next name
 ==> +
 ```
 
-```bash 
+```bash
 Io> plus message next setName("-")
 ==> -(b)
 
@@ -252,13 +211,12 @@ Io> plus call(2, 3)
 
 ## Serialization in Io Language
 
-Many methods in Io respond to the ```
-undefined
-``` method which returns a string representation of the receiver of that message,
+Many methods in Io respond to the `serialized` method which returns a string
+representation of the receiver of that message,
 
 ## Ruby-like Syntax in Io Language
 
-```bash 
+```bash
 def := Object clone
 def forward := method(
   method_name := call message name

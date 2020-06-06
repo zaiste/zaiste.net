@@ -10,21 +10,15 @@ Plain Objects or Data Classes
 
 in Kotlin:
 
-```kotlin 
+```kotlin
 data class Widget(var name: String, var owner: Person)
 ```
 
-It generates getters, setters, ```
-undefined
-```, ```
-undefined
-```, ```
-undefined
-```.
+It generates getters, setters, `hashCode()`, `equals()`, `toString()`.
 
 You can define default parameters
 
-```kotlin 
+```kotlin
 class Book(val title: String,
            val price: Int = 10000,
            val desc: String = "") {
@@ -33,27 +27,22 @@ class Book(val title: String,
 
 You can refer to parameters using their names
 
-```kotlin 
+```kotlin
 val book = Book(title = "Madame Bovary", price = 1000, desc = "Good")
 ```
 
-You can use ```
-undefined
-``` for lambdas
+You can use `it` for lambdas
 
-```kotlin 
+```kotlin
 mylist.filter { it > 4 }
 ```
 
 ## Safety
 
-You have to explicitly allow variables to be ```
-undefined
-``` aka. nullable-types by adding ```
-undefined
-``` to the type name. Those will be checked at compile-time.
+You have to explicitly allow variables to be `null` aka. nullable-types by
+adding `?` to the type name. Those will be checked at compile-time.
 
-```kotlin 
+```kotlin
 val name: String? = ""
 
 ```

@@ -4,17 +4,11 @@
 +++
 # How To Resize On The Fly & Cache Images in Nginx
 
-Nginx provides the ```
-undefined
-``` module for the dynamic image resizing. This Nginx configuration will allow for requests such as```
-undefined
-``` - this image will be resized to ```
-undefined
-```pixels wide and compressed using the quality value of ```
-undefined
-```. Requests asking for images larger than 20 megabytes (before resizing) will be resized.
+Nginx provides the `image_filter` module for the dynamic image resizing. This Nginx configuration will allow for requests such as
+`http://server.com/images/1024/river.jpg` - this image will be resized to `1024` pixels wide and compressed using the quality value
+of `95`. Requests asking for images larger than 20 megabytes (before resizing) will be resized.
 
-```shell 
+```shell
 server {
   server_name server.com;
 
@@ -29,7 +23,7 @@ server {
 
 This configuration triggers the resizing on every request, even if the request repeats itself. There is a need for caching. This requires a separate server block in Nginx: first, internal for the actual resizing and second, public that redirects the requests to the first one, but it also caches them when necessary.
 
-```shell 
+```shell
 server {
   server_name localhost;
   listen 8888;

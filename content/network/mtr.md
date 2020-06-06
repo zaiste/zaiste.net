@@ -1,7 +1,6 @@
-
++++
 +++
 
-+++
 # MTR
 
 [MTR](http://www.bitwizard.nl/mtr/) combines the functionality of the 'traceroute' and 'ping' programs in a single network diagnostic tool. It is a tool which enables to diagnose and identify networking errors along with network status reports.
@@ -14,49 +13,26 @@ Hops are the Internet nodes that packets pass through to get to their destinatio
 
 ## Generate a MTR Report
 
-```bash 
+```bash
 mtr -rw <destination>
 ```
 
 Run faster interval:
 
-```bash 
+```bash
 mtr -rwc 50 -i 0.2 -rw <destination>
 ```
 
--   ```
-    undefined
-    ```
-
-     - generate the report
--   ```
-    undefined
-    ```
-
-     - use the long-version of the hostname
--   ```
-    undefined
-    ```
-
-     - set how many packets are sent and recorded in the report
--   ```
-    undefined
-    ```
-
-     - run the report at a faster rate to reveal packet loss that can occur only during network congestion
++ ~-r~ - generate the report
++ ~-w~ - use the long-version of the hostname
++ ~-c~ - set how many packets are sent and recorded in the report
++ ~-i~ - run the report at a faster rate to reveal packet loss that can occur only during network congestion
 
 ## Read a MTR Report
 
 Each numbered line in the MTR report is a hop.
 
--   ```
-    undefined
-    ```
++ ~Loss%~ - the percentage of packet loss at each hop
++ ~Snt~ - the number of packets sent
 
-     - the percentage of packet loss at each hop
--   ```
-    undefined
-    ```
-
-     - the number of packets sent.
 

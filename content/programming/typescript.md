@@ -1,16 +1,13 @@
-
++++
 +++
 
-+++
 # TypeScript
 
 TypeScript is a superset of JavaScript. It provides optional types annotations.
 
 TypeScript can help avoid common bugs by type-checking the code. It can use the type system to help write code faster.
 
-TypeScript allows to migrate from JavaScript gradually, i.e. on a file basis using the ```
-undefined
-``` flag. As of TypeScript 2.3, it is possible to check regular JavaScript files.
+TypeScript allows to migrate from JavaScript gradually, i.e. on a file basis using the `--allowJs` flag. As of TypeScript 2.3, it is possible to check regular JavaScript files.
 
 TypeScript's type system is complex. Its type-checking performance is a challenge.
 
@@ -30,15 +27,11 @@ TypeScript has structural types, in contrast with Java (which has nominal types)
 
 ## Configuration
 
--   ```
-    undefined
-    ```
-
-     allows to use modules which don't define default exports
+-   `allowSyntheticDefaultImports` allows to use modules which don't define default exports
 
 ## How-Tos
 
 ## Notes
 
-### [TypeScript's Built-In Type Declarations with the ~--lib~ Compiler Option](file:typescript/built-in-type-declarations-lib-compiler-option.org)
+### [TypeScript's Built-In Type Declarations with the ~--lib~ Compiler Option](@/programming/typescript/built-in-type-declarations-lib-compiler-option.md)
 

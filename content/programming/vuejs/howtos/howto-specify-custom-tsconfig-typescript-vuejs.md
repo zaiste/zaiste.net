@@ -1,22 +1,11 @@
-
++++
 +++
 
-+++
-# How To Specify A Custom TypeScript ```
-undefined
-``` in Vue.js
+# How To Specify A Custom TypeScript `tsconfig.json` in Vue.js
 
-Use the ```
-undefined
-``` option from the ```
-undefined
-``` configuration file to adjust the config for ```
-undefined
-``` and ```
-undefined
-``` accordingly.
+Use the `chainWebpack` option from the `vue.config.js` configuration file to adjust the config for `ts-loader` and `fork-ts-checker-plugin` accordingly.
 
-```js 
+```js
 module.exports = {
   chainWebpack: config => {
     config

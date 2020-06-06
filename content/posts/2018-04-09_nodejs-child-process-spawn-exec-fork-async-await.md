@@ -1,14 +1,13 @@
-
 +++
 date = 2018-04-09T00:00:00.000Z
-
-
 title = "Node.js Child Processes using spawn, exec, fork & async/await"
-topics = [ "nodejs", "javascript", "child_process", "async" ]
-
+aliases = [
+  "nodejs-child-process-spawn-exec-fork-async-await"
+]
+[taxonomies]
+topics = [ "Node.js", "JavaScript" ]
 [extra]
 priority = 0.8
-
 +++
 
 Node.js runs in a single thread. You can, however take advantage of multiple processes.

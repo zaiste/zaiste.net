@@ -8,7 +8,7 @@ Dark aims to provide the quick prototyping of Python using their built-in editor
 
 In Dark, types cannot be changed; only new types are made to replace the previous ones.
 
-Dark doesn't have ~null~s and exceptions.
+Dark doesn't have `null`s and exceptions.
 
 Dark supports HTTP and at some point it will also support GRPC, Thrift or similar things. This way you can access 3rd party services and wrap them in SDKs in the Dark package manager.
 

@@ -8,7 +8,7 @@ topics = [ "vim" ]
 
 +++
 
-Last week I found a nifty [Vim](http://www.vim.org) plugin that lets write HTML code
+Last week I found a nifty [Vim](http://www.vim.md) plugin that lets write HTML code
 faster and easier. It's called [sparkup](https://github.com/rstacruz/sparkup): the idea is
 to use a shortcut language inspired by CSS which expands to valid HTML code while hitting `<C-e>`.
 The language greatly reduces the amount of characters that need to be written in

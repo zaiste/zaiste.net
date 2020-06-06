@@ -1,11 +1,11 @@
-
 +++
 date = 2012-12-02T00:00:00.000Z
-
-
 title = "Merging maps in Clojure"
-topics = [ "clojure" ]
-
+aliases = [
+  "merging_maps_in_clojure"
+]
+[taxonomies]
+topics = [ "Clojure" ]
 +++
 
 There are several ways to merge maps in Clojure.

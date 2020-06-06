@@ -10,7 +10,7 @@ Self has no classes only prototypes.
 
 Self makes no distinction between member access and method calls.
 
-The term \`prototype\` has a different meaning in Self than it has in Javascript.
+The term `prototype` has a different meaning in Self than it has in Javascript.
 
 Self parent slots are built-in delegation. They can be used for inheritance (traits), they can be used for sharing implementation (mixins) or they can be used in the general context of composition
 

@@ -1,17 +1,13 @@
-
 +++
 date = 2018-06-02T00:00:00.000Z
-
-
 title = "Rails: Whitelist params"
-topics = [ "rails" ]
 description = """
 Use `allowable` gem to integrate with Rails' ActionController::Parameters
 """
-
 [extra]
 priority = 0.8
-
+[taxonomies]
+topics = [ "Rails" ]
 +++
 
 There is a gem called [allowable](https://github.com/msimonborg/allowable) which extends `ActionController:Paramters` with additional methods to whitelist or blacklist `params` values.

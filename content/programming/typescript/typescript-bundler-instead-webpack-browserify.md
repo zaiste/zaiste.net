@@ -6,11 +6,9 @@
 
 TypeScript supports bundling for AMD and System.js module formats.
 
-In order to create a bundle you need to specify the ```
-undefined
-``` compiler option:
+In order to create a bundle you need to specify the `outFile` compiler option:
 
-```json 
+```json
 {
   "compilerOptions": {
     "module": "system",
@@ -22,21 +20,17 @@ undefined
 }
 ```
 
-or the ```
-undefined
-``` command-line parameter:
+or the `--outfile` command-line parameter:
 
-```js 
+```js
 tsc --outfile ./dist/bundle.js --module system ./src/index.ts
 ```
 
 ## Using System.js
 
-System.js provides a minimal (1.5kb) loader for loading modules. The```
-undefined
-``` call to load the entry point; by default this corresponds to the file names.
+System.js provides a minimal (1.5kb) loader for loading modules. The `System.import` call to load the entry point; by default this corresponds to the file names.
 
-```html 
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,25 +50,19 @@ undefined
 
 ## Using AMD
 
-In order to generate an AMD module in TypeScript, simply set the ```
-undefined
-```compiler option to ```
-undefined
-```
+In order to generate an AMD module in TypeScript, simply set the `module` compiler option to `amd`
 
-```json 
+```json
 
 ```
 
-or, use the ```
-undefined
-``` command-line parameter:
+or, use the `--module` command-line parameter:
 
-```bash 
+```bash
 tsc --outfile ./dist/bundle.js --module amd ./src/index.ts
 ```
 
-```html 
+```html
 <!DOCTYPE html>
 <html>
 <head>

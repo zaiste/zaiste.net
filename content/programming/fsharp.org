@@ -1,8 +1,0 @@
-#+title: F#
-#+ABSTRACT: F# is a strongly type, multi-paradigm programming language influenced by the ML programming language.
-
-* F#
-
-[[https://fsharp.org/][F#]] is a functional programming language. It is fully compatible with C#,
-VB, .NET and other CLR based languages.
-

@@ -1,16 +1,12 @@
-
 +++
 date = 2018-10-28T00:00:00.000Z
-
-
 title = "React.js: Building Todo App using Hooks"
 image = "react-hooks-todo-app-zaiste-net.gif"
-topics = [ "reactjs", "javascript", "hooks" ]
 abstract = ""
-
 [extra]
 priority = 0.8
-
+[taxonomies]
+topics = [ "React.js", "JavaScript" ]
 +++
 
 React 16.7.0-alpha introduced [Hooks](https://reactjs.org/docs/hooks-intro.html), a new feature to reuse stateful logic between components. Hooks are self-contained blocks of functionality that can be easily extracted and shared, also as external dependencies. In addition, this approach doesn't require to change the component hierarchy.

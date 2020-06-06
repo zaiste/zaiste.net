@@ -1,17 +1,13 @@
-
 +++
 date = 2018-05-12T00:00:00.000Z
-
-
 title = "Delete empty files using find"
-topics = [ "shell" ]
 description = """
 Use `find . -empty -delete` to delete empty files from current directory
 """
-
+[taxonomies]
+topics = [ "CLI" ]
 [extra]
 priority = 0.8
-
 +++
 
 The following command will delete all empty files in the current directory and in all of its subdirectories:

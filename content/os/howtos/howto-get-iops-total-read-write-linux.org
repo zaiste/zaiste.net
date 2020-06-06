@@ -1,9 +1,0 @@
-#+title: howto-get-iops-total-read-write-linux
-
-* How To Get IOPS (total read & write operations) In Linux
-
-Use ~iostat~ from the ~sysstat~ package:
-
-#+begin_src bash
-iostat -d sda | grep sda | awk '{ print $2; }'
-#+end_src

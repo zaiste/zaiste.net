@@ -1,11 +1,8 @@
-
 +++
 date = 2017-12-06T00:00:00.000Z
-
-
 title = "Encrypt external drive in MacOS High Sierra"
-topics = [ "security", "macos" ]
-
+[taxonomies]
+topics = [ "Security", "MacOS" ]
 +++
 
 Connect the drive via USB. List mounted devices:

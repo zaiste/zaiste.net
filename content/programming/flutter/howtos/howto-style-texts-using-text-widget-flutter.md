@@ -1,12 +1,9 @@
-
++++
 +++
 
-+++
-# How To Style Texts using the ```
-undefined
-``` widget in Flutter
+# How To Style Texts using the `Text` widget in Flutter
 
-```dart 
+```dart
 Text(
   'Styling text in Flutter',
   style: TextStyle(
@@ -35,16 +32,9 @@ Text(
   )
 );
 ```
+For the custom font (using the `fontFamily`) put the font file in the `assets/` directory and register it in `pubspec.yml`:
 
-For the custom font (using the ```
-undefined
-```) put the font file in the ```
-undefined
-```directory and register it in ```
-undefined
-```:
-
-```yaml 
+```yaml
 flutter:
   fonts:
   - family: YourCustomFont

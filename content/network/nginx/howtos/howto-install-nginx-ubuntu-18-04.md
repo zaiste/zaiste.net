@@ -6,21 +6,19 @@
 
 ## Install Nginx
 
-```bash 
+```bash
 sudo apt install nginx
 ```
 
 ## Setup Server Blocks
 
-```bash 
+```bash
 sudo mkdir -p /var/www/example.com
 ```
 
-In ```
-undefined
-```
+In `/etc/nginx/sites-available/example.com`
 
-```bash 
+```bash
 server {
         listen 80;
         listen [::]:80;
@@ -36,13 +34,9 @@ server {
 }
 ```
 
-Create a link from the ```
-undefined
-``` to the ```
-undefined
-``` directory:
+Create a link from the `sites-available` to the `sites-enabled` directory:
 
-```bash 
+```bash
 sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 ```
 
@@ -50,19 +44,19 @@ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 
 ### Stop Nginx
 
-```bash 
+```bash
 sudo systemctl stop nginx
 ```
 
 ### Start Nginx
 
-```bash 
+```bash
 sudo systemctl start nginx
 ```
 
 ### Restart Nginx
 
-```bash 
+```bash
 sudo systemctl restart nginx
 ```
 
@@ -70,13 +64,13 @@ sudo systemctl restart nginx
 
 For configuration changes Nginx can be reloaded instead of restarting.
 
-```bash 
+```bash
 sudo systemctl reload nginx
 ```
 
 ### Check Nginx Configuration
 
-```bash 
+```bash
 sudo nginx -t
 ```
 
@@ -84,19 +78,19 @@ sudo nginx -t
 
 Only for HTTP
 
-```bash 
+```bash
 sudo ufw allow 'Nginx HTTP'
 ```
 
 Only for HTTPS
 
-```bash 
+```bash
 sudo ufw allow 'Nginx HTTPS'
 ```
 
 For both HTTP & HTTPS
 
-```bash 
+```bash
 sudo ufw allow 'Nginx Full'
 ```
 

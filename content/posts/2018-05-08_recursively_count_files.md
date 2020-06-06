@@ -1,17 +1,13 @@
-
 +++
 date = 2018-05-08T00:00:00.000Z
-
-
 title = "Recursively count files using find"
-topics = [ "shell" ]
 description = """
 Use `find . -type f | wc -l` to recursively count files in the current directory
 """
-
+[taxonomies]
+topics = [ "CLI" ]
 [extra]
 priority = 0.8
-
 +++
 
 Combine `find` and `wc` to count files in the current directory and in all of its subdirectories:

@@ -1,10 +1,11 @@
-
 +++
 date = 2019-04-01T00:00:00.000Z
 title = "Creating Secure REST APIs in Node.js without JWTs"
-
+aliases = [
+  "creating-secure-rest-api-nodejs-without-jwt"
+]
+[taxonomies]
 topics = [ "Node.js", "JavaScript", "security" ]
-
 +++
 
 Before we go on creating an actual RESTful API, let's address the elephant in

@@ -6,11 +6,11 @@
 
 ## Operating Systems
 
--   [MirageOS](file:os/mirageos.org)
+-   [MirageOS](@/os/mirageos.md)
 
 ## Shells
 
--   [Bash](file:os/bash.org)
+-   [Bash](@/os/bash.md)
 
-## [Operating System Related HowTos](file:os/howtos.org)
+## [Operating System Related HowTos](@/os/howtos.md)
 

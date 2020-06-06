@@ -4,17 +4,15 @@
 +++
 # How To Get A Random Model Record with ActiveRecord in Rails
 
-In Rails 4+ with either Postgresql or SQLite by using ```
-undefined
-```:
+In Rails 4+ with either Postgresql or SQLite by using `RANDOM()`:
 
-```ruby 
+```ruby
 Model.order('RANDOM()').first
 ```
 
 with MySQL:
 
-```ruby 
+```ruby
 Model.order('RAND()').first
 ```
 

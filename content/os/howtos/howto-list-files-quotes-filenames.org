@@ -1,7 +1,0 @@
-#+title: How To List Files with Double Quotes Around Each Filename
-
-* How To List Files with Double Quotes Around Each Filename
-
-#+begin_src bash
-ls -Q
-#+end_src

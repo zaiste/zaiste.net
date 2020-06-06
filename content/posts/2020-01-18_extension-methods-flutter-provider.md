@@ -1,10 +1,12 @@
-
 +++
 date = 2020-01-18T00:00:00.000Z
 title = "Using **Extension Methods** in **Flutter** for the **Provider** Lookup"
+aliases = [
+  "extension-methods-flutter-provider"
+]
 
+[taxonomies]
 topics = [ "Flutter", "Dart" ]
-
 +++
 
 Dart 2.7 adds the extension methods. This feature allows to add new members (not only methods) to existing types.

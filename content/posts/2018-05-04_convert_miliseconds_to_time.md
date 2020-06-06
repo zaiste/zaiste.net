@@ -1,15 +1,11 @@
-
 +++
 date = 2018-05-04T00:00:00.000Z
-
-
 title = "Convert Miliseconds to hh:mm:ss.mmm Time in JavaScript"
-topics = [ "javascript" ]
 abstract = ""
-
+[taxonomies]
+topics = [ "JavaScript" ]
 [extra]
 priority = 0.8
-
 +++
 
 The following JavaScript function converts miliseconds to `hh:mm:ss.mmm` time format:

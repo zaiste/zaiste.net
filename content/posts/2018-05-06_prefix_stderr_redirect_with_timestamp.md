@@ -1,12 +1,9 @@
-
 +++
 date = 2018-05-06T00:00:00.000Z
-
-
 title = "Prefix stderr redirect with timestamp"
-topics = [ "shell" ]
 abstract = ""
-
+[taxonomies]
+topics = [ "CLI" ]
 [extra]
 priority = 0.8
 

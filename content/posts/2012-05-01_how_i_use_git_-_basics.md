@@ -1,11 +1,7 @@
-
 +++
 date = 2012-05-01T00:00:00.000Z
-
-
 title = "How I Use Git - Basics"
-topics = [ "git", "cli" ]
-
+topics = [ "Git", "CLI" ]
 +++
 
 [Git](http://git-scm.com/) is an amazing piece of software. More I know about, more I’m fascinated by its power. Yet, I still have an impression that this is just a beginning of my Git journey.

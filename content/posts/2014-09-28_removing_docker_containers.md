@@ -1,11 +1,11 @@
-
 +++
 date = 2014-09-28T00:00:00.000Z
-
-
 title = "Removing Docker containers and images"
-topics = [ "docker" ]
-
+aliases = [
+  "removing_docker_containers"
+]
+[taxonomies]
+topics = [ "Docker" ]
 +++
 
 Playing with Docker can leave you with several stopped containers and unneeded,

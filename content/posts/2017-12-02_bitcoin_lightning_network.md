@@ -1,11 +1,10 @@
 
 +++
 date = 2017-12-02T00:00:00.000Z
-
-
 title = "Bitcoin's Lightning Network"
+aliases = ["boo"]
+[taxonomies]
 topics = [ "bitcoin", "crypto currency" ]
-
 +++
 
 Lightning Network is a protocol for scaling and speeding up blockchain operations. It was designed to solve the Bitcoin blockchain limitations. It can be used on top of any blockchain.

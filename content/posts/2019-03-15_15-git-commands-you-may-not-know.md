@@ -1,12 +1,14 @@
-
 +++
 date = 2019-03-15T00:00:00.000Z
 title = "15 Git Commands You May Not Know"
 description = """
 Here is a list of 15 Git commands that you may not know yet, but hopefully they will help you out on a journey to master this tool.
 """
-topics = [ "Git", "tutorial" ]
-
+aliases = [
+  "15-git-commands-you-may-not-know"
+]
+[taxonomies]
+topics = [ "Git" ]
 +++
 
 Using [Git](https://git-scm.com/) may be intimidating at times. There are so many commands and details to

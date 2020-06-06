@@ -1,39 +1,22 @@
-
++++
+title = "How To Disable A `TextField` in Flutter"
 +++
 
-+++
-# How To Disable A ```
-undefined
-``` in Flutter
+Use the `enabled:` property of the `TextField` widget by setting it to `false`:
 
-Use the ```
-undefined
-``` property of the ```
-undefined
-``` widget by setting it to ```
-undefined
-```:
-
-```dart 
+```dart
 TextField(
   enabled: false,
   ...
 )
 ```
 
-This field won't respond to ```
-undefined
-``` events - it is similar to a disabled field in HTML.
+This field won't respond to `onTap` events - it is similar to a disabled field in HTML.
 
-Use ```
-undefined
-``` and ```
-undefined
-``` to make a TextField in Flutter readonly so that it can respond to the ```
-undefined
-``` events:
+Use `focusNode` and `enableInteractiveSelection` to make a TextField in Flutter
+readonly so that it can respond to the `onTap` events:
 
-```dart 
+```dart
 TextField(
   focusNode: FocusNode(),
   enableInteractiveSelection: false,

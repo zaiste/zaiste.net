@@ -1,36 +1,35 @@
-
++++
 +++
 
-+++
 # Programming
 
 I like programming a lot.
 
-## [Programming Languages](file:programming/languages.org)
+## [Programming Languages](@/programming/languages.md)
 
 ## Programming Frameworks
 
 -   Struts
 -   Spring
 -   Rails
--   [Flutter](file:programming/flutter.org)
+-   [Flutter](@/programming/flutter.md)
 -   Huncwot
--   [Node.js](file:programming/nodejs.org)
--   [Vue.js](file:programming/vuejs.org)
+-   [Node.js](@/programming/nodejs.md)
+-   [Vue.js](@/programming/vuejs.md)
 
 ## UI libraries
 
--   [React.js](file:programming/reactjs.org)
--   [Marko.js](file:programming/markojs.org)
+-   [React.js](@/programming/reactjs.md)
+-   [Marko.js](@/programming/markojs.md)
 
 ## Databases
 
--   [PostgreSQL](file:databases/postgresql.org)
+-   [PostgreSQL](@/databases/postgresql.md)
 -   Redis
 
 ## Testing
 
--   [TestCafe](file:programming/javascript/testcafe.org)
+-   [TestCafe](@/programming/javascript/testcafe.md)
 
 ## Editors
 
@@ -48,13 +47,13 @@ I like programming a lot.
 
 ## Comparing Programming Concepts
 
--   [Promises vs Observables](file:programming/vs/promise-observable.org)
--   [Concurrency vs Parallelism](file:programming/vs/concurrency-parallelism.org)
--   [Synchronous Callbacks vs Asynchronous Callbacks](file:programming/vs/callback-synchronous-asynchronous.org)
+-   [Promises vs Observables](@/programming/vs/promise-observable.md)
+-   [Concurrency vs Parallelism](@/programming/vs/concurrency-parallelism.md)
+-   [Synchronous Callbacks vs Asynchronous Callbacks](@/programming/vs/callback-synchronous-asynchronous.md)
 
 ## Architecture
 
--   [Onion Architecture](file:programming/architecture/onion.org)
--   [Model-View-Controler](file:programming/architecture/mvc.org)
--   [State Management](file:programming/architecture/state-management.org)
+-   [Onion Architecture](@/programming/architecture/onion.md)
+-   [Model-View-Controler](@/programming/architecture/mvc.md)
+-   [State Management](@/programming/architecture/state-management.md)
 

@@ -1,11 +1,11 @@
-
 +++
 date = 2017-07-11T00:00:00.000Z
-
-
 title = "Zsh Primer for Busy People"
-topics = [ "zsh", "cli" ]
-
+aliases = [
+  "zsh_primer_for_busy_people"
+]
+[taxonomies]
+topics = [ "Zsh", "CLI" ]
 +++
 
 Check `zshall` for comprehensive description of Zsh features. Here's a [Zsh guide](http://zsh.sourceforge.net/Guide/zshguide.pdf).

@@ -1,7 +1,6 @@
-
++++
 +++
 
-+++
 # Module Systems in JavaScript
 
 Module Systems provide a way to manage dependencies in JavaScript.
@@ -16,7 +15,7 @@ Universal Module Definition (UMD) is a set of boilerplate recipes that attempt t
 
 ## The Revealing Module Pattern
 
-```js 
+```js
 var simpleModule = (function () {
     var privateVariable = "A";
 
@@ -39,31 +38,13 @@ CommonJS is a specification project to help in the development of server-side Ja
 
 Node.js developers originally intended to follow the CommonJS specification but later decided against it.
 
-CommonJS provides two keywords to interact with the module system: ```
-undefined
-``` &```
-undefined
-```.
+CommonJS provides two keywords to interact with the module system: `require` & `exports`.
 
-```
-undefined
-``` is a function that imports a module by id (in Node.js, it's the name of the module from the ```
-undefined
-``` directory).
+`require` is a function that imports a module by id (in Node.js, it's the name of the module from the `node_modules` directory).
 
-```
-undefined
-``` is an object that exports its fields as public elements.
+`exports` is an object that exports its fields as public elements.
 
-A difference between Node.js and CommonJS: the ```
-undefined
-``` object, which has a special meaning in Node.js, while ```
-undefined
-``` is just a variable that gets bound by default to ```
-undefined
-```. In CommonJS, there is no ```
-undefined
-```object.
+A difference between Node.js and CommonJS: the `module.exports` object, which has a special meaning in Node.js, while `exports` is just a variable that gets bound by default to `module.exports`. In CommonJS, there is no `module.exports` object.
 
 CommonJS modules are synchronous: they are loaded at the moment and in the order they are required inside a source file.
 
@@ -71,13 +52,9 @@ CommonJS modules are synchronous: they are loaded at the moment and in the order
 
 AMD was created in response to the shortcomings of CommonJS, namely the support for asynchronous module loading.
 
-In AMD, you call the ```
-undefined
-``` function with a dependency array and a factory function. This way you define the module value (the ```
-undefined
-``` statement):
+In AMD, you call the `define` function with a dependency array and a factory function. This way you define the module value (the `return` statement):
 
-```js 
+```js
 define(['dep1', 'dep2'], function (dep1, dep2) {
     return function () {
 
@@ -89,7 +66,7 @@ define(['dep1', 'dep2'], function (dep1, dep2) {
 
 Another way of using AMD:
 
-```js 
+```js
 define(function (require) {
     var dep1 = require('dep1'),
         dep2 = require('dep2');

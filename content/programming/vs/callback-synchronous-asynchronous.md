@@ -8,7 +8,7 @@
 
 -   is invoked before a function returns i.e. callback receiver remains on the stack
 
-```js 
+```js
 list.foreach(callback)
 
 // here, the callback is expected to be invoked on each element
@@ -31,34 +31,13 @@ list.foreach(callback)
 
 ## Summary
 
-Taking a callback doesn't make a function asynchronous e.g. ```
-undefined
-``` in JavaScript.
+Taking a callback doesn't make a function asynchronous e.g. `Array.forEach` in JavaScript.
 
 For a function to be asynchronous it must perform an asynchronous operation, e.g.
 
--   by using timer functions: 
++ by using timer functions: `setTimout`, `setInterval`
++ by using special functions: `nextTick`, `setImediate`
++ by performing I/O (network, database, filesystem)
++ by subscribing to an event
 
-    ```
-    undefined
-    ```
-
-    , 
-
-    ```
-    undefined
-    ```
--   by using special functions: 
-
-    ```
-    undefined
-    ```
-
-    , 
-
-    ```
-    undefined
-    ```
--   by performing I/O (network, database, filesystem)
--   by subscribing to an event
 

@@ -6,11 +6,9 @@
 
 ## Components
 
-Compontents are declared with an API method ```
-undefined
-```, which takes an id and a definition object.
+Compontents are declared with an API method `.component`, which takes an id and a definition object.
 
-```js 
+```js
 Vue.component('my-component', {
   props: [ 'myprop' ],
 
@@ -45,13 +43,9 @@ Vue.component('my-component', {
 
 A template is a string as HTML. Vue.js includes a runtime compiler that converts a template into a render function. Render functions are used by the virtual DOM.
 
-The ```
-undefined
-``` is triggered when the component state is ready, but before the component is mounted to the page.
+The `created()` is triggered when the component state is ready, but before the component is mounted to the page.
 
-There is no equivalent of React's ```
-undefined
-``` in Vue.js.
+There is no equivalent of React's `shouldComponentUpdate` in Vue.js.
 
 At init, Vue.js goes thourgh all of the data properties and converts them into getters and setters. It's needed for change notifications.
 

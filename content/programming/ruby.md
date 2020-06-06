@@ -1,18 +1,17 @@
-
++++
 +++
 
-+++
 # Ruby
 
 ## Oneliners
 
-```bash 
+```bash
 ruby -ne 'print if /^[RS]/' file.txt
 ```
 
 ## Create a Gem
 
-```bash 
+```bash
 bundle gem mygem
 
 ├── Gemfile
@@ -26,11 +25,11 @@ bundle gem mygem
     └── mygem.rb
 ```
 
-```ruby 
+```ruby
 spec.add_dependency "http"
 ```
 
-```bash 
+```bash
 gem build mygem.gemspec
 ```
 
@@ -38,12 +37,12 @@ https&#x3A;//techandfi.com/how-to-create-a-ruby-gem/ https&#x3A;//quickleft.com/
 
 ## Howtos
 
--   [How to Convert an Array of Hashes into a Hash](file:ruby/howtos/howto-convert-array-of-hashes-hash-ruby.org)
--   [How to Upgrade Rubygems](file:ruby/howtos/howto-upgrade-rubygems.org)
+-   [How to Convert an Array of Hashes into a Hash](@/programming/ruby/howtos/howto-convert-array-of-hashes-hash-ruby.md)
+-   [How to Upgrade Rubygems](@/programming/ruby/howtos/howto-upgrade-rubygems.md)
 
 ### How To Chain Method Invocation
 
-```ruby 
+```ruby
 user.profile.settings.newsletter
 
 # vs

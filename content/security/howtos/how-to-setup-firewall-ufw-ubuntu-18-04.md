@@ -8,7 +8,7 @@ Ubuntu comes with a firewall configuration tool called UFW (Uncomplicated Firewa
 
 ## UFW: Check Firewall Status
 
-```bash 
+```bash
 sudo ufw status
 ```
 
@@ -18,21 +18,19 @@ By default, UFW will block all of the incoming connections and allow all outboun
 
 ## UFW: Application Profiles
 
-```
-undefined
-``` may add an UFW application profile. Those profiles are stored in the```
-undefined
-``` directory. Each profile contains UFW settings for that particular application.
+`apt` may add an UFW application profile. Those profiles are stored in the
+`/etc/ufw/applications.d/` directory. Each profile contains UFW settings for
+that particular application
 
 List all UFW application profiles:
 
-```bash 
+```bash
 sudo ufw app list
 ```
 
 Display more information about each UFW application profile and its rules:
 
-```bash 
+```bash
 sudo ufw app info 'Nginx Full'
 ```
 
@@ -40,13 +38,13 @@ sudo ufw app info 'Nginx Full'
 
 Allow incoming SSH connections:
 
-```bash 
+```bash
 sudo ufw allow ssh
 ```
 
 If the ssh daemon listens on a different port e.g. 5522:
 
-```bash 
+```bash
 sudo ufw allow 5522/tcp
 ```
 
@@ -54,7 +52,7 @@ sudo ufw allow 5522/tcp
 
 Activate (or Enable) the firewall:
 
-```bash 
+```bash
 sudo ufw enable
 ```
 
@@ -62,19 +60,19 @@ sudo ufw enable
 
 Allow access to port ranges:
 
-```bash 
+```bash
 sudo ufw allow 7100:7200/udp
 ```
 
 ## UFW: Allow Specific IPs
 
-```bash 
+```bash
 sudo ufw allow from 1.1.1.1
 ```
 
 ## UFW: Allow Specific IPs with Specific Ports
 
-```bash 
+```bash
 sudo ufw allow from 1.1.1.1 to any port 1234
 ```
 
@@ -82,25 +80,25 @@ sudo ufw allow from 1.1.1.1 to any port 1234
 
 Allow connections from a range of IPs addresses by specifying a subnet:
 
-```bash 
+```bash
 sudo ufw allow from 192.168.1.1/24 to any port 5432
 ```
 
 ## UFW: Allow Specific Network Interfaces
 
-```bash 
+```bash
 sudo ufw allow in on eth1 to any port 5432
 ```
 
 ## UFW: Deny Specific IPs
 
-```bash 
+```bash
 sudo ufw deny from 1.1.1.1
 ```
 
 ## UFW: Deny Specific IPs with Specific Ports
 
-```bash 
+```bash
 sudo ufw deny from 1.1.1.1 to any port 80
 ```
 
@@ -110,7 +108,7 @@ The order in which the rules are added is the order that UFW will use when proce
 
 Add a rule at the top of the rule chain (the highest priority):
 
-```bash 
+```bash
 sudo ufw insert 1 <rule> comment 'block specific person'
 ```
 

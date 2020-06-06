@@ -12,9 +12,7 @@ Rigetti uses Common Lisp to build [compilers](https://github.com/rigetti/quilc) 
 
 SBCL stands for Steel Bank Common Lisp.
 
-In SBCL, there is ```
-undefined
-``` which can be put at the top of a function and the compiler will give useful feedback when it can’t optimize something and suggest type hints to improve performance.
+In SBCL, there is `(declare (optimize (speed 3)))` which can be put at the top of a function and the compiler will give useful feedback when it can’t optimize something and suggest type hints to improve performance.
 
 [ABCL](https://abcl.org%20) is a Common Lisp on the JVM.
 

@@ -4,33 +4,25 @@
 +++
 # Rails Caching
 
-Enable caching in the ```
-undefined
-```
+Enable caching in the `development`
 
-```bash 
+```bash
 rails dev:cache
 ```
 
 ## Page Caching
 
-Since Rails 4 Page Caching has been extracted to the ```
-undefined
-```.
+Since Rails 4 Page Caching has been extracted to the `actionpack-page_caching`.
 
-In ```
-undefined
-```
+In `config/application.rb`:
 
-```ruby 
+```ruby
 config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
 ```
 
-Page caching is enabled per-action by using ```
-undefined
-``` method.
+Page caching is enabled per-action by using `caches_page` method.
 
-```ruby 
+```ruby
 class PagesController < ApplicationController
   caches_page :index
 end
