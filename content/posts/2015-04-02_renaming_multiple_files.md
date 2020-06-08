@@ -1,6 +1,9 @@
 +++
 date = 2015-04-02T00:00:00.000Z
 title = "Renaming multiple files"
+aliases = [
+  "renaming_multiple_files"
+]
 [taxonomies]
 topics = [ "CLI" ]
 +++
