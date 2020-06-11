@@ -1,5 +1,7 @@
 +++
 title = "How To Create A Credit Card Formatter for A Text Field in Flutter"
+[taxonomies]
+topics = [ "Flutter", "Dart" ]
 +++
 
 ```dart
