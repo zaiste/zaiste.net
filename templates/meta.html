@@ -16,7 +16,7 @@
     {% set to = 'https://zaiste.net/logo/' ~ t ~ '.svg' | urlencode %}
     {% set_global images = images ~ '&images=' ~ to %}
   {%- endfor -%}
-  <meta name="og:image" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
+  <meta property="og:image" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
   <meta name="twitter:image:src" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
 {%- endif -%}
 
