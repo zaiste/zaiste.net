@@ -1,25 +1,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
 
-<meta name="description" content="{{ config.extra.desc }}">
+<title>{% block title %}{{ page.title | default(value=config.title) }}{% endblock title %} · zaiste.net</title>
+<meta property="og:title" content="{{ page.title | default(value=config.title) }} · zaiste.net" />
+<meta name="twitter:title" content="{{ page.title | default(value=config.title) }} · zaiste.net"/>
+
+<meta name="description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title }}{% else %}{{ config.description }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title }}{% else %}{{ config.description }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title }}{% else %}{{ config.description }}{% endif %}">
+
+{%- if page.taxonomies.topics -%}
+  {%- set images = "" -%}
+  {%- for topic in page.taxonomies.topics -%}
+    {% set t = topic | slugify %}
+    {% set to = 'https://zaiste.net/logo/' ~ t ~ '.svg' | urlencode %}
+    {% set_global images = images ~ '&images=' ~ to %}
+  {%- endfor -%}
+  <meta name="og:image" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
+  <meta name="twitter:image:src" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
+{%- endif -%}
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:description" content="{{ config.extra.desc }}" />
-<meta property="og:title" content="{{ config.extra.title }}" />
 <meta property="og:site_name" content="Zaiste Programming" />
-<meta property="og:image" content="{{ config.extra.image_url }}" />
-<meta property="og:image:type" content="{{ config.extra.image_type }}" />
-<meta property="og:image:width" content="{{ config.extra.image_width }}" />
-<meta property="og:image:height" content="{{ config.extra.image_height }}" />
 <meta property="og:url" content="{{ current_url | safe }}">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@zaiste">
-<meta name="twitter:title" content="{{ config.extra.title }}">
 <meta name="twitter:creator" content="@zaiste">
-<meta name="twitter:description" content="{{ config.extra.desc }}">
-<meta name="twitter:image:src" content="{{ config.extra.image_url }}">
 <meta name="twitter:domain" content="zaiste.net">
