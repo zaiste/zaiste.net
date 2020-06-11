@@ -3,14 +3,15 @@ compile_sass = true
 highlight_code = false
 build_search_index = false
 
+title = "Zaiste Programming"
+description = """
+Zaiste Programming is a personal website by Jakub Neander about Java, Ruby, Python, JavaScript,
+Node.js, Clojure, Dart, Flutter and more.
+"""
+
 taxonomies = [ {name = "topics", rss = true} ]
 
 [extra]
-title = "Zaiste Programming"
-desc = """
-Zaiste Programming by Jakub Neander, a software engineer who teaches Java, Ruby, Python, JavaScript,
-Node.js, Clojure, Dart, Flutter and more.
-"""
 image_url = ""
 image_type = ""
 image_width = ""
