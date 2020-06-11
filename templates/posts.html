@@ -10,7 +10,10 @@
         <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="{{ page.slug }}">
           {{ page.title }}
         </a>
-        <span class="ml-4 text-sm text-gray-400">{{ page.date }}</span>
+        {% if page.date %}
+        <span class="ml-4 text-sm text-gray-400">{{ page.date | date(format="%Y-%m-%d")}}</span>
+        {% endif %}
+
       </h4>
       <div class="text-gray-400"></div>
     </li>
