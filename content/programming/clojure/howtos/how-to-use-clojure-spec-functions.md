@@ -1,8 +1,8 @@
-
 +++
-
+title = "How To Use Clojure.Spec for Functions"
+[taxonomies]
+topics = [ "Clojure"]
 +++
-# How To Use Clojure.Spec for Functions
 
 ```clojure
 (defn int-to-digits

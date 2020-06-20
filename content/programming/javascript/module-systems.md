@@ -1,7 +1,9 @@
 +++
+title = "Module Systems in JavaScript"
+[taxonomies]
+topics = [ "JavaScript" ]
 +++
 
-# Module Systems in JavaScript
 
 Module Systems provide a way to manage dependencies in JavaScript.
 

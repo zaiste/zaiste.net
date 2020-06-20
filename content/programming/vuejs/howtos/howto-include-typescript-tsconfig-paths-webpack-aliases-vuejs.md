@@ -1,5 +1,7 @@
 +++
 title = "How To Include TypeScript Paths from `tsconfig.json` as Webpack Aliases in Vue.js"
+[taxonomies]
+topics = [ "Vue.js", "JavaScript" ]
 +++
 
 

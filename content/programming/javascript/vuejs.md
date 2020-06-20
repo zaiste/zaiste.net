@@ -1,8 +1,8 @@
-
 +++
-
+title = "Vue.js"
+[taxonomies]
+topics = [ "JavaScript", "Vue.js" ]
 +++
-# Vue.js
 
 ## Components
 

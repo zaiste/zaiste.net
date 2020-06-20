@@ -1,5 +1,7 @@
 
 +++
+[taxonomies]
+topics = [ "JavaScript" ]
 
 +++
 # TestCafe (End-to-End Testing)

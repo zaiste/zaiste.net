@@ -1,5 +1,7 @@
 +++
 title = "How To Assure Unique Jobs in Sidekiq"
+[taxonomies]
+topics = [ "Ruby" ]
 +++
 
 ```ruby

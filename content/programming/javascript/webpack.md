@@ -1,8 +1,8 @@
-
 +++
-
+title = "Webpack"
+[taxonomies]
+topics = [ "JavaScript", "Webpack" ]
 +++
-# Webpack
 
 Webpack recursively processes module imports in the code to build a dependency graph. Its result is a single bundle file. WebPack figures the order of imports on its own. The code must be written as JavaScript Modules, i.e.  a single JavaScript file that exports pieces of functionality for use in other parts of the application.
 

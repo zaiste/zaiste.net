@@ -1,8 +1,8 @@
-
 +++
-
+title = "NPM"
+[taxonomies]
+topics = [ "JavaScript" ]
 +++
-# NPM
 
 ## Set Default Config
 

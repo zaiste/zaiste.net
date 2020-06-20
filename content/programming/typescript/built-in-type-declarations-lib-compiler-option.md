@@ -1,7 +1,9 @@
 +++
+title = "TypeScript's Built-In Type Declarations with the `--lib` Compiler Option"
+[taxonomies]
+topics = [ "TypeScript" ]
 +++
 
-# TypeScript's Built-In Type Declarations with the `--lib` Compiler Option
 
 Since version 2.0, the built-in standard library type declarations have been split into modules in TypeScript. This allows to select which (of those built-in) declarations to include in the project.
 

@@ -1,8 +1,8 @@
-
 +++
-
+title = "TypeScript as Bundler instead of Webpack or Browserify"
+[taxonomies]
+topics = [ "TypeScript" ]
 +++
-# TypeScript as Bundler instead of Webpack or Browserify
 
 TypeScript supports bundling for AMD and System.js module formats.
 

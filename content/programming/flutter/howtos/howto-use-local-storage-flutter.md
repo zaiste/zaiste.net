@@ -1,5 +1,7 @@
 +++
 title = "How To Use Local Storage in Flutter"
+[taxonomies]
+topics = [ "Flutter", "Dart" ]
 +++
 
 ## Use the `shared_preferences` Plugin

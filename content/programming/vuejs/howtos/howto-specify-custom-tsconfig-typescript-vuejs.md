@@ -1,5 +1,7 @@
 +++
 title = "How To Specify A Custom TypeScript `tsconfig.json` in Vue.js"
+[taxonomies]
+topics = [ "Vue.js", "JavaScript" ]
 +++
 
 

@@ -1,5 +1,7 @@
 +++
 title = "How To Specify A `vue.config.js` Location for `vue-cli`"
+[taxonomies]
+topics = [ "Vue.js", "JavaScript" ]
 +++
 
 

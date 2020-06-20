@@ -1,8 +1,8 @@
-
 +++
-
+title = "ESLint"
+[taxonomies]
+topics = [ "JavaScript" ]
 +++
-# ESLint
 
 ```json
 {

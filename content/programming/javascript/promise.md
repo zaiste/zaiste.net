@@ -1,8 +1,8 @@
-
 +++
-
+title = "JavaScript Promise"
+[taxonomies]
+topics = [ "JavaScript" ]
 +++
-# JavaScript Promise
 
 ## Promise.all
 

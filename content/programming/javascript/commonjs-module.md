@@ -1,10 +1,10 @@
-
++++
+title = "CommonJS Module Approach"
+[taxonomies]
+topics = [ "JavaScript" ]
 +++
 
-+++
-# CommonJS Module Approach
-
-```js 
+```js
 var compute = require('./compute.js');
 
 exports.computeSomethingElse = function() {

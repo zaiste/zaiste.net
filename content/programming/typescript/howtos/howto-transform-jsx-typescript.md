@@ -1,5 +1,7 @@
 +++
 title = "How To Transform JSX using TypeScript"
+[taxonomies]
+topics = [ "TypeScript" ]
 +++
 
 TypeScript can transform JSX templates. You need use the `.tsx` extension and set the `--jsx` flag to `React`.

@@ -1,8 +1,8 @@
-
 +++
-
+title = "Rails Caching"
+[taxonomies]
+topics = [ "Rails", "Ruby" ]
 +++
-# Rails Caching
 
 Enable caching in the `development`
 

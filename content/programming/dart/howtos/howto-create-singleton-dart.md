@@ -1,5 +1,7 @@
 +++
 title = "How To Create A Singleton in Dart"
+[taxonomies]
+topics = [ "Dart" ]
 +++
 
 Dart provides factory constructors, which simplifies the creation of singletons.

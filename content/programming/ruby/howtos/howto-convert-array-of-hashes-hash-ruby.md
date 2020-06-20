@@ -1,5 +1,7 @@
 +++
 title = "How To Convert An Array Of Hashes Into A Hash in Ruby"
+[taxonomies]
+topics = [ "Ruby" ]
 +++
 
 To convert:

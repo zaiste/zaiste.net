@@ -1,5 +1,7 @@
 +++
 title = "How To Delete A Job From A Queue In Sidekiq"
+[taxonomies]
+topics = [ "Ruby" ]
 +++
 
 ```ruby

@@ -1,5 +1,7 @@
 +++
 title = "How To Render Conditionally in React.js"
+[taxonomies]
+topics = [ "React.js", "JavaScript" ]
 +++
 
 ```js

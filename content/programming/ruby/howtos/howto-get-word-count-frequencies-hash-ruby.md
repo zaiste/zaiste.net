@@ -1,5 +1,7 @@
 +++
 title = "How To Get Word Count / Frequencies using Hashes in Ruby"
+[taxonomies]
+topics = [ "Ruby" ]
 +++
 
 

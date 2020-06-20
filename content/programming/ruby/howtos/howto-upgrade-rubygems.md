@@ -1,5 +1,7 @@
 +++
 title = "How To Upgrade Rubygems"
+[taxonomies]
+topics = [ "Ruby" ]
 +++
 
 ```bash

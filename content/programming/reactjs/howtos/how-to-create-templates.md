@@ -1,5 +1,7 @@
 +++
 title = "How To Create Templates"
+[taxonomies]
+topics = [ "React.js", "JavaScript" ]
 +++
 
 Use JSX (an ECMAScript extension)

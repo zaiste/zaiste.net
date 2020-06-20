@@ -1,5 +1,7 @@
 +++
 title = "How To Disable A `TextField` in Flutter"
+[taxonomies]
+topics = [ "Flutter", "Dart" ]
 +++
 
 Use the `enabled:` property of the `TextField` widget by setting it to `false`:

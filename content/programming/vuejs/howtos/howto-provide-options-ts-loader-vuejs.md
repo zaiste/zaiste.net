@@ -1,5 +1,7 @@
 +++
 title = "How To Modify Options to the `ts-loader` Loader in Vue.js CLI"
+[taxonomies]
+topics = [ "Vue.js", "JavaScript" ]
 +++
 
 

@@ -1,9 +1,11 @@
 +++
+[taxonomies]
+topics = [ "JavaScript", "React Native" ]
 +++
 
 # React Native
 
-React Native is a framework for building native mobile applications using[JavaScript](@/programming/javascript.md). It uses the same programming model as React, but instead of rendering DOM elements in the browser window, it renders native components in mobile platform UI systems (i.e. UIKit on iOS).
+React Native is a framework for building native mobile applications using [JavaScript](@/programming/javascript.md). It uses the same programming model as React, but instead of rendering DOM elements in the browser window, it renders native components in mobile platform UI systems (i.e. UIKit on iOS).
 
 In React, you render your components using React components like `<div>` and `<ul>` which are wrappers around DOM elements.
 

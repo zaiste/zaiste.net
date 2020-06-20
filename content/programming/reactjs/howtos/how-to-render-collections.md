@@ -1,5 +1,7 @@
 +++
 title = "How To Render Collections"
+[taxonomies]
+topics = [ "React.js", "JavaScript" ]
 +++
 
 ## Array
