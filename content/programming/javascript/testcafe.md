@@ -1,10 +1,8 @@
-
 +++
+title = "TestCafe (End-to-End Testing)"
 [taxonomies]
 topics = [ "JavaScript" ]
-
 +++
-# TestCafe (End-to-End Testing)
 
 ```bash
 npm i testcafe
