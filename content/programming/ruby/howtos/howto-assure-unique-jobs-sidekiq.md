@@ -4,7 +4,7 @@ title = "How To Assure Unique Jobs in Sidekiq"
 topics = [ "Ruby" ]
 +++
 
-```ruby
+```rb
 class UniqueWorker
 
   def self.perform_unique_async(...<params>...)

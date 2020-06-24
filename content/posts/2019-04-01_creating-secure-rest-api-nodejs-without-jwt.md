@@ -122,7 +122,7 @@ the following command:
 ```bash
 http :5544/
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 14
@@ -180,7 +180,7 @@ Let's repeat our request to `/` endpoint.
 ```
 http :5544/
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 29
@@ -302,7 +302,7 @@ And then you can trigger the following request:
 ```bash
 http :5544/name/Zaiste
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 26
@@ -446,7 +446,7 @@ Let's send some data via `POST` request to our newly create `/register` route.
 ```
 http :5544/register name=Zaiste password=krzychujacielubie email=zaiste@example.com
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 113
@@ -595,7 +595,7 @@ Let's test it again:
 ```bash
 http :5544/register name=Zaiste password=krzychujacielubie email=zaiste@example.com
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 48
@@ -906,7 +906,7 @@ Let's test if it all works together. First, register a new user.
 ```bash
 http :5544/register name=Hanka email=hanka@agrobots.com password=tomliand1
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 48
@@ -927,7 +927,7 @@ Let see if I can access the `/secret` route without providing the token.
 ```bash
 http :5544/secret
 ```
-```http
+```config
 HTTP/1.1 401 Unauthorized
 Connection: keep-alive
 Content-Length: 0
@@ -941,7 +941,7 @@ will send our authentication token along with the request as an HTTP header.
 ```bash
 http :5544/secure Authorization:c33qPZLwgb74V-ysAVu5Eg
 ```
-```http
+```config
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 45

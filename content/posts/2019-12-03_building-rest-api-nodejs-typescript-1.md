@@ -20,7 +20,7 @@ In this series I will be using [Huncwot](https://github.com/huncwotjs/huncwot), 
 
 Let's start by installing [Huncwot](https://github.com/huncwotjs/huncwot). It's better to do it globally.
 
-```shell
+```bash
 npm install -g huncwot
 ```
 
@@ -62,13 +62,13 @@ A Web API is a mapping between paths (that may describe resources) and handlers.
 
 Let's finally jump to the code and let's create our project: `techevents`.
 
-```shell
+```bash
 huncwot new techevents
 ```
 
 Let's open the project in VS Code. We are only interested in the `config/server/routes.ts` file.
 
-```typescript
+```ts
 import { Routes } from 'huncwot';
 import { OK } from 'huncwot/response';
 

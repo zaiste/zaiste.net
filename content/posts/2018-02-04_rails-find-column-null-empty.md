@@ -12,13 +12,13 @@ priority = 0.8
 
 Let's find records where column is `NULL` or empty using Active Record
 
-```ruby
+```rb
 Article.where(topic: [nil, ""])
 ```
 
 Let's now find records where column is NOT `NULL` or empty using Active Record
 
-```ruby
+```rb
 Article.where.not(topic: [nil, ""])
 ```
 

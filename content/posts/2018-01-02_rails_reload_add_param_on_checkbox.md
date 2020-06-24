@@ -12,7 +12,7 @@ priority = 0.8
 
 The following snippet will reload the page once the checkbox is clicked with a new parameter being added to the URL.
 
-```ruby
+```rb
 = form_tag the_current_path, method: :get do |f|
   = check_box_tag :custom_filter, true, params[:custom_filter], onchange: 'this.form.submit();'
   = label_tag :custom_filter, "Custom Filter"

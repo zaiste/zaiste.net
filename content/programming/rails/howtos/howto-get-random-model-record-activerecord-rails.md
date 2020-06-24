@@ -6,13 +6,13 @@ topics = [ "Rails", "Ruby" ]
 
 In Rails 4+ with either Postgresql or SQLite by using `RANDOM()`:
 
-```ruby
+```rb
 Model.order('RANDOM()').first
 ```
 
 with MySQL:
 
-```ruby
+```rb
 Model.order('RAND()').first
 ```
 

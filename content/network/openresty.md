@@ -15,7 +15,7 @@ OpenResty gives us additional directives which let us script behaviour with the 
 
 The `content_by_lua` directive allows to run arbitrary Lua code:
 
-```nginx
+```conf
 location / {
 	content_by_lua 'ngx.say("<p>hello, world</p>")';
 }
@@ -23,7 +23,7 @@ location / {
 
 For more complex logic there is `content_by_lua_file`.
 
-```nginx
+```conf
 location /by_file {
     default_type text/html;
     lua_code_cache off;
@@ -35,7 +35,7 @@ location /by_file {
 
 The `init_by_lua` directive allows to run initialization code during the nginx start up up. It is being used for importing and defining libraries or modules that are used in our request handlers.
 
-```nginx
+```conf
 init_by_lua '
     cjson = require("cjson") -- global variable
 '
@@ -52,7 +52,7 @@ There is also `init_by_lua_file`.
 
 `ngx.location.capture` allows to trigger an internal request.
 
-```nginx
+```conf
 local res = ngx.location.capture("/some-path")
 ```
 
@@ -60,7 +60,7 @@ The `res` contains response's status, header, and body.
 
 Pass arguments to requests:
 
-```nginx
+```conf
 local options = {
     method = ngx.HTTP_POST,
     args = { maxsize = 1000 }
@@ -70,7 +70,7 @@ local res = ngx.location.capture("/some-path", options)
 
 The ngx request object contains typical request attributes:
 
-```nginx
+```conf
 local headers = ngx.req.get_headers()
 local cookie = headers["Cookie"]
 local etag = headers["Etag"]
@@ -84,14 +84,14 @@ local post_params = ngx.req.get_post_args()
 
 For the response, there is **NO** `ngx.res.body()` method. Use `ngx.print` or `ngx.say`. The latter appends the newline at the end `\n`.
 
-```nginx
+```conf
 ngx.print("Hello world")
 ngx.say("Hello world")
 ```
 
 Send JSON response
 
-```nginx
+```conf
 ngx.say(cjson.encode({a=1,b=2}))
 ```
 

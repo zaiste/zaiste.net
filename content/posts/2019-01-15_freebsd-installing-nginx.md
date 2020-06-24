@@ -188,7 +188,7 @@ mkdir /usr/local/etc/nginx/servers/
 Include the server blocks directory in `nginx.conf` located at
 `/usr/local/etc/nginx/` within the `http` block:
 
-```nginx
+```conf
 http {
   ...
   include "servers/*.conf";
@@ -203,7 +203,7 @@ vi /usr/local/etc/nginx/servers/domain.com.conf
 
 Put the following content in this newly created server block configuration:
 
-```nginx
+```conf
 server {
     access_log /var/log/nginx/domain.com.access.log;
     error_log /var/log/nginx/domain.com.error.log;

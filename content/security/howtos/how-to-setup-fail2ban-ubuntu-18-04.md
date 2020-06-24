@@ -12,7 +12,7 @@ Since fail2ban 0.9, the bans are persistent. fail2ban maintains a database at `/
 
 ## fail2ban: Installation
 
-```shell
+```bash
 sudo apt-get install fail2ban
 ```
 
@@ -22,7 +22,7 @@ The `/etc/fail2ban/fail2ban.conf` contains the default configuration. It is a
 good practice to copy this file to `/etc/fail2ban/fail2ban.local`. In fail2ban
 `.local` files override `.conf` files
 
-```shell
+```bash
 cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
 ```
 
@@ -33,7 +33,7 @@ Again, it is a good practice to copy this file to `/etc/fail2ban/jail.local`.
 
 To make an IP ignored by fail2ban, use the `ignoreip` setting:
 
-```shell
+```bash
 ignoreip = 127.0.0.1/8 1.1.1.1
 ```
 

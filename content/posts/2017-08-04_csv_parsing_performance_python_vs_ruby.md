@@ -18,7 +18,7 @@ For both languages we will be testing three scenarios: a regular parsing, parsin
 
 Regular CSV parsing:
 
-```python
+```py
 with open(csv_path, newline='') as f:
     reader = csv.reader(f)
     for row in reader:
@@ -27,7 +27,7 @@ with open(csv_path, newline='') as f:
 
 CSV parsing with headers:
 
-```python
+```py
 with open(csv_path, newline='') as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -36,7 +36,7 @@ with open(csv_path, newline='') as f:
 
 CSV parsing with a progress bar using `progressbar2` package.
 
-```python
+```py
 num_lines = sum(1 for line in open(csv_path))
 
 with progressbar.ProgressBar(max_value=num_lines) as bar:
@@ -74,7 +74,7 @@ Memory usage for the large data set is about 2x smaller than for the small data 
 
 The following method can be used as a decorator on a method to measure its memory usage and how long it is being executed.
 
-```python
+```py
 def example(fn):
     @functools.wraps(fn)
     def wrapped():
@@ -103,7 +103,7 @@ def example(fn):
 
 Regular CSV parsing:
 
-```ruby
+```rb
 CSV.foreach(FILENAME) do |row|
 
 end
@@ -111,7 +111,7 @@ end
 
 CSV parsing with headers:
 
-```ruby
+```rb
 CSV.foreach(FILENAME, headers: true) do |row|
 
 end
@@ -119,7 +119,7 @@ end
 
 CSV parsing with a progress bar using `progressbar2` package.
 
-```ruby
+```rb
 count = File.foreach(FILENAME).inject(0) { |c, _| c + 1 }
 bar = ProgressBar.create(throttle_rate: 0.2, total: count)
 
@@ -154,7 +154,7 @@ For the larger data set the memory usage wasn't consistent. During some runs it 
 
 The following methods were used to measure the execution time along with the memory usage.
 
-```ruby
+```rb
 def memory_usage
   memory_before = `ps -o rss= -p #{Process.pid}`.to_i
   yield
@@ -172,7 +172,7 @@ def time_spent
 end
 ```
 
-```ruby
+```rb
 memory_usage do
   time_spent do
     # actual code goes here

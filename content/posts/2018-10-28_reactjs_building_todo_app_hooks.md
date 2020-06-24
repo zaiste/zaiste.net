@@ -23,7 +23,7 @@ Let's start with the component representing a single task:
 ./src/components/Task.js
 :::
 
-```jsx
+```js
 import React, { memo } from "react";
 
 export default memo(({ text, complete, onClick }) => (
@@ -60,7 +60,7 @@ Next, there is a list of tasks with an input field at the top add new tasks to t
 ./src/components/TaskList.js
 :::
 
-```jsx
+```js
 export default () => {
   const [tasks, setTasks] = useState([]);
 
@@ -99,7 +99,7 @@ Lastly, there is `TaskInput` component defining an `onSubmit` handler that prepe
 ./src/components/TaskInput.js
 :::
 
-```jsx
+```js
 import React, { useState } from "react";
 
 const useInputValue = initialValue => {

@@ -6,7 +6,7 @@ title = "How to Clear journalctl Logs"
 
 Keep only the logs from the last 2 days:
 
-```shell
+```bash
 journalctl --vacuum-time=2d
 ```
 
@@ -14,7 +14,7 @@ journalctl --vacuum-time=2d
 
 Keep only the logs under `100mb`:
 
-```shell
+```bash
 journalctl --vacuum-size=100M
 ```
 

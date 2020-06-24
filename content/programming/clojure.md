@@ -20,7 +20,7 @@ Idiomatic Clojure is slow compared to SBCL-compiled Common Lisp.
 
 This
 
-```clojure 
+```clj
 (->> task
      :state
      (map :status)
@@ -29,7 +29,7 @@ This
 
 is more readable than this:
 
-```clojure 
+```clj
 (every? #(= % "yes") (map :status (:state task)))
 ```
 

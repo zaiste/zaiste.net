@@ -6,13 +6,13 @@ topics = [ "Ruby" ]
 
 To convert:
 
-```ruby
+```rb
 arr = [{a: 1}, {b: 2}, {c: 3}]
 ```
 
 into:
 
-```ruby
+```rb
 h = { a: 1, b: 2, c: 3 }
 ```
 
@@ -20,7 +20,7 @@ h = { a: 1, b: 2, c: 3 }
 
 Use the `reduce` method along with the `merge` method:
 
-```ruby
+```rb
 arr = [{a: 1}, {b: 2}, {c: 3}]
 arr.reduce({}, :merge)
 ```
@@ -33,7 +33,7 @@ arr.reduce({}, :merge)
 
 Use the `inject` method along with the `merge` method:
 
-```ruby
+```rb
 arr = [{a: 1}, {b: 2}, {c: 3}]
 arr.inject(:merge)
 ```

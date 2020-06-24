@@ -17,7 +17,7 @@ In Rails, `pluck` is a shortcut to select one or more attributes
 without loading the corresponding records just to filter out the selected
 attributes. It returns an Array of attribute values.
 
-```ruby
+```rb
 Person.pluck(:name)
 # SELECT people.name FROM people
 # => ["Zosia", "Basia", "Jurek"]
@@ -25,7 +25,7 @@ Person.pluck(:name)
 
 This is similar to the following, but `pluck` is much more performant
 
-```ruby
+```rb
 Person.all.map { |p| p.slice(:id, :name) }
 ```
 
@@ -34,7 +34,7 @@ for the query so that only certain fields are retrieved. It doesn't return an
 array, but a relation object. Thus, it's usually less performant than `pluck` as
 it needs to instatiante those object.
 
-```ruby
+```rb
 Person.select(:id,:name)
 ```
 
@@ -45,7 +45,7 @@ return the JSON.
 `pluck` can be combined with `map` to create a hash between selected fields and
 their values:
 
-```ruby
+```rb
 Person.all.pluck(:id, :name).map { |id, name| { id: id, name: name } }
 ```
 
@@ -56,28 +56,28 @@ instantiate Person objects nor need to assign attributes to the models.
 It is possible to make `pluck+map` method simpler by using spread operator along
 with `zip` function
 
-```ruby
+```rb
 attrs = %w(id name)
 Person.pluck(*attrs).map { |p| attrs.zip(p).to_h }
 ```
 
 Alternatively, `as_json` may be used to specify a subset of fields
 
-```ruby
+```rb
 Person.all.as_json(only: [:id, :name])
 ```
 
 Finally, there is [pluck_to_hash](https://github.com/girishso/pluck_to_hash) which extends ActiveRecord pluck to return array of hashes. It also
 supports `Struct` via `pluck_to_struct` method.
 
-```ruby
+```rb
 Post.limit(2).pluck_to_hash(:id, :title)
 # => [{:id=>213, :title=>"foo"}, {:id=>214, :title=>"bar"}]
 ```
 
 It also allows to alias fields
 
-```ruby
+```rb
 User.pluck_to_hash(:id, 'created_at::date as custom_date', 'created_at::time as custom_time')
 # => [{:id=>23, :custom_date=>Fri, 11 Jul 2014, :custom_time=>2000-01-01 07:54:36 UTC}]
 ```

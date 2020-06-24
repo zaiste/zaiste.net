@@ -37,7 +37,7 @@ match '/googleb74edef4a46cf19d.html',
 You can also parametrize this code by adding a config entry inside `config/applicaiton.rb`
 with a generated identifier.
 
-```ruby config/application.rb
+```rb config/application.rb
 module MyApp
   class Application < Rails::Application
     config.google_verification = "googleb74edef4a46cf19d"

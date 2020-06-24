@@ -10,7 +10,7 @@ Plain Objects or Data Classes
 
 in Kotlin:
 
-```kotlin
+```kt
 data class Widget(var name: String, var owner: Person)
 ```
 
@@ -18,7 +18,7 @@ It generates getters, setters, `hashCode()`, `equals()`, `toString()`.
 
 You can define default parameters
 
-```kotlin
+```kt
 class Book(val title: String,
            val price: Int = 10000,
            val desc: String = "") {
@@ -27,13 +27,13 @@ class Book(val title: String,
 
 You can refer to parameters using their names
 
-```kotlin
+```kt
 val book = Book(title = "Madame Bovary", price = 1000, desc = "Good")
 ```
 
 You can use `it` for lambdas
 
-```kotlin
+```kt
 mylist.filter { it > 4 }
 ```
 
@@ -42,7 +42,7 @@ mylist.filter { it > 4 }
 You have to explicitly allow variables to be `null` aka. nullable-types by
 adding `?` to the type name. Those will be checked at compile-time.
 
-```kotlin
+```kt
 val name: String? = ""
 
 ```

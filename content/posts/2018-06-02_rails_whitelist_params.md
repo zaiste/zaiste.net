@@ -12,7 +12,7 @@ topics = [ "Rails" ]
 
 There is a gem called [allowable](https://github.com/msimonborg/allowable) which extends `ActionController:Paramters` with additional methods to whitelist or blacklist `params` values.
 
-```ruby
+```rb
 def model_params
   params.require(:model).permit(:status, :other_attribute)
     .allow(status: %w[pending accepted rejected])
@@ -21,7 +21,7 @@ end
 
 The gem adds four methods to `Hash`: `#allow`, `#allow!`, `#forbid` and `#forbid!`.
 
-```ruby
+```rb
 hash = { one: 'one', two: 'two' }
 
 hash.forbid(one: 'one') # => { two: 'two' }
@@ -34,7 +34,7 @@ hash.forbid!(two: 'two') # => {}
 
 With `String` keys:
 
-```ruby
+```rb
 hash = { 'one' => 'one', 'two' => 'two' }
 
 hash.forbid(one: 'one') # => { "one" => "one", "two" => "two" }

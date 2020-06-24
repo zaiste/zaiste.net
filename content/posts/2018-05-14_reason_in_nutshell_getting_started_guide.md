@@ -109,7 +109,7 @@ filesystem without the need to modify the code.
 
 Functions are defined using `let` and `=>`.
 
-```reason
+```re
 let greet = name =>
     Js.log("Hello, " ++ name "!");
 
@@ -122,7 +122,7 @@ Function's input arguments can be labelled. This makes the function invocation m
 explicit: passed-in values no longer need to follow the arguments order from the
 function definition. Prefixing the argument name with `~` makes it labelled.
 
-```reason
+```re
 let greet = (~name, ~location) =>
     Js.log("Hello, " ++ name "! You're in " ++ location);
 
@@ -136,7 +136,7 @@ greet(~location="Vienna", ~name="Zaiste")
 
 A [variant](https://en.wikipedia.org/wiki/Tagged_union) is a data structure that holds a value from a fixed set of values. This is also known as tagged or disjoint union or algebraic data types. Each case in a variant must be capitalised. Optionally, it can receive parameters.
 
-```reason
+```re
 type animal =
   | Dog
   | Cat
@@ -148,7 +148,7 @@ type animal =
 
 This is a record
 
-```reason
+```re
 let p = {
   name: "Zaiste",
   age: 13
@@ -157,7 +157,7 @@ let p = {
 
 Records need explicit type definition.
 
-```reason
+```re
 type person = {
     name: string,
     age: int
@@ -166,7 +166,7 @@ type person = {
 
 In the scope of a module, the type will be inherited: the `p` binding will be recognized as `person` type. Outside of a module, you can reference the type by just prefixing it with file name.
 
-```reason
+```re
 let p: Person.person = {
   name: "Sean",
   age: 12
@@ -179,7 +179,7 @@ There is a convention to create a module per type and name the type as `t` to av
 
 There is a built-in support for Promises via BuckleScript, provided as `JS.Promise` module. Here's an example of making an API call using [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API):
 
-```reason
+```re
 Js.Promise.(
   Fetch.fetch(endpoint)
   |> then_(Fetch.Response.json)
@@ -193,7 +193,7 @@ You need to use `then_` as `then` is reserved word in OCaml.
 
 Pattern matching is a dispatch mechanism based on the shape of the provided value. In Reason, pattern matching is implemented with `switch` statement. It can be used with a variant type or as destructuring mechanism.
 
-```reason
+```re
 switch pet {
 | Dog => "woof"
 | Cat => "meow"
@@ -203,7 +203,7 @@ switch pet {
 
 We can use pattern matching for list destructuring:
 
-```reason
+```re
 let numbers = ["1", "2", "3", "4"];
 switch numbers {
 | [] => "Empty"
@@ -215,7 +215,7 @@ switch numbers {
 
 Or, we can use it for record destructuring
 
-```reason
+```re
 let project = {
   name: "Huncwot",
   size: 101101,
@@ -234,7 +234,7 @@ switch project {
 
 `option()` is a built-in variant in Reason describing "nullable" values:
 
-```reason
+```re
 type option('a) = None | Some('a);
 ```
 
@@ -257,7 +257,7 @@ This method is recommended by Reason team for scaffolding ReasonReact projects. 
 
 ReasonReact provides two types of components: `statelessComponent` and `reducerComponent`. Contrary to stateless components, reducer components are stateful providing Redux-like reducers.
 
-```reason
+```re
 let s = ReasonReact.string;
 
 let component = ReasonReact.statelessComponent("App");
@@ -292,7 +292,7 @@ Start it with:
 
 **Repository** is the central concept in this application. Let's start by defining a type to describe that entity. We will put it inside a separate module called `Repo`.
 
-```reason
+```re
 type t = {
   name: string,
   size: int,
@@ -308,7 +308,7 @@ We've already seen a stateless component. Now let's create a component that has 
 
 Let's start by defining the type for the state managed by `RepoList` component.
 
-```reason
+```re
 type state = {
   repos: list(Repo.t)
 };
@@ -321,7 +321,7 @@ mean that our query for fetching trending repositories didn't return any results
 
 Let's use Reason's optional values to deal with that situation.
 
-```reason
+```re
 type state = {
   repos: option(list(Repo.t))
 }
@@ -329,14 +329,14 @@ type state = {
 
 Next step is to define possible actions for that component. In ReasonReact, actions are represented as variants. For now we will only have one action called `ReposFetched`.
 
-```reason
+```re
 type action =
   | ReposFetched(list(Repo.t));
 ```
 
 In order to create a stateful component in ReasonReact we need to use `reducerComponent()` function.
 
-```reason
+```re
 let component = ReasonReact.reducerComponent("App");
 ```
 
@@ -344,7 +344,7 @@ Such component allows to define a reducer which describes how the state is trans
 response to actions. A reducer takes an action along with the current state as input
 and returns the new state as output. Reducers must be pure functions.
 
-```reason
+```re
 reducer: (action, _prevState) => {
   switch action {
   | ReposFetched(repos) =>
@@ -357,7 +357,7 @@ We're pattern matching action, based on the parameter we receive in the reducer(
 
 To finish off component's definition, let's define its initial state:
 
-```reason
+```re
 initialState: () => {
   repos: Some([
     {name: "Huncwot", size: 11011, forks: 42}
@@ -388,7 +388,7 @@ Add them to `bs-dependencies` in your `bsconfig.json`:
 We defined our `Repo` type as a set of three fields: `name`, `size` and `forks`. Once the payload is
 fetched from GitHub API we parse it to extract those three fields.
 
-```reason
+```re
 let parse = json =>
   Json.Decode.{
     name: json |> field("name", string),
@@ -403,7 +403,7 @@ brackets without the need of prefixing with `Json.Decode`.
 
 Since GitHub returns repos under `items`, let's define another function to get that list.
 
-```reason
+```re
 let extract = (fields, json) =>
   Json.Decode.(
     json |> at(fields, list(parse))
@@ -412,7 +412,7 @@ let extract = (fields, json) =>
 
 Finally we can make a request and pass the returned data through our parsing functions:
 
-```reason
+```re
 let list = () =>
   Js.Promise.(
     Fetch.fetch(endpoint)
@@ -426,7 +426,7 @@ let list = () =>
 Let's use `didMount` lifecycle method to trigger the fetch of repositories from
 GitHub API.
 
-```reason
+```re
 didMount: self => {
   let handle = repos => self.send(ReposFetched(repos));
   Repo.list()
@@ -446,7 +446,7 @@ resolves, the action will carry fetched repositories to the reducer. This will u
 Since we distinguish between non initialized state and an empty list of repositories, it is
 straightforward to handle the initial **loading in progress** message.
 
-```reason
+```re
 render: self =>
   <div>
   (
@@ -485,7 +485,7 @@ Types for CSS with [`bs-css`](https://github.com/SentiaAnalytics/bs-css).
 
 Component:
 
-```reason
+```re
 let style =
     Css.(
     {
@@ -525,7 +525,7 @@ let make = _children => {
 
 ## TBD
 
-```reason
+```re
 module History = {
   type h;
   [@bs.send] external goBack : h => unit = "";

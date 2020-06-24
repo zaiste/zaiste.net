@@ -17,7 +17,7 @@ In `ActiveModel::Serializer` version `0.10+`, use `@instance_options` to read th
 
 Pass the parameter from an action in a controller:
 
-```ruby
+```rb
 class SomeController < ApplicationController
   def action
     render json: @model, your_option_name: value
@@ -27,7 +27,7 @@ end
 
 Access the parameter's value inside the corresponding `ActiveModel` serializer:
 
-```ruby
+```rb
 class ModelSerializer < ActiveModel::Serializer
   def some_method
     puts @instance_options[:your_option_name]

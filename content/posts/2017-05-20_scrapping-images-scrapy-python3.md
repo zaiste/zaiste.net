@@ -29,7 +29,7 @@ scrapy startproject bookspider
 
 `items.py`  allows us to define a data object model for the pages crawled by the spider. This class encapsulates each piece of data being scraped.
 
-```python
+```py
 import scrapy
 
 class Book(scrapy.Item):
@@ -43,7 +43,7 @@ class Book(scrapy.Item):
 
 Create a spider inside `spiders/` directory. It's a class that inherits from `scrapy.Spider` and must have `name` and `start_urls` fields defined.
 
-```python
+```py
 import scrapy
 from speck.items import BookItem
 
@@ -78,7 +78,7 @@ Every  spider must have at least a `parse()`  method that handles the URLs defin
 
 The last thing is to enable the item pipelines in `settings.py` so that Scrapy automatically downloads each files put into `file_urls`
 
-```python
+```py
 ITEM_PIPELINES = {
   'scrapy.pipelines.files.FilesPipeline': 1
 }

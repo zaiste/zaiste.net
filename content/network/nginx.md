@@ -16,7 +16,7 @@ lua_package_path sets the Lua module search path used by scripts specified by se
 
 ## WWW to Non-WWW
 
-```nginx
+```conf
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -42,32 +42,32 @@ server {
 
 ### Enable HTTP/2
 
-```nginx
+```conf
 listen 443 ssl http2;
 ```
 
 ### Enable SSL session cache
 
-```nginx
+```conf
 ssl_session_cache shared:SSL:1m; # 1 megabyte
 ssl_session_timeout 1m; # 1 minute
 ```
 
 ### Disable SSL session tickets
 
-```nginx
+```conf
 ssl_session_tickets off;
 ```
 
 ### Disable TLS version 1.0
 
-```nginx
+```conf
 ssl_protocols TLSv1.1 TLSv1.2;
 ```
 
 ### Reduce SSL buffer size
 
-```nginx
+```conf
 ssl_buffer_size 4k;
 ```
 
@@ -75,7 +75,7 @@ ssl_buffer_size 4k;
 
 OCSP (Online Certificate Status Protocol) stapling is an alternative approach for checking the revocation status of X.509 certificates. This appends a time-stamped OCSP response signed by the CA to the initial TLS handshake, eliminating the need for clients to contact the CA.
 
-```nginx
+```conf
 ssl_stapling on;
 ssl_stapling_verify on;
 ssl_trusted_certificate /path/to/full_chain.pem;
@@ -89,7 +89,7 @@ HTTP Strict Transport Security (HSTS) is a header which allows a web server to d
 
 ### Enable Brotli
 
-```nginx
+```conf
 brotli on;
 brotli_comp_level 4;
 brotli_types text/plain text/css application/javascript application/json image/svg+xml application/xml+rss;

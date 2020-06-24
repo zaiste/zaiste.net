@@ -12,14 +12,14 @@ Org Mode can be used to create spreadsheets and LaTeX documents, to manage tasks
 
 Org Mode can run blocks of code and collect the output.
 
-```elisp
+```lisp
 (setq org-agenda-files
     (file-expand-wildcards "~/Notes/*.org"))
 ```
 
 Show actually italicized text instead of _italicized text_.
 
-```elisp
+```lisp
 (setq org-hide-emphasis-markers t)
 ```
 

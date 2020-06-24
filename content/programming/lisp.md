@@ -14,7 +14,7 @@ Lisp has lexical scoping and dynamic scoping.
 
 A binding made by `let` lasts until the end of the `let` form.
 
-```elisp
+```lisp
 (let ((a 1))
   (let ((a 2))
     (let ((a 3))
@@ -25,7 +25,7 @@ A binding made by `let` lasts until the end of the `let` form.
 
 Function calls create bindings for their formal arguments when they are called:
 
-```elisp
+```lisp
 (defun foo (a)
   (let ((a 2)) (print a))  ;; 2
   (print a))               ;; 1
@@ -36,7 +36,7 @@ A binding made by a function call lasts until the call returns.
 
 A `let` expression can be seen as syntactic sugar for the lambda form:
 
-```elisp
+```lisp
 (let ((a 1)
       (b 3))
   (+ a b))
@@ -44,11 +44,11 @@ A `let` expression can be seen as syntactic sugar for the lambda form:
 
 is equivalent to
 
-```elisp
+```lisp
 ((lambda (a b) (+ a b)) 1 3)
 ```
 
-```elisp
+```lisp
 (let ((to_add 4))
   ((lambda (arg) (+ to_add arg)) 5))
 ```

@@ -28,7 +28,7 @@ bundle gem mygem
     └── mygem.rb
 ```
 
-```ruby
+```rb
 spec.add_dependency "http"
 ```
 
@@ -45,7 +45,7 @@ https&#x3A;//techandfi.com/how-to-create-a-ruby-gem/ https&#x3A;//quickleft.com/
 
 ### How To Chain Method Invocation
 
-```ruby
+```rb
 user.profile.settings.newsletter
 
 # vs

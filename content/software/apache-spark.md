@@ -10,7 +10,7 @@ Spark thrives in large-scale cluster deployments usually on top of Apache Mesos.
 
 Install Apache Spark on OS X via Homebrew.
 
-```shell 
+```bash
 brew install apache-spark
 ```
 

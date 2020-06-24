@@ -44,14 +44,14 @@ pip freeze > requirements.txt
 
 ## Print to `stderr`
 
-```python
+```py
 import sys
 print('your error message', file=sys.stderr)
 ```
 
 ## Print with formatting
 
-```python
+```py
 print "Who lives in a Pineapple under the sea? \n{name}.".format(name=name)
 print "my {0} string: {1}".format("cool", "Hello there!")
 ```
@@ -60,14 +60,14 @@ print "my {0} string: {1}".format("cool", "Hello there!")
 
 ## Join
 
-```python
+```py
 " ".join(["aaa", "bbb", "ccc"])
 " ".join(str(item) for item in my_list)
 ```
 
 ## Filesystem
 
-```python
+```py
 import os
 >>> filepath
 '/a/path/to/my/file.txt'
@@ -75,20 +75,20 @@ import os
 '/a/path/to/my'
 ```
 
-```python
+```py
 import glob
 >>> glob.glob('./*.txt')
 ['./outline.txt', './pip-log.txt', './test.txt', './testingvim.txt']
 ```
 
-```python
+```py
 for root, dirs, files in os.walk(directory):
     for file in files:
         if file.endswith('.txt'):
             print file
 ```
 
-```python
+```py
 import glob
 for f in glob.iglob("/mydir/*/*.txt"):
     print f
@@ -96,7 +96,7 @@ for f in glob.iglob("/mydir/*/*.txt"):
 
 ## Read multiple YAML files
 
-```python
+```py
 import yaml
 import glob
 
@@ -109,7 +109,7 @@ for config in configs:
 
 ## Matrices
 
-```python
+```py
 results = [i * j for i in range(1, 4) for j in range(1, 5)]
 
 from itertools import product
@@ -118,7 +118,7 @@ results = [i * j for i, j in product(range(1, 4), range(1, 5))]
 
 ## Transpose Matrix
 
-```python
+```py
 matrix = []
 for i in range(1, 4):
     row = []
@@ -137,26 +137,26 @@ transposed = list(map(list, zip(*matrix)))
 
 Extract elements from a `dict`:
 
-```python
+```py
 def extract(dictionary, keys):
      return dict((k, dictionary[k]) for k in keys if k in dictionary)
 ```
 
 Extract elements from a `dict` using `dict`-comprehensions
 
-```python
+```py
 {k: dictionary[k] for k in dictionary if k not in keys}
 ```
 
 Remove all keys that begin with a letter `s`:
 
-```python
+```py
 for k in dic.keys():
   if k.startswith('s_'):
     dic.pop(k)
 ```
 
-```python
+```py
 for k in dic.keys():
   if k.startswith('s_'):
     del dic[k]
@@ -167,19 +167,19 @@ for k in dic.keys():
 
 using `dict`-comprehension in Python 3
 
-```python
+```py
 {k, v: for k, v in dic.items() if not k.startswith("s_")}
 ```
 
 in Python 2
 
-```python
+```py
 dict((k, v) for k, v in dic.items() if not k.startswith("s_"))
 ```
 
 Remove several keys
 
-```python
+```py
 >>> a
 {'a': 1, 'c': 3, 'b': 2, 'd': 4}
 >>> keys = ["b", "c"]
@@ -192,12 +192,12 @@ Python convention is to use list comprehensions (or generator expressions) to ac
 
 ## Cartesian product
 
-```python
+```py
 from operator import add
 reduce(add, map(lambda i: map(lambda j: (i, j), lst), lst))
 ```
 
-```python
+```py
 from itertools import product
 list(product(lst, lst))
 ```
@@ -213,7 +213,7 @@ itertools.imap(maptest, foos, itertools.repeat(bars))
 ## Flash messages in Flask
 
 
-```python
+```py
 flash('You were successfully logged in')
 return redirect(url_for('index'))
 ```
@@ -232,7 +232,7 @@ return redirect(url_for('index'))
 
 ## Invoke an RPC method
 
-```python
+```py
 $ python -c 'import xmlrpclib; print xmlrpclib.Server("http://host:8080").methodName(param,param2)'
 ```
 

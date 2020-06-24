@@ -4,7 +4,7 @@ title = "How To Set Colors for Priorities in Org Mode"
 
 Customize `org-priority-faces` to set specific attributes for each priority:
 
-```elisp
+```lisp
 '((65 :foreground "red" )
   (66 :foreground "orage")
   (67 :foreground "blue"))

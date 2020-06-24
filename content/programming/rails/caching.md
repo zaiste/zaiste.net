@@ -16,13 +16,13 @@ Since Rails 4 Page Caching has been extracted to the `actionpack-page_caching`.
 
 In `config/application.rb`:
 
-```ruby
+```rb
 config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
 ```
 
 Page caching is enabled per-action by using `caches_page` method.
 
-```ruby
+```rb
 class PagesController < ApplicationController
   caches_page :index
 end

@@ -14,7 +14,7 @@ Methods in Ruby are defined using the reserved word `def`.
 
 Blocks, Procs, Methods and Lambdas are variances of a function in Ruby. All functions in Ruby act (or can be made to act) like some variant of a Proc. lambdas in Ruby are objects of class Proc.  Proc objects don't belong to any object. They are called without binding them to an object.
 
-```ruby
+```rb
 add = lambda { |a,b| a + b }
 add = ->(a, b) { a + b }
 ```
@@ -22,19 +22,19 @@ add = ->(a, b) { a + b }
 Lambdas are like Procs, but with stricter argument passing and localised returns. Create a lambda which takes two arguments and returns the result of calling `+` on the first, with the second as its arguments.
 In Ruby 1.9, the Proc class gained the method: `#curry`.
 
-```ruby
+```rb
 plus_five = add.curry[5]
 puts plus_five[8]
 ```
 
-```ruby
+```rb
 plus_five = add.curry.(5)
 puts plus_five.(8)
 ```
 
 Blocks in Ruby are a special syntactic sugar to create Procs.
 
-```ruby
+```rb
 def my_method
   yield if block_given?
 end
@@ -44,7 +44,7 @@ my_method do
 end # => 12
 ```
 
-```ruby
+```rb
 def my_method(&block)
   block.class
 end
@@ -53,7 +53,7 @@ my_method do
 end # => Proc
 ```
 
-```ruby
+```rb
 def my_method
   yield
 end
@@ -65,7 +65,7 @@ my_method &proc { puts "Hello World!" } # => "Hello World!"
 
 Methods are syntactic sugar for some variation of an underlying Proc.
 
-```ruby
+```rb
 def executor
   yield
 end
@@ -81,7 +81,7 @@ Lambdas and methods validate the arguments they receive while Procs do not: if y
 
 Higher-order functions are functions that accept a function as an argument and/or return a function as the return value.
 
-```ruby
+```rb
 def adder(a, b)
   lambda { a + b }
 end
@@ -93,7 +93,7 @@ adder_fn.call # => 14
 Partial function aplication is calling a function with some number of arguments, in order to get a function back that will take that many less arguments. Currying is taking a function that takes n arguments, and splitting it into n functions that take one argument.
 
 
-```ruby
+```rb
 apply_math = lambda do |fn, a, b|
   a.send(fn, b)
 end
