@@ -9,10 +9,16 @@ Topics
   <p class="text-base leading-6 font-semibold uppercase text-gray-600 tracking-wider">
     Topics I cover on my website
   </p>
-  <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+  <div class="mt-6 grid grid-cols-2 gap-2 md:grid-cols-3 lg:mt-8">
     {% for term in terms %}
-    <a href="{{ term.slug }}" class="col-span-1 flex justify-center py-8 px-8 bg-gray-50 hover:bg-gray-100">
-      <div class="text-gray-500">{{ term.name }}</div>
+    <a href="{{ term.slug }}" class="col-span-1 flex justify-between shadow bg-gray-50 hover:bg-gray-100">
+      <div class="w-1/4 bg-white flex align-strech border-r border-gray-300">
+        <img src="/logo/{{ term.slug }}.svg" alt="">
+      </div>
+      <div class="p-8 flex-1">
+        <div class="text-lg text-gray-700">{{ term.name }}</div>
+        <!-- <div class="text-gray-500 text-sm">Some description</div> -->
+      </div>
     </a>
     {% endfor %}
   </div>
