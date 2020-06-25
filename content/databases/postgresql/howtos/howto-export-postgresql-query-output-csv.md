@@ -1,5 +1,7 @@
 +++
 title = "How To Export PostgreSQL Query Output as CSV"
+[taxonomies]
+topics = [ "PostgreSQL" ]
 +++
 
 `\o` puts the query output into file at given location. PostgreSQL must have write privileges to that location.
