@@ -16,3 +16,16 @@ server.on('connection', socket => {
 });
 ```
 
+Node.js emits events when the process receives a signal. We can write a handler for these events.
+
+```js
+const onExitHandler = signal => {
+  console.log(`Received ${signal}. Exiting...`)
+  server.close(() => {
+    process.exit(0);
+  });
+}
+process.on('SIGINT', onExitHandler);
+process.on('SIGQUIT', onExitHandler);
+process.on('SIGTERM', onExitHandler);
+```
