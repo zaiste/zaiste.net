@@ -1,4 +1,6 @@
-
++++
+title = "Use Direnv with Nix"
++++
 
 Install `direnv`
 
