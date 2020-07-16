@@ -1,5 +1,7 @@
 +++
 title = "How To Shutdown a Node.js Server"
+[taxonomies]
+topics = [ "Node.js", "JavaScript" ]
 +++
 
 1.  Subscribe to the `connection` event which provides the socket for each new connection.

@@ -1,5 +1,6 @@
 +++
 title = "Configure NGINX for Phoenix applications"
+[taxonomies]
 topics = [ "NGINX", "Phoenix" ]
 +++
 
