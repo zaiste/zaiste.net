@@ -14,20 +14,7 @@
 
         <hr/>
 
-        {% if page.taxonomies.topics %}
-        <div class="flex my-4">
-          {% for topic in page.taxonomies.topics %}
-            <div class="flex flex-shrink-0 text-sm items-center mr-2">
-              <div class="bg-gray-200 text-gray-600 px-2 py-1 rounded-l-sm">#</div>
-              <div class="bg-gray-100 px-2 py-1 rounded-r-sm">
-                <a href="{{ get_taxonomy_url(kind='topics', name=topic) }}">
-                  {{ topic }}
-                </a>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        {% endif %}
+        {% include "topics.html" %}
 
         <div class="text-gray-500">
           {{ page.date | date(format="%Y-%m-%d") }}
