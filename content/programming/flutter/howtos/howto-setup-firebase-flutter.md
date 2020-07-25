@@ -1,7 +1,7 @@
 +++
 title = "How To Setup Firebase in Flutter (Visual Guide)"
 [taxonomies]
-topics = [ "Flutter", "Dart" ]
+topics = [ "Flutter", "Dart", "Firebase" ]
 +++
 
 **Last updated**: 2020-07-25
