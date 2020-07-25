@@ -121,7 +121,7 @@ android {
 
 ![Firebase Project](../firebase-19.png)
 
-## Configure Flutter
+## Configure Your Flutter App
 
 
 Add FlutterFire plugin to `pubspec.yaml`
@@ -130,8 +130,8 @@ Add FlutterFire plugin to `pubspec.yaml`
 dependencies:
   flutter:
     sdk: flutter
-  # Add the dependency for the Firebase Core Flutter SDK
-  firebase_core: ^0.4.0+9
+  firebase_core:
+  cloud_firestore:
 ```
 
 Run `flutter packages get`.

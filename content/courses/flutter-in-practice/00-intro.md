@@ -1,6 +1,6 @@
 +++
 date = 2019-01-22T00:00:00.000Z
-title = "Intro - Flutter in Practice Video Tutorial"
+title = "Introduction"
 description = """
 Introduction to Flutter in Practice, a free programming course that teaches how to write a mobile application using Flutter framework and Dart programming language.
 """

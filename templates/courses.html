@@ -9,20 +9,34 @@
   <h1 class="text-4xl leading-tight text-cool-gray-600 font-medium mb-4">
     My courses
   </h1>
-  <div class="mt-6 grid grid-cols-1 gap-1 lg:mt-8">
-    {% for page in section.pages %}
-    <a href="{{ page.slug }}" class="rounded border-2 border-blue-100 col-span-1 flex justify-between items-center py-8 px-8 hover:bg-gray-100 hover:border-blue-200">
-      <div>
-        <h4 class="text-2xl">Full-Stack TypeScript</h4>
-        <div class="text-gray-500">Some description</div>
+
+
+  <div class="mt-6 grid grid-cols-1 gap-4 lg:mt-8">
+    {% for subsection in section.subsections %}
+    {% set page = get_section(path=subsection) %}
+    <div class="col-span-2">
+      <div class="bg-cool-gray-700 text-white rounded-md shadow-lg overflow-hidden">
+        <a href="/{{ page.path }}" class="flex px-6 py-8 rounded justify-between items-center">
+          <div>
+            <h4 class="text-2xl font-semibold mb-2">{{ page.title }}</h4>
+            <div class="font-light leading-snug">
+              <p>{{ page.description }}</p>
+            </div>
+          </div>
+          <div class="w-1/4 text-center">
+            <span
+              class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
+              Free
+            </span>
+          </div>
+        </a>
+        <div class="flex items-center sm:items-start bg-cool-gray-500 not-italic py-4 px-6">
+          <a href="#" type="button" class="items-center px-2 py-1 border border-transparent text-base leading-6 rounded text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:border-red-700 focus:shadow-outline-indigo active:bg-red-600 transition ease-in-out duration-150">
+            Check on <strong class="text-white font-extrabold">YouTube</strong>
+          </a>
+        </div>
       </div>
-      <div>
-        <span
-          class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
-          Free
-        </span>
-      </div>
-    </a>
+    </div>
     {% endfor %}
   </div>
 </div>

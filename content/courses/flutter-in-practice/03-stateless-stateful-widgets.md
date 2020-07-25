@@ -1,6 +1,6 @@
 +++
 date = 2019-01-22T00:00:00.000Z
-title = "Stateless & Stateful Widgets - Flutter in Practice Video Tutorial"
+title = "Stateless & Stateful Widgets"
 description = """
 This episode of Flutter in Practice Video Tutorial describes the difference between Stateless and Stateful widgets in Flutter.
 """
