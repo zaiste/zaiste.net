@@ -10,7 +10,6 @@
     My courses
   </h1>
 
-
   <div class="mt-6 grid grid-cols-1 gap-4 lg:mt-8">
     {% for subsection in section.subsections %}
     {% set page = get_section(path=subsection) %}
@@ -31,7 +30,7 @@
           </div>
         </a>
         <div class="flex items-center sm:items-start bg-cool-gray-500 not-italic py-4 px-6">
-          <a href="#" type="button" class="items-center px-2 py-1 border border-transparent text-base leading-6 rounded text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:border-red-700 focus:shadow-outline-indigo active:bg-red-600 transition ease-in-out duration-150">
+          <a href="{{ page.extra.youtube }}" type="button" class="items-center px-2 py-1 border border-transparent text-base leading-6 rounded text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:border-red-700 focus:shadow-outline-indigo active:bg-red-600 transition ease-in-out duration-150">
             Check on <strong class="text-white font-extrabold">YouTube</strong>
           </a>
         </div>
