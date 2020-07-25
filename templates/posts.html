@@ -8,7 +8,7 @@
     <li class="mb-6">
       <h4 class="text-2xl leading-tight text-gray-600 font-medium">
         <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="{{ page.slug }}">
-          {{ page.title }}
+          {{ page.title | replace(from="*", to="")}}
         </a>
         {% if page.date %}
         <span class="ml-4 text-sm text-gray-400">{{ page.date | date(format="%Y-%m-%d")}}</span>

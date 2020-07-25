@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
 
-<title>{% block title %}{{ page.title | default(value=config.title) }}{% endblock title %} · zaiste.net</title>
-<meta property="og:title" content="{{ page.title | default(value=config.title) }} · zaiste.net" />
-<meta name="twitter:title" content="{{ page.title | default(value=config.title) }} · zaiste.net"/>
+<title>{% block title %}{{ page.title | default(value=config.title) | replace(from="*", to="")}}{% endblock title %} · zaiste.net</title>
+<meta property="og:title" content="{{ page.title | default(value=config.title) | replace(from='*', to='') }} · zaiste.net" />
+<meta name="twitter:title" content="{{ page.title | default(value=config.title) | replace(from='*', to='') }} · zaiste.net"/>
 
-<meta name="description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title }}{% else %}{{ config.description }}{% endif %}">
-<meta property="og:description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title }}{% else %}{{ config.description }}{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title }}{% else %}{{ config.description }}{% endif %}">
+<meta name="description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title | replace(from='*', to='')  }}{% else %}{{ config.description }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title | replace(from='*', to='') }}{% else %}{{ config.description }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate(length=160) }}{% elif page.title %}{{ page.title | replace(from='*', to='') }}{% else %}{{ config.description }}{% endif %}">
 
 {%- if page.taxonomies.topics -%}
   {%- set images = "" -%}

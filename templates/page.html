@@ -26,6 +26,12 @@
   <div class="markdown">
     {{ page.content | safe }}
   </div>
+
+  {% if page.taxonomies.topics %}
+    {% if page.taxonomies.topics is containing("Flutter") %}
+      {% include "related-course.html" %}
+    {% endif %}
+  {% endif %}
 </div>
 
 {% endblock content %}
