@@ -49,19 +49,23 @@ table {
 .markdown h2 {
   line-height: 1.25;
   border-bottom-width: 1px;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   padding-bottom: 0.5rem;
 }
 
 .markdown h3 {
   line-height: 1.375;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
+  color: #3b3b3b;
+  border-bottom-width: 1px;
+  padding-bottom: 0.35rem;
+  border-color: #DEDEDE;
 }
 
 .markdown h4 {
@@ -100,7 +104,7 @@ table {
 
 .markdown code {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1rem;
+  font-size: 85%;
   display: inline;
   background-color: #f7fafc;
   border-radius: 0.25rem;
@@ -110,8 +114,9 @@ table {
   padding-bottom: 0.125rem;
 }
 
-.markdown p > code {
-  color: #6875f5;
+.markdown p > code, h3 > code {
+  color: #686565;
+  border: 1px solid #EDEDED;
 }
 
 .markdown pre {
