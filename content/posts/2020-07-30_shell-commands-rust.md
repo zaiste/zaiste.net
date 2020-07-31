@@ -9,7 +9,7 @@ Shell is the essential tool for every programmer. The more familiar you become w
 
 ## `bat`
 
-`bat` is a `cat` clone with syntax highlighting and Git integration that woks on Windows, MacOS and Linux. It provides syntax highlighting for many file extensions by default.
+`bat` is a `cat` clone with syntax highlighting and Git integration that works on Windows, MacOS and Linux. It provides syntax highlighting for many file extensions by default.
 
 ![bat](/images/posts/bat.png)
 
@@ -25,7 +25,7 @@ Shell is the essential tool for every programmer. The more familiar you become w
 
 ## `fd`
 
-`fd` is a fast and user-friendly alternative to `find`, the built-in command-line program in Unix/Linx for walking a file hierarchy. `fd` provides opinionated defaults for the most common use cases. To find a specific file by name, you write `fd PATTERN` instead of `find -iname ‘*PATTERN*’`. `fd` is also extremely fast and it comes with a ton of options like ignoring hidden directories, files and patterns from `.gitignore` by default.
+`fd` is a fast and user-friendly alternative to `find`, the built-in command-line program in Unix/Linux for walking a file hierarchy. `fd` provides opinionated defaults for the most common use cases. To find a specific file by name, you write `fd PATTERN` instead of `find -iname ‘*PATTERN*’`. `fd` is also extremely fast and it comes with a ton of options like ignoring hidden directories, files and patterns from `.gitignore` by default.
 
 ![fd](/images/posts/fd.png)
 
