@@ -1,6 +1,6 @@
 +++
 date = 2020-07-30T00:00:00.000Z
-title = "Shell Commands I Wish I Knew Earlier"
+title = "Rewritten in Rust: Modern Alternatives of Command-Line Tools"
 [taxonomies]
 topics = [ "Shell", "Rust"  ]
 +++
