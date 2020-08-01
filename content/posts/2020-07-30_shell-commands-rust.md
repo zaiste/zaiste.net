@@ -17,7 +17,7 @@ Shell is the essential tool for every programmer. The more familiar you become w
 
 ## `exa`
 
-`exa` is a modern replacement for `ls`, the default command-line program in Unix/Linux for listing directory contents
+`exa` is a modern replacement for `ls`, the default command-line program in Unix/Linux for listing directory contents. `exa` supports icons with the `--icons` flag.
 
 ![exa](/images/posts/exa.png)
 
@@ -41,7 +41,9 @@ Shell is the essential tool for every programmer. The more familiar you become w
 
 ## `sd`
 
-`sd` is an intuitive find & replace command-line tool, it is an alternative to `sed`, the built-in command-line program in Unix/Linux for parsing and transforming text. `sd` has simpler syntax for replacing all occurrences and it uses the convenient regex syntax that you already know from JavaScript and Python. `sd` is also 2x-11x faster than `sed`.
+`sd` is an intuitive find & replace command-line tool, it is an alternative to `sed`, the built-in command-line program in Unix/Linux for parsing and transforming text (). `sd` has simpler syntax for replacing all occurrences and it uses the convenient regex syntax that you already know from JavaScript and Python. `sd` is also 2x-11x faster than `sed`. 
+
+`sed` is a programmable text editor, with search and replace being a common use case. In that light, `sd` is more like `tr`, but on steroids. (thanks [/u/oleid](https://www.reddit.com/user/oleid/) for the suggestion).
 
 ![sd](/images/posts/sd.png)
 
@@ -101,12 +103,21 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/dbrgn/tealdeer)
 
+## `bandwhich`
+
+`bandwhich` is a CLI utility for displaying current network utilization by process, connection and remote IP or hostname.
+
+![bandwhich](/images/posts/bandwhich.gif)
+
+[GitHub](https://github.com/imsnif/bandwhich)
+
+
 ## Bonus: `nushell`
 
 `nushell` is a new type of shell, written in Rust. Its goal is to create a modern shell alternative that's still based on the Unix philosophy, but adapted to the current era.
 It supports piping and filtering in a way similar to `awk` and `sed` with a column view so that you can combine operations like in `SQL`. (thanks [/u/matu3ba](https://www.reddit.com/user/matu3ba/) for the suggestion).
 
-![tealdeer](/images/posts/nushell.gif)
+![nushell](/images/posts/nushell.gif)
 
 [GitHub](https://github.com/nushell/nushell)
 
