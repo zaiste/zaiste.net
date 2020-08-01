@@ -111,6 +111,14 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/imsnif/bandwhich)
 
+## `grex`
+
+`grex` is a command-line tool and library for generating regular expressions from user-provided test cases.
+
+![grex](/images/posts/grex.gif)
+
+[GitHub](https://github.com/pemistahl/grex)
+
 
 ## Bonus: `nushell`
 
