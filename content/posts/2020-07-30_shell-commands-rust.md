@@ -104,6 +104,7 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 ## Bonus: `nushell`
 
 `nushell` is a new type of shell, written in Rust. Its goal is to create a modern shell alternative that's still based on the Unix philosophy, but adapted to the current era.
+It supports piping and filtering in a way similar to `awk` and `sed` with a column view so that you can combine operations like in `SQL`. (thanks [/u/matu3ba](https://www.reddit.com/user/matu3ba/) for the suggestion).
 
 ![tealdeer](/images/posts/nushell.gif)
 
