@@ -119,6 +119,13 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/pemistahl/grex)
 
+## `rmesg`
+
+`rmesg` is a dmesg implementation in Rust (and available as a library for Rust programs to consume kernel message logs.)
+
+![rmesg](/images/posts/rmesg.png)
+
+[GitHub](https://github.com/polyverse/rmesg/)
 
 ## Bonus: `nushell`
 
