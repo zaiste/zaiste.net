@@ -1,6 +1,7 @@
 base_url = "https://zaiste.net"
 compile_sass = true
-highlight_code = false
+highlight_code = true
+highlight_theme = "classic-modified"
 build_search_index = false
 
 title = "Zaiste Programming"
