@@ -36,7 +36,7 @@ Functions introduced via `class` syntax must be instantiated with `new` keyword.
 
 For that reason the simplest way  to check if a function is ES6 class or not is to check the result of applying `.toString()` method on it.
 
-```js
+```
 function isClass(func) {
   return typeof func === 'function'
     && /^class\s/.test(Function.prototype.toString.call(func));
