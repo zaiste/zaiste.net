@@ -3,8 +3,8 @@
 {% block content %}
 <div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
   {% set section = page.components | reverse | nth(n=1) %}
-  {% if section == 'howtos' %}
-  <span class="font-bold tracking-wide uppercase text-gray-400 border border-gray-200 mb-1 px-2 py-1 inline-block">How-To</span>
+  {% if page.extra.category and page.extra.category == 'How-To' or section == 'howtos' %}
+  <span class="font-bold tracking-wide uppercase inline-block text-cool-gray-600">How To</span>
   {% endif %}
   <h1 class="text-4xl leading-tight text-cool-gray-600 font-medium border-b border-gray-300 pb-1">
     {{ page.title }}
@@ -12,17 +12,15 @@
 
   {% include "topics.html" %}
 
-
   {% if page.extra.howtos %}
   <div class="mt-6 grid grid-cols-2 gap-2 md:grid-cols-3 lg:my-8">
-    {% if page.extra.howtos %}
     <a href="/{{ page.path }}howtos/"
       class="col-span-1 shadow flex justify-center py-8 px-8 bg-gray-50 hover:bg-gray-100">
       <div class="text-gray-800 font-medium"><span class="text-gray-500">{{ page.title }}</span> HowTos</div>
     </a>
-    {% endif %}
   </div>
   {% endif %}
+
   <div class="markdown">
     {{ page.content | safe }}
   </div>
