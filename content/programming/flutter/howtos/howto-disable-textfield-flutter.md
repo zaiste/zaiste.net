@@ -1,5 +1,5 @@
 +++
-title = "How To Disable A `TextField` in Flutter"
+title = "Disable a `TextField` in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++
