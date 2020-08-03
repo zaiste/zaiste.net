@@ -127,6 +127,14 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/polyverse/rmesg/)
 
+## `zoxide`
+
+`zoxide` is a blazing fast autojumper, intended to completely replace the `cd` command. It allows you to change directories without typing out the entire path name.
+
+![zoxide](/images/posts/zoxide.gif)
+
+[GitHub](https://github.com/ajeetdsouza/zoxide)
+
 ## Bonus: `nushell`
 
 `nushell` is a new type of shell, written in Rust. Its goal is to create a modern shell alternative that's still based on the Unix philosophy, but adapted to the current era.
