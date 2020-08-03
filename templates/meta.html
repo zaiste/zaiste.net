@@ -11,13 +11,24 @@
 
 {%- if page.taxonomies.topics -%}
   {%- set images = "" -%}
+  {%- set category = "" -%}
+
   {%- for topic in page.taxonomies.topics -%}
     {% set t = topic | slugify %}
     {% set to = 'https://zaiste.net/logo/' ~ t ~ '.svg' | urlencode %}
     {% set_global images = images ~ '&images=' ~ to %}
   {%- endfor -%}
-  <meta property="og:image" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
-  <meta name="twitter:image:src" content="https://og-image.zaiste.now.sh/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}" />
+
+  {% set section = page.components | reverse | nth(n=1) %}
+  {% if section == 'howtos' %}
+    {% set category = 'How-To' %}
+  {% endif %}
+
+  {% if page.extra.category %}
+    {% set category = page.extra.category %}
+  {%- endif -%}
+  <meta property="og:image" content="https://images.zaiste.vercel.app/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}&section={{ category }}" />
+  <meta name="twitter:image:src" content="https://images.zaiste.vercel.app/{{ page.title | urlencode }}.png?theme=light&md=1&fontSize=100px{{ images | safe }}&section={{ category }}" />
 {%- endif -%}
 
 <!-- Open Graph -->

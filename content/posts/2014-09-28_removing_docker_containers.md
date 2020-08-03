@@ -24,7 +24,7 @@ docker ps -aq -f status=exited
 docker ps -aq --no-trunc -f status=exited | xargs docker rm
 ```
 
-This command will *not* remove running containers, only an error message will be
+This command will **not** remove running containers, only an error message will be
 printed out for each of them.
 
 ## Remove dangling/untagged images

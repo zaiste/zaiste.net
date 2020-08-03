@@ -1,7 +1,9 @@
 +++
 title = "Parse TypeScript Source"
 [taxonomies]
-topics = [ "TypeScript" ]
+topics = ["TypeScript"]
+[extra]
+category = "How-To"
 +++
 
 ```ts

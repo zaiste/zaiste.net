@@ -1,5 +1,5 @@
 +++
-title = "How To Convert / Expand Paths in TypeScript"
+title = "Convert and Expand Paths in TypeScript"
 [taxonomies]
 topics = [ "TypeScript" ]
 +++
