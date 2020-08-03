@@ -8,7 +8,7 @@ topics = [ "JavaScript" ]
 npm i testcafe
 ```
 
-```
+```ts
 import { Selector } from 'testcafe';
 
 fixture `My first test`

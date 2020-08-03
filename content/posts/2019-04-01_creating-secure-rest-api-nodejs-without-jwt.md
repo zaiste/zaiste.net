@@ -530,7 +530,7 @@ roughly 200x faster than [Squel](https://hiddentao.com/squel/).
 
 Here is an example of a Sqorn query:
 
-```
+```ts
 sq.return({ authorId: 'a.id', name: 'a.last_name' })
   .distinct
   .from({ b: 'book' })
