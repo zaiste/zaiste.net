@@ -135,6 +135,15 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/ajeetdsouza/zoxide)
 
+
+## `delta`
+
+`delta` is a viewer for git and diff output. It allows you to make extensive changes to the layout and styling of diffs, as well as allowing you to stay arbitrarily close to the default git/diff output.
+
+![delta](https://user-images.githubusercontent.com/52205/87230973-412eb900-c381-11ea-8aec-cc200290bd1b.png)
+
+[GitHub](https://github.com/dandavison/delta)
+
 ## Bonus: `nushell`
 
 `nushell` is a new type of shell, written in Rust. Its goal is to create a modern shell alternative that's still based on the Unix philosophy, but adapted to the current era.
