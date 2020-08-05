@@ -1,5 +1,5 @@
 +++
-title = "How To Navigate between Screens in Flutter"
+title = "Navigate between Screens in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

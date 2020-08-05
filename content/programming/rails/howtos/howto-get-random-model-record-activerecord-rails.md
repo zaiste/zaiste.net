@@ -1,5 +1,5 @@
 +++
-title = "How To Get A Random Model Record with ActiveRecord in Rails"
+title = "Get a Random Model Record with ActiveRecord in Rails"
 [taxonomies]
 topics = [ "Rails", "Ruby" ]
 +++

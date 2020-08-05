@@ -1,5 +1,5 @@
 +++
-title = "How To Paginate in React.js using React Hooks"
+title = "Paginate in React.js using React Hooks"
 [taxonomies]
 topics = [ "React.js", "JavaScript" ]
 +++

@@ -1,5 +1,5 @@
 +++
-title = "How To Render Collections"
+title = "Render Collections"
 [taxonomies]
 topics = [ "React.js", "JavaScript" ]
 +++

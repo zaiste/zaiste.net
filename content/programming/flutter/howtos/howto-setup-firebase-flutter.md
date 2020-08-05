@@ -1,5 +1,5 @@
 +++
-title = "How To Setup Firebase in Flutter (Visual Guide)"
+title = "Setup Firebase in Flutter (Visual Guide)"
 [taxonomies]
 topics = [ "Flutter", "Dart", "Firebase" ]
 +++

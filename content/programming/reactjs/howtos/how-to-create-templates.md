@@ -1,5 +1,5 @@
 +++
-title = "How To Create Templates"
+title = "Create Templates"
 [taxonomies]
 topics = [ "React.js", "JavaScript" ]
 +++

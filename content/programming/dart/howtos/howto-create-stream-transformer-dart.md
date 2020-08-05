@@ -1,5 +1,5 @@
 +++
-title = "How To Create a Stream Transformer in Dart"
+title = "Create a Stream Transformer in Dart"
 [taxonomies]
 topics = [ "Dart" ]
 +++

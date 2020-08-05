@@ -1,5 +1,5 @@
 +++
-title = "How To Style Texts using the `Text` widget in Flutter"
+title = "Style Texts using the `Text` widget in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

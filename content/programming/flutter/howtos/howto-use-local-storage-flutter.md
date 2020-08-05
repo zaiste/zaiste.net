@@ -1,5 +1,5 @@
 +++
-title = "How To Use Local Storage in Flutter"
+title = "Use Local Storage in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

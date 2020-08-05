@@ -1,5 +1,5 @@
 +++
-title = "How To Reduce over Objects"
+title = "Reduce over Objects"
 [taxonomies]
 topics = [ "JavaScript" ]
 +++

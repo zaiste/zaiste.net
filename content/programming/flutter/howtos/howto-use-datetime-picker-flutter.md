@@ -1,5 +1,5 @@
 +++
-title = "How To Use A DateTime Picker in Flutter"
+title = "Use A DateTime Picker in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

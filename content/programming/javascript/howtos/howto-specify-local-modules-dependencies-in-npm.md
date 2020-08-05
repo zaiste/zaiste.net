@@ -1,5 +1,5 @@
 +++
-title = "How To Specify Local Modules As Dependencies in NPM"
+title = "Specify Local Modules as Dependencies in NPM"
 [taxonomies]
 topics = [ "JavaScript" ]
 +++

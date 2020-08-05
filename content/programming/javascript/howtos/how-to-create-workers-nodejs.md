@@ -1,7 +1,7 @@
 +++
-title = "How To Create Workers in Node.js 11+"
+title = "Create Workers in Node.js 11+"
 [taxonomies]
-topics = [ "Node.js", "JavaScript" ]
+topics = ["Node.js", "JavaScript"]
 +++
 
 ```js

@@ -1,5 +1,5 @@
 +++
-title = "How To Validate A Phone Number in Dart"
+title = "Validate a Phone Number in Dart"
 [taxonomies]
 topics = [ "Dart" ]
 +++

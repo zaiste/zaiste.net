@@ -1,5 +1,5 @@
 +++
-title = "How To Create A Singleton in Dart"
+title = "Create a Singleton in Dart"
 [taxonomies]
 topics = [ "Dart" ]
 +++

@@ -1,5 +1,5 @@
 +++
-title = "How To Flat an Array in JavaScript"
+title = "Flatten an Array in JavaScript"
 [taxonomies]
 topics = [ "Node.js", "JavaScript" ]
 +++

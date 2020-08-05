@@ -1,7 +1,7 @@
 +++
-title = "How To Restart a Node.js Server"
+title = "Restart a Node.js Server"
 [taxonomies]
-topics = [ "Node.js" ]
+topics = ["Node.js"]
 +++
 
 First, start a server

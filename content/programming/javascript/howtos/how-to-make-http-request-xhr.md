@@ -1,5 +1,5 @@
 +++
-title = "How To Make an HTTP Request using XMLHttpRequest"
+title = "Make an HTTP Request using XMLHttpRequest"
 [taxonomies]
 topics = [ "JavaScript" ]
 +++

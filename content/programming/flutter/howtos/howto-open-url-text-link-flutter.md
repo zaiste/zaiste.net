@@ -1,5 +1,5 @@
 +++
-title = "How To Open An URL For A Text Link In Flutter"
+title = "Open An URL For A Text Link In Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

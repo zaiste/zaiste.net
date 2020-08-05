@@ -1,5 +1,5 @@
 +++
-title = "How To Retrieve Text Field Values in Flutter"
+title = "Retrieve Text Field Values in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

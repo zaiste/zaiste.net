@@ -1,5 +1,5 @@
 +++
-title = "How To Make A Button Full Width in Flutter"
+title = "Make A Button Full Width in Flutter"
 [taxonomies]
 topics = [ "Flutter", "Dart" ]
 +++

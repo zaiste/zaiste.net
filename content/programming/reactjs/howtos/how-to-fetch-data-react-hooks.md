@@ -1,5 +1,5 @@
 +++
-title = "How To Fetch Data using React Hooks"
+title = "Fetch Data using React Hooks"
 [taxonomies]
 topics = [ "React.js", "JavaScript" ]
 +++

@@ -1,8 +1,7 @@
 +++
-title = "How To Create A Service Locator for Dependency Injection in Dart"
+title = "Create a Service Locator for Dependency Injection in Dart"
 [taxonomies]
 topics = [ "Dart" ]
-
 +++
 
 ```dart

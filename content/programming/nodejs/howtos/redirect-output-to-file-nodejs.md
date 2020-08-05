@@ -1,7 +1,7 @@
 +++
-title = "How to Redirect Output to a File in Node.js"
+title = "Redirect Output to a File in Node.js"
 [taxonomies]
-topics = [ "Node.js", "JavaScript" ]
+topics = ["Node.js", "JavaScript"]
 +++
 
 Create a writeable stream using `fs.createWriteStream` with the `a` (append) flag:

@@ -1,7 +1,7 @@
 +++
-title = "How To Use Clojure.Spec for Functions"
+title = "Use Clojure.Spec for Functions"
 [taxonomies]
-topics = [ "Clojure"]
+topics = ["Clojure"]
 +++
 
 ```clj
