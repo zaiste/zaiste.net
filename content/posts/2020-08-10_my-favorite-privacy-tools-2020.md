@@ -58,3 +58,7 @@ Last year [NordVPN was hacked](https://news.ycombinator.com/item?id=21312609), b
 ![Fastmail](/images/posts/fastmail.jpg)
 
 [Fastmail](https://www.fastmail.com/) is a paid e-mail service that focuses on privacy and doesn't display ads. It is a simple service to manage e-mails, calendars and contacts. It costs $5/mo. It is also fast. This is partly related to their work on a more reliable, faster IMAP alternative, called [JMAP](https://jmap.io/) - so it goes beyond just a snappy UI.
+
+---
+
+Have I missed an interesting tool? Let me know [on Twitter](https://twitter.com/zaiste).
