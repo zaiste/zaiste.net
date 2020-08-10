@@ -13,7 +13,7 @@ This is a list of tools I use to increase my privacy on the Internet. I'm not a 
 
 [Firefox](https://www.mozilla.org/en-US/exp/firefox/) probably doesn't need an introduction. It is an open-source project. It's run by Mozilla - a non-profit organization. Anyone can go to the [Firefox repository](https://hg.mozilla.org/) to take a look at the code and see how it works.
 
-Firefox doesn't gather your personal data to serve you ads as Chrome. While Google seems careful and to an extend trusthworthy with handling people's personal data, you don't seem to have much control how your profile is built and used.
+Firefox doesn't gather your personal data to serve you ads as Chrome. While Google seems careful and to an extend trustworthy with handling people's personal data, you don't seem to have much control how your profile is built and used.
 
 The browser is constantly being improved. It seems slightly heavier than Chrome or Safari on my computer, but that's a minor issue compared to all the advantages. I use the [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 
@@ -35,7 +35,7 @@ The browser is constantly being improved. It seems slightly heavier than Chrome 
 
 ![Nibspace](/images/posts/nibspace.jpg)
 
-[Nibspace](https://nibspace.com/) is an alternative to Google Analytics. It provides basic information about the visotors of my websites. It doesn't use cookies and it has a small fooprint (~ 1kb) while being affordable ($1/mo per domain). It's not open-source. There are few other, notable competitors such as [Fathom](https://usefathom.com/), [Simple Analytics](https://simpleanalytics.com/) and [Plausible](https://plausible.io/).
+[Nibspace](https://nibspace.com/) is an alternative to Google Analytics. It provides basic information about the visitors of my websites. It doesn't use cookies and it has a small footprint (~ 1kb) while being affordable ($1/mo per domain). It's not open-source. There are few other, notable competitors such as [Fathom](https://usefathom.com/), [Simple Analytics](https://simpleanalytics.com/) and [Plausible](https://plausible.io/).
 
 ## Bitwarden
 
@@ -47,7 +47,7 @@ The browser is constantly being improved. It seems slightly heavier than Chrome 
 
 ![Nordvpn](/images/posts/nordvpn.jpg)
 
-[NordVPN](https://nordvpn.com/) is a personal virtual private network service provider. Their marketing seems aggressive, so I was a bit skepitcal at the beginning, but then I decided to give it a try. Overall, NordVPN is one of the most polished and reliable VPNs I've used so far.
+[NordVPN](https://nordvpn.com/) is a personal virtual private network service provider. Their marketing seems aggressive, so I was a bit skeptical at the beginning, but then I decided to give it a try. Overall, NordVPN is one of the most polished and reliable VPNs I've used so far.
 
 I also like that they show some innovation efforts, namely their NordLynx technology that is built around WireGuard - this relatively new VPN tunneling protocol
 
