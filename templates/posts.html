@@ -4,17 +4,24 @@
 <div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
   <h1 class="text-4xl mb-8 leading-tight font-bold text-cool-gray-600">{{ section.title }}</h1>
   <ul>
+    {% set year = "" %}
     {% for page in section.pages %}
-    <li class="mb-6">
-      <h4 class="text-2xl leading-tight text-gray-600 font-medium">
-        <a class="border-b-2 border-blue-200 hover:bg-gray-100 hover:border-blue-400" href="{{ page.slug }}">
+    {% if page.date %}
+      {% set this_year = page.date | date(format="%Y") %}
+      {% if year != this_year %}
+        {% set_global year = this_year %}
+        <li class="text-blue-400 text-2xl pb-2 font-semibold mt-8"><h2>{{ year }}</h2></li>
+      {% endif %}
+    {% endif %}
+    <li class="border-gray-300 border-b">
+      <a class="py-3 hover:bg-gray-100 flex justify-between items-center" href="{{ page.slug }}">
+        <h4 class="text-2xl leading-tight text-gray-600 font-medium ">
           {{ page.title | replace(from="*", to="")}}
-        </a>
+        </h4>
         {% if page.date %}
         <span class="ml-4 text-sm text-gray-400">{{ page.date | date(format="%Y-%m-%d")}}</span>
         {% endif %}
-
-      </h4>
+      </a>
       <div class="text-gray-400"></div>
     </li>
     {% endfor %}
