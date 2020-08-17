@@ -1,5 +1,6 @@
 +++
 title = "About"
+template = "about.html"
 +++
 
 I'm a programmer, a technology consultant and [Nukomeet][1] co-founder. I
@@ -14,8 +15,6 @@ I studied Computer Science (Artificial Intelligence) at
 Business at [HEC Paris][8] & [Télécom ParisTech][9].
 
 I'm also on [GitHub][11], [Twitter][12].
-
-If you enjoy my content, please consider [supporting what I do][13].
 
 [1]: http://nukomeet.com
 [5]: http://rupy.eu
