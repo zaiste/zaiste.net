@@ -1,5 +1,5 @@
 +++
-date = 2020-07-30T00:00:00.000Z
+date = 2020-08-10T00:00:00.000Z
 title = "My Favorite Privacy Tools in 2020"
 [taxonomies]
 topics = ["Privacy"]
