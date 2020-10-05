@@ -9,7 +9,7 @@ Find a file named `boo` in the current directory without printing *permission
 denied* message once the file is not accessible
 
 ```
-fint . ! -readable -prune -name boo -print
+find . ! -readable -prune -name boo -print
 ```
 
 Alternatively,
