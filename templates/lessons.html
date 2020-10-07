@@ -19,7 +19,10 @@
   <div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
     <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
       {% for video in section.pages %}
-      <div class="flex flex-col rounded border border-gray-200 hover:shadow-lg overflow-hidden">
+      <div class="flex flex-col rounded border border-gray-200 hover:shadow-lg overflow-hidden relative">
+        {% if video.extra.pro %}
+        <div class="ribbon bg-red-500 text-sm text-white font-bold whitespace-no-wrap px-4">PRO</div>
+        {% endif %}
         <div class="flex-shrink-0">
           <img class="h-48 w-full object-cover"
             src="{{ section.title | slugify }}-{{ video.extra.number }}.png"

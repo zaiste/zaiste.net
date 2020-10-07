@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto py-4 lg:py-8 px-4 sm:px-6 lg:px-8">
+  <div>
+    <div>
+      <nav>
+        <a href="/courses/emacs-doom/"
+          class="flex items-center text-base leading-5 font-medium text-gray-400 hover:text-gray-200 transition duration-150 ease-in-out">
+          <svg class="flex-shrink-0 -ml-1 mr-1 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+          All Episodes
+        </a>
+      </nav>
+    </div>
+    <div class="md:flex md:items-center md:justify-between">
+      <div class="flex-1 min-w-0">
+        <h1 class="text-4xl leading-tight text-cool-gray-600 font-bold leading-7 sm:truncate mb-8">
+          {{ page.title }}
+        </h2>
+      </div>
+      <div class="mt-4 flex-shrink-0 flex md:mt-0 md:ml-4">
+      </div>
+    </div>
+  </div>
+
+    {% if page.extra.pro %}
+      <div class="flex justify-center items-center h-full">
+        <div>
+          <div class="text-xl font-semibold">This video is restricted to my GitHub sponsors (<code>Lambda</code> tier or higher)</div>
+          <div>Your sponsorship allows me to make videos like these possible!️</div>
+          <span class="inline-flex rounded-md shadow-sm mt-4">
+            <a href="https://github.com/sponsors/zaiste" class="inline-flex items-center px-6 py-3 border border-gray-300 text-base leading-6 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
+              Support me on GitHub
+            </a>
+          </span>
+        </div>
+      </div>
+    {% else %}
+    <div class="embed-responsive aspect-ratio-16/9 shadow-md">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ page.extra.video_id }}"></iframe>
+    </div>
+    {% endif %}
+  <div class="markdown">
+    {{ page.content | safe }}
+  </div>
+</div>
+
+{% endblock content %}
