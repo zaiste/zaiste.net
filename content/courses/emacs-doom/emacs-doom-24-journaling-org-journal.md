@@ -1,5 +1,5 @@
 +++
-date = 2019-01-23
+date = 2019-01-24
 title = "Journaling with org-journal"
 topics = [ "Emacs", "Org Mode"]
 description = """
