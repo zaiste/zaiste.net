@@ -11,7 +11,7 @@ Project Manager and a Business Analyst. I had been involved in various
 projects related to [Internet Banking][17].
 
 I studied Computer Science (Artificial Intelligence) at
-[Adam Mickiewicz Univeristy][6] & [Paris-Sud 11 University][7] and Digital
+[Adam Mickiewicz University][6] & [Paris-Sud 11 University][7] and Digital
 Business at [HEC Paris][8] & [Télécom ParisTech][9].
 
 I'm also on [GitHub][11], [Twitter][12].
