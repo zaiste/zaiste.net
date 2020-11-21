@@ -134,6 +134,12 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/ajeetdsouza/zoxide)
 
+## `tab`
+
+`tab` is an intuitive, config-driven terminal multiplexer designed for software engineers.  Tab has a built-in fuzzy finder, and persistent configurable sessions.
+
+![tab](https://user-images.githubusercontent.com/2111479/99866824-519e3e00-2b82-11eb-9123-6c0a6599814e.png)
+
 ## Bonus: `nushell`
 
 `nushell` is a new type of shell, written in Rust. Its goal is to create a modern shell alternative that's still based on the Unix philosophy, but adapted to the current era.
