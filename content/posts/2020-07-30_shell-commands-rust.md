@@ -140,6 +140,15 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 ![tab](https://user-images.githubusercontent.com/2111479/99866824-519e3e00-2b82-11eb-9123-6c0a6599814e.png)
 
+## `tp-note`
+
+`Tp-Note` is a template tool that enhances the clipboard with a _save and edit as a note file_ function. After creating a new note file, `Tp-Note` launches the user's favorite file editor (for editing) and web browser (for viewing).
+
+![tp-note](https://blog.getreu.net/20210317-note-taking-for-minimalists/tp-note.png)
+
+[GitHub](https://github.com/getreu/tp-note)
+
+
 ## Bonus: `nushell`
 
 `nushell` is a new type of shell, written in Rust. Its goal is to create a modern shell alternative that's still based on the Unix philosophy, but adapted to the current era.
