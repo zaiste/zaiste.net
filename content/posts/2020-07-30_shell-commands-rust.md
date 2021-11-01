@@ -148,6 +148,12 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/getreu/tp-note)
 
+## `tidy-viewer`
+
+`tidy-viewer` (`tv`) is a `column` clone with `NA` comprehension, customizable themes, column overflow logic, and other features which help guide the eye while glancing at csv files. It works on Windows, MacOS and Linux. 
+
+[GitHub](https://github.com/alexhallam/tv)
+
 
 ## Bonus: `nushell`
 
