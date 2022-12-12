@@ -2,7 +2,7 @@
 +++
 
 +++
-# Dark Lang
+# Darklang
 
 Dark aims to provide the quick prototyping of Python using their built-in editor along with a language that comes with static types (similar to OCaml).
 
