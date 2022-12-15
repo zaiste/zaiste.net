@@ -154,6 +154,10 @@ The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 
 [GitHub](https://github.com/alexhallam/tv)
 
+## `skim`
+`skim` (`sk`) is a general fuzzy finder written in rust.
+
+[GitHub](https://github.com/lotabout/skim)
 
 ## Bonus: `nushell`
 
