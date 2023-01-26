@@ -13,10 +13,10 @@ const { spawn } = require('child_process');
 const logging = fs.createWriteStream('yourfile.log', { flags: 'a' });
 
 const lsProcess = spawn('ls', ['-lh', '/etc']);
-ls.stdout.pipe(logging);
-ls.stderr.pipe(logging);
+lsProcess.stdout.pipe(logging);
+lsProcess.stderr.pipe(logging);
 
-ls.on('close', code => {
+lsProcess.on('close', code => {
   console.log(code);
 });
 ```
